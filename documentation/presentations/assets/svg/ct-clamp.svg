@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 440" width="3000" height="1320"><style>
+.zone-m{fill:#c2362b;fill-opacity:.06}
+.zone-l{fill:#1f6fb5;fill-opacity:.05}
+.wm,.ws,.wp,.wd{fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.wm{stroke:#c2362b}.ws{stroke:#1f6fb5}.wp{stroke:#a9650a}.wd{stroke:#5d6a73;stroke-width:1.8}
+.part{fill:#fff;stroke:#1b2227;stroke-width:1.6}
+.block{fill:#fff;stroke:#1b2227;stroke-width:1.8}
+.thin{fill:none;stroke:#1b2227;stroke-width:1.6;stroke-linecap:round}
+.gnd{fill:none;stroke:#1f6fb5;stroke-width:1.8;stroke-linecap:round}
+.barrier{stroke:#1b2227;stroke-width:1.4;stroke-dasharray:7 5}
+.dot-m{fill:#c2362b}.dot-s{fill:#1f6fb5}.dot-p{fill:#a9650a}
+.a-m{fill:#c2362b}.a-s{fill:#1f6fb5}.a-p{fill:#a9650a}.a-d{fill:#5d6a73}
+text{fill:#1b2227;font-family:'Liberation Sans',Arial,sans-serif;font-size:13px}
+.b{font-weight:700;font-size:14px}
+.mono{font-family:'Liberation Mono','Courier New',monospace;font-size:12px}
+.dim{fill:#5d6a73;font-size:12px}
+.zone-label{fill:#5d6a73;font-size:12px;letter-spacing:.08em;font-weight:700}
+.tm{fill:#c2362b}.ts{fill:#1f6fb5}.tp{fill:#a9650a}
+.core{fill:#cfd6db;stroke:#1b2227;stroke-width:1.6;fill-rule:evenodd}
+.turn{stroke:#1f6fb5;stroke-width:3;stroke-linecap:round;fill:none}
+.flux{fill:none;stroke:#5d6a73;stroke-width:2;stroke-dasharray:6 5}
+.badge{fill:#1b2227}
+.badge-t{fill:#fff;font-weight:700;font-size:12px;text-anchor:middle}
+.grid{stroke:#cfd6db;stroke-width:1;fill:none}
+.axis{stroke:#5d6a73;stroke-width:1.2;fill:none}
+.curve{fill:none;stroke:#1f6fb5;stroke-width:2.6}
+.wave-in{fill:none;stroke:#5d6a73;stroke-width:1.4;stroke-linejoin:round}
+.wave-out{fill:none;stroke:#1f6fb5;stroke-width:2.6}
+.band-sig{fill:#1f6fb5;fill-opacity:.13}
+.band-noise{fill:#c2362b;fill-opacity:.10}
+.vline{stroke:#1b2227;stroke-width:1.2;stroke-dasharray:4 4;fill:none}
+</style><rect x="-200" y="-200" width="1800" height="1400" fill="#ffffff"/>
+        <defs><g id="gnd2"><path class="gnd" d="M0 0 v6 M-9 6 h18 M-6 10 h12 M-3 14 h6"/></g></defs>
+
+        <!-- iron core, with the split at the bottom and the hinge at the top -->
+        <path class="core" d="M170 250 a130 130 0 1 0 260 0 a130 130 0 1 0 -260 0 M216 250 a84 84 0 1 0 168 0 a84 84 0 1 0 -168 0"/>
+        <line class="thin" x1="300" y1="334" x2="300" y2="380"/>
+        <circle class="badge" cx="300" cy="126" r="4"/>
+        <text x="300" y="108" text-anchor="middle" class="dim">hinge</text>
+        <text x="300" y="414" text-anchor="middle" class="dim">split core: opens on a hinge, so it clamps on without cutting the wire</text>
+        <text x="60" y="134" class="b">iron core</text>
+        <path class="thin" d="M122 140 L196 168"/>
+
+        <!-- magnetic flux inside the core -->
+        <circle class="flux" cx="300" cy="250" r="107"/>
+        <polygon class="a-d" points="314,136 298,143 314,150"/>
+        <polygon class="a-d" points="187,242 193,256 199,242"/>
+
+        <!-- the live wire: one turn, current toward the viewer -->
+        <circle cx="300" cy="250" r="22" fill="#ffffff" stroke="#c2362b" stroke-width="3"/>
+        <circle class="dot-m" cx="300" cy="250" r="5"/>
+        <text x="300" y="208" text-anchor="middle" class="mono tm">I = 10 A rms</text>
+        <text x="300" y="298" text-anchor="middle" class="dim">primary, 1 turn</text>
+
+        <!-- secondary winding: nine of the 2,000 turns -->
+        <line class="turn" x1="378" y1="250" x2="438" y2="250"/>
+        <line class="turn" x1="376.3" y1="266.2" x2="435" y2="278.7"/>
+        <line class="turn" x1="376.3" y1="233.8" x2="435" y2="221.3"/>
+        <line class="turn" x1="371.3" y1="281.7" x2="426.1" y2="306.1"/>
+        <line class="turn" x1="371.3" y1="218.3" x2="426.1" y2="193.9"/>
+        <line class="turn" x1="363.1" y1="295.9" x2="411.6" y2="331.1"/>
+        <line class="turn" x1="363.1" y1="204.1" x2="411.6" y2="168.9"/>
+        <line class="turn" x1="352.2" y1="308" x2="392.3" y2="352.6"/>
+        <line class="turn" x1="352.2" y1="192" x2="392.3" y2="147.5"/>
+        <text x="440" y="96" class="b ts">secondary winding</text>
+        <text x="440" y="114" class="dim">2,000 turns of fine wire (9 drawn)</text>
+
+        <!-- leads, burden resistor and output -->
+        <path class="ws" d="M392 147 H600 V205"/>
+        <path class="ws" d="M392 353 H600 V285"/>
+        <polygon class="a-s" points="462,141 476,147 462,153"/>
+        <text x="430" y="136" class="dim">secondary current: I ÷ 2000 = 5 mA</text>
+        <rect class="part" x="592" y="205" width="16" height="80"/>
+        <text x="620" y="222" class="b ts">Rb (burden)</text>
+        <text x="620" y="240" class="mono">V = I_sec × Rb</text>
+        <text x="620" y="258" class="mono">5 mA × 22 Ω = 110 mV rms</text>
+        <circle class="dot-s" cx="600" cy="147" r="3.5"/>
+        <path class="ws" d="M600 147 H890"/>
+        <polygon class="a-s" points="884,141 896,147 884,153"/>
+        <text x="640" y="178" class="dim">to Rf + Cf, then ADC CH1+</text>
+        <circle class="dot-s" cx="600" cy="353" r="3.5"/>
+        <use xlink:href="#gnd2" x="600" y="353"/>
+        <text x="622" y="368" class="dim">analog ground, also ADC CH1−</text>
+
+        <!-- step badges -->
+        <circle class="badge" cx="338" cy="236" r="11"/><text class="badge-t" x="338" y="240">1</text>
+        <circle class="badge" cx="208" cy="196" r="11"/><text class="badge-t" x="208" y="200">2</text>
+        <circle class="badge" cx="458" cy="250" r="11"/><text class="badge-t" x="458" y="254">3</text>
+        <circle class="badge" cx="572" cy="245" r="11"/><text class="badge-t" x="572" y="249">4</text>
+        <circle class="badge" cx="700" cy="147" r="11"/><text class="badge-t" x="700" y="151">5</text>
+      </svg>
