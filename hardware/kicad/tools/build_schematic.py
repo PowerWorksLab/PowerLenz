@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from kicad_gen import Schematic
 
 OUT = os.path.join(os.path.dirname(__file__), "..", "powerlenz.kicad_sch")
-s = Schematic("PowerLenz: single-phase NILM front end", paper="A3")
+s = Schematic("PowerLenz: single-phase NILM front end", paper="A2")
 
 
 def block1_mains():
@@ -96,7 +96,42 @@ def block2_analog():
     s.text("TI clamp per pin: BAT54 to AVDD (+3V3A) and a BAV199 pair to GND, between the 1 kohm and 100 ohm resistors", 15.24, 288, 1.27)
 
 
+
+def block3_adc_power():
+    """ADS131M04 with decoupling, and the LP5907 3.3 V supply for AVDD and DVDD."""
+    s.box(292.1, 15.24, 560, 160)
+    s.text("3. ADS131M04 ADC AND 3.3 V SUPPLY (LP5907)", 294.64, 22, 2.0, True)
+    # LP5907 supply from the HLK 5 V rail
+    s.text("LP5907: quiet 3.3 V for AVDD and DVDD (HLK ripple rejected about 60 dB at 100 kHz)", 294.64, 30, 1.27)
+    s.part("Regulator_Linear", "LP5907MFX-3.3", "LP5907-3.3", (332.74, 55.88), {1: "+5V", 3: "+5V", 5: "+3V3A", 2: "GND"},
+           prefix="U", nc=(4,), extra={"MPN": "LP5907MFX-3.3/NOPB", "Manufacturer": "Texas Instruments",
+                                       "Note": "250 mA, under 6.5 uV rms noise; EN tied to IN"})
+    s.part("Device", "C", "1uF 50V X7R", (304.8, 68.58), {1: "+5V", 2: "GND"}, prefix="C",
+           extra={"MPN": "CC0805KKX7R9BB105", "Manufacturer": "Yageo", "Note": "LP5907 input capacitor, 1 uF ceramic"})
+    s.part("Device", "C", "1uF 50V X7R", (368.3, 68.58), {1: "+3V3A", 2: "GND"}, prefix="C",
+           extra={"MPN": "CC0805KKX7R9BB105", "Manufacturer": "Yageo", "Note": "LP5907 output capacitor, 1 uF ceramic"})
+    # ADC
+    s.part("Analog_ADC", "ADS131M04xPW", "ADS131M04", (449.58, 91.44),
+           {1: "+3V3A", 20: "+3V3A", 2: "GND", 19: "GND",
+            6: "CH1P", 5: "CH1N", 7: "CH2P", 8: "CH2N",
+            3: "GND", 4: "GND", 10: "GND", 9: "GND",
+            18: "ADC_CAP", 14: "ADC_SCLK", 16: "ADC_DIN", 15: "ADC_DOUT", 12: "ADC_CS",
+            13: "ADC_DRDY", 17: "ADC_CLKIN", 11: "ADC_RESET"},
+           prefix="U", extra={"MPN": "ADS131M04IPWR", "Manufacturer": "Texas Instruments",
+                              "Note": "TSSOP-20. CH1 = current (gain 1), CH2 = voltage (gain 2). CH0 and CH3 unused: "
+                                      "inputs tied to AGND (datasheet allows floating or AGND). 8 kSPS, continuous-conversion mode"})
+    s.part("Device", "C", "1uF 50V X7R", (406.4, 55.88), {1: "+3V3A", 2: "GND"}, prefix="C",
+           extra={"MPN": "CC0805KKX7R9BB105", "Manufacturer": "Yageo", "Note": "AVDD decoupling, place at the pin"})
+    s.part("Device", "C", "1uF 50V X7R", (492.76, 55.88), {1: "+3V3A", 2: "GND"}, prefix="C",
+           extra={"MPN": "CC0805KKX7R9BB105", "Manufacturer": "Yageo", "Note": "DVDD decoupling, place at the pin"})
+    s.part("Device", "C", "220nF 50V X7R", (505.46, 109.22), {1: "ADC_CAP", 2: "GND"}, prefix="C",
+           extra={"MPN": "0805B224K500CT", "Manufacturer": "Walsin", "Note": "CAP pin to DGND, required by the datasheet (DVDD above 2.7 V)"})
+    s.text("Channels: CH1 current, CH2 voltage. AGND and DGND are joined here (one GND net)", 294.64, 150, 1.27)
+    s.text("ADC to MCU: SCLK, DIN, DOUT, CS, DRDY, CLKIN, SYNC/RESET (nets ADC_*)", 294.64, 154, 1.27)
+
+
 block1_mains()
 block2_analog()
+block3_adc_power()
 s.save(OUT)
 print("wrote", os.path.abspath(OUT))
