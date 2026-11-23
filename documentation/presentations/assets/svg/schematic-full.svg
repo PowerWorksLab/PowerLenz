@@ -61,8 +61,8 @@ text{fill:#1b2227;font-family:'Liberation Sans',Arial,sans-serif;font-size:13px}
         <path class="wm" d="M170 60 V92 M170 128 V140 H1010 V270"/>
         <rect class="part" x="162" y="92" width="16" height="36"/>
         <path class="thin" d="M170 92 V128"/>
-        <text x="190" y="108" class="dim">fuse 1 A</text>
-        <text x="190" y="124" class="dim">slow-blow</text>
+        <text x="190" y="108" class="dim">fuse 1 A, ceramic</text>
+        <text x="190" y="124" class="dim">time-lag, 1.5 kA</text>
         <text x="560" y="132" class="mono tm">L (fused)</text>
 
         <!-- neutral -->
@@ -167,6 +167,7 @@ text{fill:#1b2227;font-family:'Liberation Sans',Arial,sans-serif;font-size:13px}
         <text x="710" y="774" class="mono">CH1 −</text>
         <text x="790" y="716" text-anchor="middle" class="mono dim">1 µF AVDD, 1 µF DVDD</text>
         <text x="790" y="734" text-anchor="middle" class="mono dim">220 nF CAP · AGND=DGND</text>
+        <text x="790" y="752" text-anchor="middle" class="mono dim">clamps (SBAA506): not drawn</text>
 
         <!-- HLK outputs and power -->
         <path class="wp" d="M910 400 V402"/><use xlink:href="#gnd" x="910" y="400"/>

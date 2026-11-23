@@ -146,7 +146,7 @@ function add(master, sec) { return pres.addSlide({ masterName: master, sectionTi
   title(s, "What sits on the mains side, and why");
   picture(s, "schematic-mains", 0.6, 1.55, { w: 8.2 }, "The live wire passes through the CT clamp. A 1 A fused tap feeds a MOV, the ZMPT107-1 through three 39 kΩ resistors, and the HLK-5M05");
   const items5 = [
-    ["Fuse", "1 A slow-blow. Opens if our own circuit shorts. The home's breaker is far too large to protect a PCB."],
+    ["Fuse", "1 A ceramic time-lag, 1.5 kA. The first fuse chosen was rated only 35 A at 250 V AC, so it was replaced."],
     ["MOV 10D561K", "Idles at 230 V and conducts when a voltage spike hits, clamping it. A fuse is too slow for microsecond spikes. Hi-Link recommends this part."],
     ["ZMPT107-1", "A current-type transformer. Three 39 kΩ resistors set about 2 mA through its primary, and 2 mA comes out of the secondary. 3000 V isolated."],
   ];
@@ -154,7 +154,7 @@ function add(master, sec) { return pres.addSlide({ masterName: master, sectionTi
     text(s, it[0], { x: 9.1, y: 1.55 + i * 1.7, w: 3.63, h: 0.35, fontSize: 18, bold: true, color: C.accent2 });
     text(s, it[1], { x: 9.1, y: 1.95 + i * 1.7, w: 3.63, h: 1.25, fontSize: 15 });
   });
-  s.addNotes("Fuse: sized for our tiny load (tens of mA), rated 250 V AC with adequate breaking capacity, slow-blow to ride through inrush. MOV: voltage-dependent resistor, wears out with surges and tends to fail short-circuit, which is why the fuse sits in front. Hi-Link recommends the 10D561K; its datasheet is not yet read. ZMPT107-1 (manufacturer sheet read): 2 mA : 2 mA, phase error at most 0.75 degrees at 2 mA with a 50 ohm sampling resistor, linear from about 46 V to 276 V rms, 3000 V isolation. The series resistors are our calculation (230 V / 2 mA = 115 kohm; three 39 kohm in series).");
+  s.addNotes("Fuse: the Littelfuse 0239 glass fuse is only rated 35 A at 250 V AC (official table), so the plan is now a Bel 5HT 1-R ceramic time-lag fuse, listed at 1.5 kA (seller listing; Bel datasheet not yet read), same 5 x 20 mm size, slow-blow to ride through the 10 A inrush. MOV: voltage-dependent resistor, wears out with surges and tends to fail short-circuit, which is why the fuse sits in front. Hi-Link recommends the 10D561K; its datasheet is not yet read. ZMPT107-1 (manufacturer sheet read): 2 mA : 2 mA, phase error at most 0.75 degrees at 2 mA with a 50 ohm sampling resistor, linear from about 46 V to 276 V rms, 3000 V isolation. The series resistors are our calculation (230 V / 2 mA = 115 kohm; three 39 kohm in series).");
 
   // ===== 6. CT clamp =====
   section("Current and voltage sensing");
@@ -383,7 +383,7 @@ function add(master, sec) { return pres.addSlide({ masterName: master, sectionTi
   text(s, "Needs a datasheet or an answer", { x: 0.9 + ow + 0.2, y: 1.7, w: ow - 0.6, h: 0.4, fontSize: 20, bold: true, color: C.accent2 });
   text(s, bullets([
     "HLK-5M05 isolation rating (3000 V or 2500 V); its text says a 1 A fuse, its drawing 0.5 A.",
-    "Official fuse datasheet (breaking capacity at 250 V AC may be only 35 A); CT clamp (TI SBAA506).",
+    "Bel 5HT datasheet (confirm 1.5 kA); a 3.3 V supply clamp part; CT secondary clamp.",
     "ZMPT107-1 surge withstand.",
     "DevKitC regulator current rating; never use USB and the 5V pin together.",
   ]), { x: 0.9 + ow + 0.2, y: 2.25, w: ow - 0.6, h: 2.5, fontSize: 15 });
@@ -405,7 +405,9 @@ function add(master, sec) { return pres.addSlide({ masterName: master, sectionTi
     hubHlk: ["Hubtronics", "https://hubtronics.in/power-converter-modules/ac-dc-converter-modules/hlk-5m05"],
     evHlk: ["Evelta", "https://evelta.com/hlk-5m05-5w-ultra-compact-ac-dc-power-module-acin-100-240v-dcout-5v"],
     lp5907: ["Digi-Key India", "https://www.digikey.in/en/products/detail/texas-instruments/LP5907MFX-3-3-NOPB/5034443"],
-    fuse: ["Digi-Key India", "https://www.digikey.in/en/products/detail/littelfuse-inc/0239001-HXP/778214"],
+    fuse: ["Lion Circuits", "https://www.lioncircuits.com/parts/5HT%201-R"],
+    bat54: ["BAT54", "https://www.lioncircuits.com/parts/BAT54-7-F"],
+    bav199: ["BAV199", "https://www.lioncircuits.com/parts/BAV199-7-F"],
     holder: ["Hubtronics", "https://hubtronics.in/fuse-holder-panel-mount-red?tag=Fuse+Holder"],
     lionMov: ["Lion Circuits", "https://lioncircuits.com/parts/MOV-10D561KTR"],
     dkMov: ["Digi-Key India", "https://www.digikey.in/en/products/detail/bourns-inc/MOV-10D561K/2407569"],
@@ -452,14 +454,15 @@ function add(master, sec) { return pres.addSlide({ masterName: master, sectionTi
   priceTable(s, [
     ["Power supply", "Hi-Link HLK-5M05, 1", "₹209 + GST, or ₹253.70 with GST", [L.hubHlk, L.evHlk]],
     ["Analog supply", "TI LP5907MFX-3.3, 1", "₹62 + ₹452 reel fee", [L.lp5907]],
-    ["Fuse", "Littelfuse 0239001.HXP, 1 A, pack of 5", "₹110 per 5", [L.fuse]],
+    ["Fuse", "Bel 5HT 1-R, 1 A ceramic, 1.5 kA, 1", "₹80.30", [L.fuse]],
+    ["Input protection", "BAT54-7-F x4 and BAV199-7-F x4", "₹10.55 and ₹20.72 each", [L.bat54, L.bav199]],
     ["Fuse holder", "Panel mount, 5 x 20 mm, 1", "₹12 + GST", [L.holder]],
     ["MOV", "Bourns 10D561K, 1", "₹38.23 (₹23.45 each at 10)", [L.lionMov, L.dkMov]],
     ["Enclosure", "ABS, IP65, about 200 x 120 x 75 mm, 1", "about ₹300", [L.encl]],
     ["Buck (custom board only)", "Diodes AP63203WU-7, 1", "₹88.45 + ₹452 reel fee", [L.buck]],
   ], 1.5, 0.52);
-  text(s, "The Digi-Key India pages for the MOV and the buck showed zero stock and 16 and 32 week lead times, so the Indian seller is the practical route. The buck is not needed for the DevKitC demo.", { x: 0.6, y: 5.8, w: 11.8, h: 0.6, fontSize: 12, color: C.accent5 });
-  s.addNotes("Power supply: Hubtronics 209 rupees plus 18 percent GST (an earlier check, the site now blocks automated reading), Evelta 253.70 including GST. LP5907: Digi-Key India 62 rupees; Digi-Reel orders add a 452 rupee fee. Fuse: Littelfuse 0239001.HXP slow-blow 1 A, 109.96 rupees per 5. Fuse holder: Hubtronics 11.80 rupees including GST (earlier check). MOV: Lion Circuits tape and reel Bourns MOV-10D561KTR shows 38.23 rupees, with 23.45 each at 10 pieces, in stock and shipping in 7 to 10 days; Digi-Key India lists the MOV-10D561K at 25.68 rupees with zero stock and a 16 week lead time; Evelta's HEL-10D561K at 5.25 rupees ex-GST is sold out. Enclosure: IndiaMART listings of 200 x 120 x 75 mm ABS IP65 boxes at about 300 rupees. AP63203WU-7: Digi-Key India 88.45 rupees, zero stock, 32 week lead time, Digi-Reel fee 452 rupees.");
+  text(s, "The Digi-Key India pages for the MOV and the buck showed zero stock and 16 and 32 week lead times, so the Indian seller is the practical route. The buck is not needed for the DevKitC demo.", { x: 0.6, y: 6.35, w: 11.4, h: 0.6, fontSize: 12, color: C.accent5 });
+  s.addNotes("Power supply: Hubtronics 209 rupees plus 18 percent GST (an earlier check, the site now blocks automated reading), Evelta 253.70 including GST. LP5907: Digi-Key India 62 rupees; Digi-Reel orders add a 452 rupee fee. Fuse: Bel 5HT 1-R at Lion Circuits, 80.30 rupees (73.80 at 10 pieces), in stock; the earlier Littelfuse 0239001.HXP glass fuse was rejected. Input protection: BAT54-7-F 10.55 rupees and BAV199-7-F 20.72 rupees at 1 piece, both read on Lion Circuits. Fuse holder: Hubtronics 11.80 rupees including GST (earlier check). MOV: Lion Circuits tape and reel Bourns MOV-10D561KTR shows 38.23 rupees, with 23.45 each at 10 pieces, in stock and shipping in 7 to 10 days; Digi-Key India lists the MOV-10D561K at 25.68 rupees with zero stock and a 16 week lead time; Evelta's HEL-10D561K at 5.25 rupees ex-GST is sold out. Enclosure: IndiaMART listings of 200 x 120 x 75 mm ABS IP65 boxes at about 300 rupees. AP63203WU-7: Digi-Key India 88.45 rupees, zero stock, 32 week lead time, Digi-Reel fee 452 rupees.");
 
   s = add("CONTENT", "Components");
   title(s, "Components and prices: resistors and capacitors");
@@ -476,7 +479,7 @@ function add(master, sec) { return pres.addSlide({ masterName: master, sectionTi
     ["Perfboard", "7 x 9 cm, single-sided, 1", "₹37 incl. GST", [L.perf]],
   ], 1.4, 0.4);
   card(s, 0.6, 6.15, 12.13, 0.6, C.text2, "banner estimate");
-  text(s, "Bench demo parts: about ₹3,600 to ₹4,300 before GST, shipping and fees.", { x: 0.9, y: 6.15, w: 11.5, h: 0.6, fontSize: 16, color: C.background1, valign: "middle", bold: true });
+  text(s, "Bench demo parts: about ₹3,700 to ₹4,400 before GST, shipping and fees.", { x: 0.9, y: 6.15, w: 11.5, h: 0.6, fontSize: 16, color: C.background1, valign: "middle", bold: true });
   text(s, "The Zbotic and Robu prices come from search results. Lion Circuits prices are the 1-piece price. Hook-up wire and a mains cable are not priced. Minimum packs apply: 25 resistors, reels of 1 kΩ and 1 µF parts.", { x: 0.6, y: 6.88, w: 11.4, h: 0.42, fontSize: 11, color: C.accent5 });
   s.addNotes("Full list with every price and link: documentation/findings/bill-of-materials.md. 6.49 ohm: Vishay CRCW12066R49FKEA, 1206, 1 percent, 15.81 rupees at Lion Circuits (page read, in stock; 10.25 at 10 pieces); Digi-Key India listed 10.65 in a search result. 24.9 ohm: Digi-Key India 9.51 rupees, 24 week lead time, marketplace stock. 39 kohm: Lion Circuits Multicomp MF50 39K, 7.51 rupees each from 25 pieces. 1 kohm: Evelta Yageo RC0805FR-071KL, 2.00 rupees ex-GST, 2,219 in stock, full reel 5,000. 1 microfarad: Evelta Yageo CC0805KKX7R9BB105, 12.00 rupees ex-GST, 2,566 in stock, full reel 3,000. 10 nanofarad C0G: Lion Circuits Walsin 0805N103J500CT, 5 percent, 50 V, 13.45 rupees (page read, in stock); the KEMET part at Digi-Key was 136.98. 220 nanofarad: Lion Circuits Walsin 0805B224K500CT, X7R, 13.45 rupees. 220 microfarad 25 V: Evelta Samwha 2.70 rupees ex-GST, 18 in stock. Terminal blocks (Zbotic) and perfboard (Robu) are search-result prices. The total sums the priced rows only.");
 
