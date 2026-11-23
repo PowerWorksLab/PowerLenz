@@ -21,6 +21,7 @@ Links collected while checking the PowerLenz parts. Last reviewed 23 Nov 2026. M
 | LP5907 (analog LDO) | TI datasheet SNVS798Q, July 2025 | [ti.com/lit/ds/symlink/lp5907.pdf](https://www.ti.com/lit/ds/symlink/lp5907.pdf) | Read |
 | AP2112 (digital LDO) | Diodes Incorporated datasheet | [diodes.com/assets/Datasheets/AP2112.pdf](https://www.diodes.com/assets/Datasheets/AP2112.pdf) | Read |
 | SCT-013-000 (CT) | Manufacturer datasheet page, SparkFun mirror | [cdn.sparkfun.com/.../SCT-013-000-2.pdf](https://cdn.sparkfun.com/assets/d/0/e/9/9/SCT-013-000-2.pdf) | Read |
+| ESP32-S3-DevKitC-1 v1.1 | Espressif user guide | [docs.espressif.com/.../user_guide_v1.1.html](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.1.html) | Read |
 | ESP32-S3-WROOM-1 | Espressif datasheet v1.8 | [documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf](https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf) | Read |
 | AP63203 (digital buck) | Diodes AP63200/01/03/05 datasheet, SparkFun copy (Jan 2019) | [cdn.sparkfun.com/.../AP63200-AP63201-AP63203-AP63205.pdf](https://cdn.sparkfun.com/assets/e/3/d/9/d/AP63200-AP63201-AP63203-AP63205.pdf) | Read |
 | AP63203 | Diodes product page (current datasheet DS41326) | [diodes.com/part/view/AP63203](https://www.diodes.com/part/view/AP63203) | Not read |
@@ -56,7 +57,7 @@ The datasheet link is on each page. These parts are not yet checked.
 
 Identifiers only. Search ti.com for them. None has been read.
 
-- SBAA506: ADC overstress protection circuit (relevant to input protection).
+- SBAA506: ADC overstress protection circuit (relevant to input protection). [ti.com/lit/an/sbaa506/sbaa506.pdf](https://www.ti.com/lit/an/sbaa506/sbaa506.pdf) downloads, but the text could not be extracted here.
 - SBAA385: two-phase Rogowski coil AFE.
 - SBAA106: communication methods for data integrity.
 - SBAA230: digital filter types.
