@@ -17,8 +17,8 @@ How the list was checked: Evelta, Sharvi Electronics, DNA Tech, Lion Circuits, I
 | 5 | ZMPT107-1, 2 mA : 2 mA | 1 | ₹83.69, ex-GST (page also shows ₹103.69 incl. taxes) | [Sharvi Electronics](https://sharvielectronics.com/product/zmpt107-1-current-type-voltage-transformer/) | Page names ZMPT107-1 with 2 mA : 2 mA and 3000 V. DNA Tech's [ZMPT107](https://www.dnatechindia.com/zmpt-0107-ac-mains-voltage-sensor-micro-transformer.html) is ₹70.80 incl. GST but out of stock and never says "-1". |
 | 6 | Hi-Link HLK-5M05 | 1 | ₹209 + GST, or ₹253.70 incl. GST | [Hubtronics](https://hubtronics.in/power-converter-modules/ac-dc-converter-modules/hlk-5m05), [Evelta](https://evelta.com/hlk-5m05-5w-ultra-compact-ac-dc-power-module-acin-100-240v-dcout-5v) | Hubtronics price is from an earlier check (site now blocks automated reading). |
 | 7 | TI LP5907MFX-3.3 | 1 | ₹62 | [Digi-Key India](https://www.digikey.in/en/products/detail/texas-instruments/LP5907MFX-3-3-NOPB/5034443) | Digi-Reel orders add ₹452. Combine with other Digi-Key items or ask an Indian seller. |
-| 8 | Littelfuse 0239001.HXP, 1 A slow-blow | 1 pack (5) | ₹110 per 5 | [Digi-Key India](https://www.digikey.in/en/products/detail/littelfuse-inc/0239001-HXP/778214) | |
-| 9 | Fuse holder, panel mount, 5 × 20 mm | 1 | ₹12 + GST | [Hubtronics](https://hubtronics.in/fuse-holder-panel-mount-red?tag=Fuse+Holder) | Earlier-check price. |
+| 8 | Bel Fuse 5HT 1-R, 1 A, 250 V AC, time-lag, ceramic 5 × 20 mm (listed breaking capacity 1.5 kA) | 1 | ₹80.30 at 1 piece (₹73.80 at 10) | [Lion Circuits](https://www.lioncircuits.com/parts/5HT%201-R) | **Replaces the Littelfuse 0239001 glass fuse, which is only rated 35 A at 250 V AC.** In stock, ships in 7 to 10 days. The 1.5 kA figure is from the seller's listing and a search summary of Bel's datasheet, which I have not opened: check [Bel's datasheet](https://www.alldatasheet.com/html-pdf/2166821/BEL/5HT%20250-R/64/1/5HT%20250-R.html) before ordering. Alternative: Littelfuse [0215001.MXP](https://www.lioncircuits.com/parts/0215001.MXP), 1 A ceramic, listed 1.5 kA, ₹248.52 at 1 piece. |
+| 9 | Fuse holder, panel mount, 5 × 20 mm | 1 | ₹12 + GST | [Hubtronics](https://hubtronics.in/fuse-holder-panel-mount-red?tag=Fuse+Holder) | Earlier-check price. The ceramic fuse is the same 5 × 20 mm size. Check the holder's own voltage and current rating before using it on mains. |
 | 10 | MOV 10D561K (Bourns, 560 V) | 1 | ₹38.23 shown (₹23.45 each at 10) | [Lion Circuits](https://lioncircuits.com/parts/MOV-10D561KTR) | Tape and reel, "In stock, ships in 7 to 10 days". [Digi-Key India](https://www.digikey.in/en/products/detail/bourns-inc/MOV-10D561K/2407569): ₹25.68, 0 in stock, 16-week lead time. [Evelta HEL-10D561K](https://evelta.com/560v-180pf-mov-varistor-through-hole): ₹5.25 ex-GST, sold out. |
 | 11 | 39 kΩ, ½ W, 1% metal film resistor | 3 | ₹7.51 each, sold from 25 pieces (₹187.72 per 25) | [Lion Circuits MF50 39K](https://www.lioncircuits.com/parts/MF50%2039K) | No 1-piece price on the page. Carries the full mains voltage, so keep the ½ W through-hole part. |
 | 12 | 24.9 Ω, 1%, 0805 resistor (the 25 Ω halves) | 2 | ₹9.51 each | [Digi-Key India](https://www.digikey.in/en/products/detail/yageo/RC0805FR-0724R9L/727759) | 24-week lead time at Digi-Key; marketplace stock shown. 24.9 Ω is the standard value nearest 25 Ω. |
@@ -36,6 +36,17 @@ How the list was checked: Evelta, Sharvi Electronics, DNA Tech, Lion Circuits, I
 | 19 | 220 µF, 25 V electrolytic capacitor (HLK-5M05 output) | 1 | ₹2.70 ex-GST (₹3.19 incl.) | [Evelta](https://evelta.com/220uf-25v-electrolytic-capacitor) | Page read: Samwha 6.3 × 11 mm, 18 in stock. Alternative: [Lion Circuits Nichicon UUX1E221MNL1GS](https://www.lioncircuits.com/parts/UUX1E221MNL1GS), ₹53.41. |
 | 20 | 2-pin 5.08 mm screw terminal block | 1 pack of 5 | ₹31.74 incl. GST | [Zbotic](https://zbotic.in/?p=438931) | Search result only; the page blocked reading, so pitch and pack size are unconfirmed. |
 | 21 | 7 × 9 cm perfboard, single-sided, 2.54 mm | 1 | ₹37 incl. GST | [Robu](https://st.robu.in/product/7-x-9-cm-universal-pcb-prototype-board-single-sided-2-54mm-hole-pitch) | Search result only; the link is the host the search returned. Robodo's [5-pack](https://robodo.in/products/5-pieces-general-purpose-perforated-pcb-boards-7-x-9-cm-perfboard) was listed at ₹18 but rate-limited when read. |
+
+### Input protection (TI SBAA506, added for version 3)
+
+Per ADC input pin, four pins in all: signal, then 1 kΩ, then a clamp node (a BAT54 Schottky diode to AVDD and a BAV199 pair to ground), then 100 Ω, then the ADC pin. The 10 nF capacitor sits across the two pins of each channel.
+
+| # | Part | Qty | Unit price (INR) | Buy link | Notes |
+|---|---|---|---|---|---|
+| 22 | Diodes BAT54-7-F, Schottky, SOT-23 | 4 | ₹10.55 at 1 piece (₹4.89 at 25) | [Lion Circuits](https://www.lioncircuits.com/parts/BAT54-7-F) | Page read; in stock. |
+| 23 | BAV199-7-F, dual series switching diode, SOT-23 | 4 | ₹20.72 at 1 piece (₹14.41 at 10) | [Lion Circuits](https://www.lioncircuits.com/parts/BAV199-7-F) | Page read; in stock. |
+| 24 | 100 Ω, 1%, 0805 resistor | 4 | not priced yet | | No listing checked. |
+| 25 | 3.3 V supply clamp (TVS or Zener on AVDD) | 1 | not chosen | | TI says a TVS or Zener is needed but names no part. AVDD absolute maximum is 3.9 V, so the part needs checking. |
 
 Still no price or link found: hook-up wire and a mains cable with plug. The Zbotic terminal block and Robu perfboard prices (rows 20 and 21) are from search results only.
 
@@ -57,11 +68,11 @@ Still no price or link found: hook-up wire and a mains cable with plug. The Zbot
 
 ## Rough total for part A
 
-Using rows 1 to 21, without GST, shipping or fees:
+Using rows 1 to 23, without GST, shipping or fees:
 
 | | Low | High |
 |---|---|---|
-| Total | about ₹3,600 | about ₹4,300 |
+| Total | about ₹3,700 | about ₹4,400 |
 
 This leaves out hook-up wire and the mains cable. Minimum-pack sizes push the real spend higher: 25 resistors, a reel of 1 kΩ and 1 µF parts, 10 MOVs, a 20-piece pack of 220 nF. Digi-Key adds a ₹452 fee on Digi-Reel items, and several Digi-Key parts showed zero stock and long lead times.
 
