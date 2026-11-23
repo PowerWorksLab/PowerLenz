@@ -1,0 +1,7 @@
+(version 1)
+# The mains terminal block J1 has a fixed pad gap of 2.48 mm (Phoenix MKDS 1,5/2-5.08, rated for 250 V by the manufacturer).
+# Everything else keeps the 3 mm "Mains" net-class clearance.
+(rule "J1 own pad gap"
+	(condition "A.Reference == 'J1' && B.Reference == 'J1'")
+	(constraint clearance (min 2.4mm))
+)

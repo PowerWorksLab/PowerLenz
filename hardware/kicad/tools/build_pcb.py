@@ -19,12 +19,13 @@ VERSION = "20260206"
 
 BOARD_W, BOARD_H = 154.0, 86.0
 BARRIER_X = 56.0
+SLOT_W, SLOT_A, SLOT_B = 1.0, (10.0, 36.0), (52.0, 80.0)   # slot width and y ranges (mm)
 DK_X, DK_Y = 121.0, 10.0       # pin 1 of the DevKitC left socket row; right row is 22.86 mm further right
 
 # ref -> (x, y, rotation). Compact placement; not a routed design.
 PLACE = {
     # --- mains side ---
-    "J1": (8, 16, 90), "F1": (30, 8, 0), "RV1": (47, 22, 0),
+    "J1": (8, 16, 90), "F1": (30, 8, 0), "RV1": (42, 22, 0),
     "R1": (22, 30, 0), "R2": (22, 38, 0), "R3": (22, 46, 0), "C1": (20, 58, 0),
     "T1": (56, 44, 180), "PS1": (40, 68, 0), "C2": (82, 68, 0),
     # --- analog front end (low voltage) ---
@@ -139,6 +140,11 @@ def gr_line(x1, y1, x2, y2, layer, width=0.15, dashed=False):
             % (num(x1), num(y1), num(x2), num(y2), num(width), "dash" if dashed else "solid", layer, uid()))
 
 
+def gr_rect(x1, y1, x2, y2, layer, width=0.1):
+    return ("\t(gr_rect\n\t\t(start %s %s)\n\t\t(end %s %s)\n\t\t(stroke\n\t\t\t(width %s)\n\t\t\t(type solid)\n\t\t)\n\t\t(fill no)\n\t\t(layer \"%s\")\n\t\t(uuid \"%s\")\n\t)"
+            % (num(x1), num(y1), num(x2), num(y2), num(width), layer, uid()))
+
+
 def gr_text(s, x, y, layer, size=1.2, bold=False):
     return ("\t(gr_text \"%s\"\n\t\t(at %s %s 0)\n\t\t(layer \"%s\")\n\t\t(uuid \"%s\")\n\t\t(effects\n\t\t\t(font\n\t\t\t\t(size %s %s)\n\t\t\t\t(thickness %s)\n\t\t\t)\n\t\t\t(justify left)\n\t\t)\n\t)"
             % (s, num(x), num(y), layer, uid(), num(size), num(size), num(size / 6 if not bold else size / 4)))
@@ -187,10 +193,13 @@ def main():
         gr_line(0, 0, BOARD_W, 0, "Edge.Cuts", 0.1), gr_line(BOARD_W, 0, BOARD_W, BOARD_H, "Edge.Cuts", 0.1),
         gr_line(BOARD_W, BOARD_H, 0, BOARD_H, "Edge.Cuts", 0.1), gr_line(0, BOARD_H, 0, 0, "Edge.Cuts", 0.1),
         gr_line(BARRIER_X, 2, BARRIER_X, BOARD_H - 2, "F.SilkS", 0.25, dashed=True),
+        # 1 mm milled slots along the isolation line; the board stays joined at the top, the middle (ZMPT) and the bottom
+        gr_rect(BARRIER_X - SLOT_W / 2, SLOT_A[0], BARRIER_X + SLOT_W / 2, SLOT_A[1], "Edge.Cuts"),
+        gr_rect(BARRIER_X - SLOT_W / 2, SLOT_B[0], BARRIER_X + SLOT_W / 2, SLOT_B[1], "Edge.Cuts"),
         gr_text("MAINS SIDE 230 V", 8, 83, "F.SilkS", 1.5, True),
         gr_text("LOW VOLTAGE", 62, 3, "F.SilkS", 1.5, True),
         gr_text("ISOLATION BARRIER", BARRIER_X + 2, BOARD_H - 3, "F.SilkS", 1.0),
-        gr_text("PowerLenz v0.1  not for manufacture", 100, BOARD_H - 2, "F.SilkS", 1.0),
+        gr_text("DRAFT - mains creepage unreviewed - not for manufacture", 70, BOARD_H - 2, "F.SilkS", 1.0),
     ]
     nets = ['\t(net 0 "")'] + ['\t(net %d "%s")' % (i, n) for n, i in sorted(netid.items(), key=lambda kv: kv[1])]
     layers = open(os.path.join(HERE, "pcb_layers.txt"), encoding="utf-8").read().rstrip("\n")

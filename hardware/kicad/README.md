@@ -24,10 +24,13 @@ Needs KiCad 10 (`kicad-cli`) and Python 3. Connections are made with net labels 
 
 ## PCB and 3D model
 
-`tools/build_pcb.py` builds `powerlenz.kicad_pcb` from the schematic netlist: all parts are placed on a compact 154 x 86 mm board (with the ESP32-S3 DevKitC plugged into two 1x22 sockets; its outline and 22.86 mm row spacing are assumed) with a mains zone and a low-voltage zone, and every pad is assigned its net. `tools/route.py` then routes the low-voltage side with Freerouting (needs Java and the Freerouting jar in `~/tools`, not stored in the repo). **The mains side (L_IN, L_FUSED, N and the 39 k chain, 14 connections) is deliberately left unrouted** until someone with mains-design experience sets creepage and the isolation slot. It is a picture of the design, not something to manufacture.
+`tools/build_pcb.py` builds `powerlenz.kicad_pcb` from the schematic netlist: all parts are placed on a compact 154 x 86 mm board (with the ESP32-S3 DevKitC plugged into two 1x22 sockets; its outline and 22.86 mm row spacing are assumed) with a mains zone and a low-voltage zone, and every pad is assigned its net. `tools/route.py` then routes it with Freerouting in two separate runs (needs Java and the Freerouting jar in `~/tools`, not stored in the repo): the low-voltage side (0.25 mm signals, 0.5 mm power, 0.2 mm clearance, GND pour on the back copper) and the mains nets `L_IN`, `L_FUSED`, `N`, `ZA_P`, `ZP1`, `ZP2` (0.8 mm tracks, 3 mm clearance, the `Mains` net class in `powerlenz.kicad_pro`). Two 1 mm slots are milled along the isolation line at x = 56 mm (Edge.Cuts); `powerlenz.kicad_dru` relaxes the rule only for the terminal block J1, whose own pad gap is 2.48 mm.
+
+**DRAFT: the mains clearance, the slot and the isolation spacing are my starting values (roughly IEC 60664-1 basic creepage for 250 V, pollution degree 2, plus margin) and have not been reviewed by anyone with mains-design experience.** Do not build this board. DRC reports no clearance, short or unconnected errors, only silkscreen and library-copy warnings.
 
 ```
 python3 tools/build_pcb.py        # after the schematic is built
+python3 tools/route.py            # needs ~/tools/freerouting*.jar; removes old tracks, then routes
 kicad-cli pcb render --side top --width 2400 --height 1500 --quality high --rotate '-50,0,-25' --perspective --zoom 0.9 -o exports/3d/powerlenz-pcb-3d.png powerlenz.kicad_pcb
 kicad-cli pcb export glb --subst-models -o exports/3d/powerlenz-pcb.glb powerlenz.kicad_pcb
 kicad-cli pcb export step --subst-models -o exports/3d/powerlenz-pcb.step powerlenz.kicad_pcb
