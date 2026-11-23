@@ -46,6 +46,57 @@ def block1_mains():
     s.text("HLK-5M05 -Vout is the isolated low-voltage ground (GND)", 177.8, 124.46, 1.27)
 
 
+def block2_analog():
+    """CT burden, ZMPT107-1 sampling resistors and the input chain for CH1 (current) and CH2 (voltage).
+
+    Per ADC input pin: 1 kohm, clamp node (BAT54 to AVDD, BAV199 pair to GND), 100 ohm, ADC pin (TI SBAA506).
+    10 nF C0G across each channel's pair, after the 100 ohm resistors.
+    """
+    s.box(12.7, 137.16, 275, 290)
+    s.text("2. ANALOG FRONT END: BURDEN, SAMPLING RESISTORS AND ADC INPUT PROTECTION (low voltage, isolated side)", 15.24, 144, 2.0, True)
+    yi = 160.02
+    s.text("CT current sensor: burden 2 x 6.49 ohm, midpoint to GND", 15.24, 152.4, 1.27)
+    s.part("Connector", "Screw_Terminal_01x02", "CT SCT-013-000", (25.4, yi), {1: "CT_P", 2: "CT_N"}, prefix="J",
+           extra={"Note": "Current-output CT (100 A : 50 mA). Never leave the CT secondary open"})
+    s.part("Device", "R", "6.49R 1%", (68.58, yi), {1: "CT_P", 2: "GND"}, prefix="R", rot=90,
+           extra={"MPN": "CRCW12066R49FKEA", "Manufacturer": "Vishay", "Note": "Burden half; 2 x 6.49 = 12.98 ohm"})
+    s.part("Device", "R", "6.49R 1%", (96.52, yi), {1: "GND", 2: "CT_N"}, prefix="R", rot=90,
+           extra={"MPN": "CRCW12066R49FKEA", "Manufacturer": "Vishay"})
+    s.text("ZMPT107-1 sampling: 2 x 24.9 ohm = about 50 ohm, midpoint to GND", 134.62, 152.4, 1.27)
+    s.part("Device", "R", "24.9R 1%", (160.02, yi), {1: "V_P", 2: "GND"}, prefix="R", rot=90,
+           extra={"MPN": "RC0805FR-0724R9L", "Manufacturer": "Yageo", "Note": "Sampling resistor half"})
+    s.part("Device", "R", "24.9R 1%", (187.96, yi), {1: "GND", 2: "V_N"}, prefix="R", rot=90,
+           extra={"MPN": "RC0805FR-0724R9L", "Manufacturer": "Yageo"})
+
+    legs = [  # (row y, input net, clamp node, mid net, ADC net, label)
+        (190.5, "CT_P", "CT_P_C", "CT_P_M", "CH1P", "CH1 current, + leg"),
+        (215.9, "CT_N", "CT_N_C", "CT_N_M", "CH1N", "CH1 current, - leg"),
+        (241.3, "V_P", "V_P_C", "V_P_M", "CH2P", "CH2 voltage, + leg"),
+        (266.7, "V_N", "V_N_C", "V_N_M", "CH2N", "CH2 voltage, - leg"),
+    ]
+    for y, inn, node, mid, adc, title in legs:
+        s.text(title, 15.24, y - 6.5, 1.27)
+        s.part("Device", "R", "1k 1%", (63.5, y), {1: inn, 2: node}, prefix="R", rot=90,
+               extra={"MPN": "RC0805FR-071KL", "Manufacturer": "Yageo", "Note": "Input filter resistor (TI SBAA506 R1)"})
+        s.part("Device", "D_Schottky", "BAT54", (104.14, y), {2: node, 1: "+3V3A"}, prefix="D",
+               extra={"MPN": "BAT54-7-F", "Manufacturer": "Diodes Inc",
+                      "Note": "Clamps positive overstress to AVDD. SOT-23 pin mapping to be checked in the BAT54 datasheet"})
+        s.part("Device", "D", "BAV199 (a)", (139.7, y), {2: "GND", 1: mid}, prefix="D",
+               extra={"MPN": "BAV199-7-F", "Manufacturer": "Diodes Inc",
+                      "Note": "One BAV199 package = two series diodes (this and the next). Pin mapping to be checked in its datasheet"})
+        s.part("Device", "D", "BAV199 (b)", (175.26, y), {2: mid, 1: node}, prefix="D",
+               extra={"MPN": "BAV199-7-F", "Manufacturer": "Diodes Inc"})
+        s.part("Device", "R", "100R 1%", (210.82, y), {1: node, 2: adc}, prefix="R", rot=90,
+               extra={"MPN": "RC0805FR-07100RL", "Manufacturer": "Yageo", "Note": "TI SBAA506 R2; not yet priced"})
+    s.part("Device", "C", "10nF C0G", (254, 203.2), {1: "CH1P", 2: "CH1N"}, prefix="C",
+           extra={"MPN": "0805N103J500CT", "Manufacturer": "Walsin", "Note": "C0G, 5%, 50 V. Across the CH1 pair, after the 100 ohm resistors"})
+    s.part("Device", "C", "10nF C0G", (254, 254), {1: "CH2P", 2: "CH2N"}, prefix="C",
+           extra={"MPN": "0805N103J500CT", "Manufacturer": "Walsin", "Note": "C0G, 5%, 50 V. Across the CH2 pair, after the 100 ohm resistors"})
+    s.text("Differential corner about 7.2 kHz (1.1 kohm per leg); same on both channels so the phase lags cancel", 15.24, 284, 1.27)
+    s.text("TI clamp per pin: BAT54 to AVDD (+3V3A) and a BAV199 pair to GND, between the 1 kohm and 100 ohm resistors", 15.24, 288, 1.27)
+
+
 block1_mains()
+block2_analog()
 s.save(OUT)
 print("wrote", os.path.abspath(OUT))
