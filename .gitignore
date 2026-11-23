@@ -1,0 +1,5 @@
+# Third-party datasheet PDFs are kept locally, not in git (see documentation/datasheets/README.md)
+documentation/datasheets/**/*.pdf
+
+# LibreOffice lock files
+.~lock.*#

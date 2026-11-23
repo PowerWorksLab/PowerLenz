@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="60 390 700 430" width="2800" height="1720"><style>
+.zone-m{fill:#c2362b;fill-opacity:.06}
+.zone-l{fill:#1f6fb5;fill-opacity:.05}
+.wm,.ws,.wp,.wd{fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.wm{stroke:#c2362b}.ws{stroke:#1f6fb5}.wp{stroke:#a9650a}.wd{stroke:#5d6a73;stroke-width:1.8}
+.part{fill:#fff;stroke:#1b2227;stroke-width:1.6}
+.block{fill:#fff;stroke:#1b2227;stroke-width:1.8}
+.thin{fill:none;stroke:#1b2227;stroke-width:1.6;stroke-linecap:round}
+.gnd{fill:none;stroke:#1f6fb5;stroke-width:1.8;stroke-linecap:round}
+.barrier{stroke:#1b2227;stroke-width:1.4;stroke-dasharray:7 5}
+.dot-m{fill:#c2362b}.dot-s{fill:#1f6fb5}.dot-p{fill:#a9650a}
+.a-m{fill:#c2362b}.a-s{fill:#1f6fb5}.a-p{fill:#a9650a}.a-d{fill:#5d6a73}
+text{fill:#1b2227;font-family:'Liberation Sans',Arial,sans-serif;font-size:13px}
+.b{font-weight:700;font-size:14px}
+.mono{font-family:'Liberation Mono','Courier New',monospace;font-size:12px}
+.dim{fill:#5d6a73;font-size:12px}
+.zone-label{fill:#5d6a73;font-size:12px;letter-spacing:.08em;font-weight:700}
+.tm{fill:#c2362b}.ts{fill:#1f6fb5}.tp{fill:#a9650a}
+.core{fill:#cfd6db;stroke:#1b2227;stroke-width:1.6;fill-rule:evenodd}
+.turn{stroke:#1f6fb5;stroke-width:3;stroke-linecap:round;fill:none}
+.flux{fill:none;stroke:#5d6a73;stroke-width:2;stroke-dasharray:6 5}
+.badge{fill:#1b2227}
+.badge-t{fill:#fff;font-weight:700;font-size:12px;text-anchor:middle}
+.grid{stroke:#cfd6db;stroke-width:1;fill:none}
+.axis{stroke:#5d6a73;stroke-width:1.2;fill:none}
+.curve{fill:none;stroke:#1f6fb5;stroke-width:2.6}
+.wave-in{fill:none;stroke:#5d6a73;stroke-width:1.4;stroke-linejoin:round}
+.wave-out{fill:none;stroke:#1f6fb5;stroke-width:2.6}
+.band-sig{fill:#1f6fb5;fill-opacity:.13}
+.band-noise{fill:#c2362b;fill-opacity:.10}
+.vline{stroke:#1b2227;stroke-width:1.2;stroke-dasharray:4 4;fill:none}
+</style><rect x="-200" y="-200" width="1800" height="1400" fill="#ffffff"/>
+        <defs>
+          <g id="gnd"><path class="gnd" d="M0 0 v6 M-9 6 h18 M-6 10 h12 M-3 14 h6"/></g>
+        </defs>
+
+        <!-- zones -->
+        <rect class="zone-m" x="20" y="20" width="1160" height="320" rx="4"/>
+        <rect class="zone-l" x="20" y="340" width="1160" height="475" rx="4"/>
+        <text class="zone-label tm" x="1160" y="100" text-anchor="end">MAINS SIDE · 230 V · HAZARDOUS</text>
+        <text class="zone-label ts" x="1160" y="806" text-anchor="end">LOW-VOLTAGE SIDE</text>
+
+        <!-- ===== MAINS SIDE ===== -->
+        <path class="wm" d="M40 60 H1150"/>
+        <polygon class="a-m" points="1148,53 1162,60 1148,67"/>
+        <circle class="dot-m" cx="40" cy="60" r="4"/>
+        <text x="40" y="44" class="mono tm">L in</text>
+        <text x="1160" y="44" text-anchor="end" class="dim">to home loads (from main MCB →)</text>
+
+        <!-- CT -->
+        <ellipse class="thin" cx="90" cy="60" rx="13" ry="25"/>
+        <text x="116" y="32" class="b">Split-core CT, SCT-013-000</text>
+        <text x="116" y="49" class="dim">clamps the L wire only</text>
+        <path class="ws" d="M80 84 V770 H700"/>
+        <path class="ws" d="M100 85 V670 H700"/>
+        <text x="112" y="430" class="dim">CT leads: current,</text>
+        <text x="112" y="446" class="dim">mA-level, isolated</text>
+
+        <!-- fused tap -->
+        <circle class="dot-m" cx="170" cy="60" r="4"/>
+        <path class="wm" d="M170 60 V92 M170 128 V140 H1010 V270"/>
+        <rect class="part" x="162" y="92" width="16" height="36"/>
+        <path class="thin" d="M170 92 V128"/>
+        <text x="190" y="108" class="dim">fuse 1 A, ceramic</text>
+        <text x="190" y="124" class="dim">time-lag, 1.5 kA</text>
+        <text x="560" y="132" class="mono tm">L (fused)</text>
+
+        <!-- neutral -->
+        <circle class="dot-m" cx="140" cy="190" r="4"/>
+        <text x="140" y="212" text-anchor="middle" class="mono tm">N in</text>
+        <path class="wm" d="M140 190 H910 V270"/>
+        <text x="560" y="182" class="mono tm">N</text>
+
+        <!-- MOV -->
+        <path class="wm" d="M260 140 V152 M260 178 V190"/>
+        <rect class="part" x="252" y="152" width="16" height="26"/>
+        <path class="thin" d="M254 174 L266 156"/>
+        <circle class="dot-m" cx="260" cy="140" r="3.5"/>
+        <circle class="dot-m" cx="260" cy="190" r="3.5"/>
+        <text x="244" y="164" text-anchor="end" class="dim">MOV 10D561K</text>
+        <text x="244" y="180" text-anchor="end" class="dim">surge clamp</text>
+
+        <!-- ZMPT107-1 primary: three 39 k resistors in series, hop over N -->
+        <circle class="dot-m" cx="350" cy="140" r="3.5"/>
+        <path class="wm" d="M350 140 V182 A8 8 0 0 1 350 198 V212 M350 248 V270"/>
+        <rect class="part" x="342" y="212" width="16" height="36"/>
+        <text x="334" y="226" text-anchor="end" class="dim">R′ = 3 × 39 kΩ</text>
+        <text x="334" y="242" text-anchor="end" class="dim">in series, ≈ 2 mA</text>
+        <circle class="dot-m" cx="430" cy="190" r="3.5"/>
+        <path class="wm" d="M430 190 V270"/>
+
+        <!-- ZMPT107-1 -->
+        <rect class="block" x="310" y="270" width="160" height="130" rx="3"/>
+        <text x="390" y="296" text-anchor="middle" class="b">ZMPT107-1</text>
+        <text x="390" y="316" text-anchor="middle" class="dim">current-type, 2 mA : 2 mA</text>
+        <text x="390" y="370" text-anchor="middle" class="dim">3000 V isolated</text>
+
+        <!-- HLK-5M05 -->
+        <rect class="block" x="880" y="270" width="160" height="130" rx="3"/>
+        <text x="960" y="296" text-anchor="middle" class="b">HLK-5M05</text>
+        <text x="960" y="316" text-anchor="middle" class="dim">85–265 V AC in, 5 V out</text>
+        <text x="960" y="370" text-anchor="middle" class="dim">isolated, 1 A</text>
+        <text x="700" y="240" text-anchor="middle" class="dim">only if certifying: 0.1 µF X2 cap + 10–30 mH choke at the HLK input</text>
+
+        <!-- barrier -->
+        <line class="barrier" x1="20" y1="340" x2="1180" y2="340"/>
+        <text x="700" y="332" text-anchor="middle" class="zone-label">ISOLATION BARRIER</text>
+
+        <!-- ===== LOW-VOLTAGE SIDE ===== -->
+        <!-- voltage channel (CH2) -->
+        <path class="ws" d="M430 400 V520 H700"/>
+        <path class="ws" d="M350 400 V620 H700"/>
+        <path class="ws" d="M470 520 V530 M470 558 V582 M470 610 V620 M470 570 H500"/>
+        <rect class="part" x="462" y="530" width="16" height="28"/>
+        <rect class="part" x="462" y="582" width="16" height="28"/>
+        <circle class="dot-s" cx="470" cy="520" r="3.5"/>
+        <circle class="dot-s" cx="470" cy="570" r="3.5"/>
+        <circle class="dot-s" cx="470" cy="620" r="3.5"/>
+        <use xlink:href="#gnd" x="500" y="570"/>
+        <text x="456" y="548" text-anchor="end" class="dim">25 Ω</text>
+        <text x="456" y="600" text-anchor="end" class="dim">25 Ω</text>
+        <text x="514" y="566" class="dim">AGND</text>
+        <rect class="part" x="510" y="512" width="36" height="16"/>
+        <rect class="part" x="510" y="612" width="36" height="16"/>
+        <text x="528" y="504" text-anchor="middle" class="dim">1 kΩ</text>
+        <text x="528" y="604" text-anchor="middle" class="dim">1 kΩ</text>
+        <circle class="dot-s" cx="580" cy="520" r="3.5"/>
+        <circle class="dot-s" cx="580" cy="620" r="3.5"/>
+        <path class="ws" d="M580 520 V532 M580 608 V620"/>
+        <rect class="block" x="558" y="532" width="44" height="24" rx="3"/>
+        <rect class="block" x="558" y="584" width="44" height="24" rx="3"/>
+        <text x="580" y="548" text-anchor="middle" class="dim">clamp</text>
+        <text x="580" y="600" text-anchor="middle" class="dim">clamp</text>
+        <rect class="part" x="620" y="512" width="36" height="16"/>
+        <rect class="part" x="620" y="612" width="36" height="16"/>
+        <text x="638" y="504" text-anchor="middle" class="dim">100 Ω</text>
+        <text x="638" y="604" text-anchor="middle" class="dim">100 Ω</text>
+        <circle class="dot-s" cx="676" cy="520" r="3.5"/>
+        <circle class="dot-s" cx="676" cy="620" r="3.5"/>
+        <path class="ws" d="M676 520 V566 M676 574 V620"/>
+        <path class="thin" d="M664 566 H688 M664 574 H688"/>
+        <text x="660" y="574" text-anchor="end" class="dim">10 nF</text>
+        <text x="342" y="486" text-anchor="end" class="b ts">VOLTAGE</text>
+        <text x="342" y="504" text-anchor="end" class="dim">CH2, gain 2</text>
+
+        <!-- current channel (CH1) -->
+        <path class="ws" d="M470 670 V680 M470 708 V732 M470 760 V770 M470 720 H500"/>
+        <rect class="part" x="462" y="680" width="16" height="28"/>
+        <rect class="part" x="462" y="732" width="16" height="28"/>
+        <circle class="dot-s" cx="470" cy="670" r="3.5"/>
+        <circle class="dot-s" cx="470" cy="720" r="3.5"/>
+        <circle class="dot-s" cx="470" cy="770" r="3.5"/>
+        <use xlink:href="#gnd" x="500" y="720"/>
+        <text x="456" y="698" text-anchor="end" class="dim">6.49 Ω</text>
+        <text x="456" y="750" text-anchor="end" class="dim">6.49 Ω</text>
+        <text x="514" y="716" class="dim">AGND</text>
+        <rect class="part" x="510" y="662" width="36" height="16"/>
+        <rect class="part" x="510" y="762" width="36" height="16"/>
+        <text x="528" y="654" text-anchor="middle" class="dim">1 kΩ</text>
+        <text x="528" y="754" text-anchor="middle" class="dim">1 kΩ</text>
+        <circle class="dot-s" cx="580" cy="670" r="3.5"/>
+        <circle class="dot-s" cx="580" cy="770" r="3.5"/>
+        <path class="ws" d="M580 670 V682 M580 758 V770"/>
+        <rect class="block" x="558" y="682" width="44" height="24" rx="3"/>
+        <rect class="block" x="558" y="734" width="44" height="24" rx="3"/>
+        <text x="580" y="698" text-anchor="middle" class="dim">clamp</text>
+        <text x="580" y="750" text-anchor="middle" class="dim">clamp</text>
+        <rect class="part" x="620" y="662" width="36" height="16"/>
+        <rect class="part" x="620" y="762" width="36" height="16"/>
+        <text x="638" y="654" text-anchor="middle" class="dim">100 Ω</text>
+        <text x="638" y="754" text-anchor="middle" class="dim">100 Ω</text>
+        <circle class="dot-s" cx="676" cy="670" r="3.5"/>
+        <circle class="dot-s" cx="676" cy="770" r="3.5"/>
+        <path class="ws" d="M676 670 V716 M676 724 V770"/>
+        <path class="thin" d="M664 716 H688 M664 724 H688"/>
+        <text x="660" y="724" text-anchor="end" class="dim">10 nF</text>
+        <text x="116" y="650" class="b ts">CURRENT</text>
+        <text x="116" y="666" class="dim" dy="-0">CH1, gain 1</text>
+        <text x="116" y="692" class="dim">burden 2 × 6.49 Ω ≈ 13 Ω</text>
+        <text x="116" y="800" class="dim">clamp = BAT54 to AVDD + BAV199 pair to AGND, one per ADC input pin (TI SBAA506)</text>
+
+        <!-- ADC -->
+        <rect class="block" x="700" y="470" width="180" height="320" rx="3"/>
+        <text x="790" y="490" text-anchor="middle" class="b">ADS131M04</text>
+        <text x="790" y="508" text-anchor="middle" class="dim">24-bit Δ-Σ · 8 kSPS</text>
+        <text x="710" y="524" class="mono">CH2 +  voltage</text>
+        <text x="710" y="624" class="mono">CH2 −</text>
+        <text x="710" y="574" class="mono dim">CH0, CH3 spare</text>
+        <text x="710" y="674" class="mono">CH1 +  current</text>
+        <text x="710" y="774" class="mono">CH1 −</text>
+        <text x="790" y="716" text-anchor="middle" class="mono dim">1 µF AVDD, 1 µF DVDD</text>
+        <text x="790" y="734" text-anchor="middle" class="mono dim">220 nF CAP · AGND=DGND</text>
+
+        <!-- HLK outputs and power -->
+        <path class="wp" d="M910 400 V402"/><use xlink:href="#gnd" x="910" y="400"/>
+        <text x="924" y="420" class="mono dim">0 V</text>
+        <path class="wp" d="M1010 400 V500 M1010 426 H880"/>
+        <circle class="dot-p" cx="1010" cy="426" r="3.5"/>
+        <polygon class="a-p" points="1004,490 1010,500 1016,490"/>
+        <text x="1020" y="416" class="mono tp">+5 V</text>
+        <text x="1020" y="462" class="mono tp">5V pin</text>
+        <text x="1020" y="480" class="dim">DevKitC makes 3.3 V</text>
+        <rect class="block" x="740" y="412" width="140" height="28" rx="3"/>
+        <text x="810" y="431" text-anchor="middle" class="dim">LP5907 3.3 V</text>
+        <path class="wp" d="M810 440 V462"/><polygon class="a-p" points="804,460 810,470 816,460"/>
+        <text x="822" y="460" class="mono tp">AVDD · DVDD</text>
+
+        <!-- ESP32 -->
+        <rect class="block" x="1000" y="500" width="170" height="290" rx="3"/>
+        <text x="1085" y="524" text-anchor="middle" class="b">ESP32-S3 DevKitC</text>
+        <text x="1085" y="542" text-anchor="middle" class="dim">N16R8 module</text>
+        <text x="1085" y="574" text-anchor="middle" class="dim">calibration + DSP</text>
+        <text x="1085" y="592" text-anchor="middle" class="dim">P · Q · RMS · harmonics</text>
+        <text x="1085" y="610" text-anchor="middle" class="dim">event detection</text>
+        <text x="1085" y="628" text-anchor="middle" class="dim">PSRAM waveform buffer</text>
+        <text x="1085" y="656" text-anchor="middle" class="dim">makes CLKIN 8.192 MHz</text>
+        <text x="1085" y="774" text-anchor="middle" class="dim">Wi-Fi · MQTT/TLS → cloud</text>
+
+        <!-- SPI and control wires -->
+        <path class="wd" d="M1000 550 H884"/><polygon class="a-d" points="892,544 880,550 892,556"/>
+        <text x="940" y="543" text-anchor="middle" class="mono">SCLK</text>
+        <path class="wd" d="M1000 580 H884"/><polygon class="a-d" points="892,574 880,580 892,586"/>
+        <text x="940" y="573" text-anchor="middle" class="mono">MOSI</text>
+        <path class="wd" d="M880 610 H996"/><polygon class="a-d" points="988,604 1000,610 988,616"/>
+        <text x="940" y="603" text-anchor="middle" class="mono">MISO</text>
+        <path class="wd" d="M1000 640 H884"/><polygon class="a-d" points="892,634 880,640 892,646"/>
+        <text x="940" y="633" text-anchor="middle" class="mono">CS</text>
+        <path class="wd" d="M880 670 H996"/><polygon class="a-d" points="988,664 1000,670 988,676"/>
+        <text x="940" y="663" text-anchor="middle" class="mono">DRDY</text>
+        <path class="wd" d="M1000 700 H884"/><polygon class="a-d" points="892,694 880,700 892,706"/>
+        <text x="940" y="693" text-anchor="middle" class="mono">CLKIN</text>
+        <path class="wd" d="M1000 730 H884"/><polygon class="a-d" points="892,724 880,730 892,736"/>
+        <text x="940" y="723" text-anchor="middle" class="mono">SYNC/RESET</text>
+      </svg>
