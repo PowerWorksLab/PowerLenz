@@ -11,4 +11,5 @@
 	(lib (name "TerminalBlock_Phoenix")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/TerminalBlock_Phoenix.pretty")(options "")(descr ""))
 	(lib (name "Connector_PinHeader_2.54mm")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Connector_PinHeader_2.54mm.pretty")(options "")(descr ""))
 	(lib (name "Converter_ACDC")(type "KiCad")(uri "${KICAD10_FOOTPRINT_DIR}/Converter_ACDC.pretty")(options "")(descr ""))
+	(lib (name "powerlenz")(type "KiCad")(uri "${KIPRJMOD}/footprints/powerlenz.pretty")(options "")(descr "PowerLenz custom footprints"))
 )
