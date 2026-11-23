@@ -142,6 +142,9 @@ class Schematic:
         return ref
 
     def _connect(self, net, px, py, out_ang, flag=False):
+        if net.startswith("~"):  # label only, no power symbol
+            self.label(net[1:], px, py, out_ang)
+            return
         dx = math.cos(math.radians(out_ang))
         dy = -math.sin(math.radians(out_ang))
         if net in POWER_SYMS or flag:

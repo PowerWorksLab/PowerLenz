@@ -103,7 +103,7 @@ def block3_adc_power():
     s.text("3. ADS131M04 ADC AND 3.3 V SUPPLY (LP5907)", 294.64, 22, 2.0, True)
     # LP5907 supply from the HLK 5 V rail
     s.text("LP5907: quiet 3.3 V for AVDD and DVDD (HLK ripple rejected about 60 dB at 100 kHz)", 294.64, 30, 1.27)
-    s.part("Regulator_Linear", "LP5907MFX-3.3", "LP5907-3.3", (332.74, 55.88), {1: "+5V", 3: "+5V", 5: "+3V3A", 2: "GND"},
+    s.part("Regulator_Linear", "LP5907MFX-3.3", "LP5907-3.3", (332.74, 55.88), {1: "+5V", 3: "~+5V", 5: "~+3V3A", 2: "GND"},
            prefix="U", nc=(4,), extra={"MPN": "LP5907MFX-3.3/NOPB", "Manufacturer": "Texas Instruments",
                                        "Note": "250 mA, under 6.5 uV rms noise; EN tied to IN"})
     s.part("Device", "C", "1uF 50V X7R", (304.8, 68.58), {1: "+5V", 2: "GND"}, prefix="C",
@@ -112,9 +112,9 @@ def block3_adc_power():
            extra={"MPN": "CC0805KKX7R9BB105", "Manufacturer": "Yageo", "Note": "LP5907 output capacitor, 1 uF ceramic"})
     # ADC
     s.part("Analog_ADC", "ADS131M04xPW", "ADS131M04", (449.58, 91.44),
-           {1: "+3V3A", 20: "+3V3A", 2: "GND", 19: "GND",
+           {1: "~+3V3A", 20: "~+3V3A", 2: "~GND", 19: "~GND",
             6: "CH1P", 5: "CH1N", 7: "CH2P", 8: "CH2N",
-            3: "GND", 4: "GND", 10: "GND", 9: "GND",
+            3: "~GND", 4: "~GND", 10: "~GND", 9: "~GND",
             18: "ADC_CAP", 14: "ADC_SCLK", 16: "ADC_DIN", 15: "ADC_DOUT", 12: "ADC_CS",
             13: "ADC_DRDY", 17: "ADC_CLKIN", 11: "ADC_RESET"},
            prefix="U", extra={"MPN": "ADS131M04IPWR", "Manufacturer": "Texas Instruments",
@@ -130,8 +130,36 @@ def block3_adc_power():
     s.text("ADC to MCU: SCLK, DIN, DOUT, CS, DRDY, CLKIN, SYNC/RESET (nets ADC_*)", 294.64, 154, 1.27)
 
 
+
+def block4_header():
+    """Header carrying the ADC control signals and the 5 V supply to the ESP32-S3 DevKitC."""
+    s.box(292.1, 165.1, 560, 290)
+    s.text("4. HEADER TO THE ESP32-S3 DEVKITC (N16R8)", 294.64, 172, 2.0, True)
+    s.part("Connector_Generic", "Conn_01x09", "To DevKitC", (368.3, 228.6),
+           {1: "ADC_SCLK", 2: "ADC_DIN", 3: "ADC_DOUT", 4: "ADC_CS", 5: "ADC_DRDY", 6: "ADC_CLKIN", 7: "ADC_RESET",
+            8: "~+5V", 9: "~GND"}, prefix="J",
+           extra={"Note": "Wire or header to the DevKitC. Pin 8 feeds the DevKitC 5V pin. Never connect USB and this 5 V at the same time"})
+    s.text("Suggested DevKitC pins (not final):", 400.0, 200.0, 1.27, True)
+    rows = [
+        "1  ADC_SCLK   -> IO12 (FSPICLK)",
+        "2  ADC_DIN    -> IO11 (FSPID, MOSI)",
+        "3  ADC_DOUT   -> IO13 (FSPIQ, MISO)",
+        "4  ADC_CS     -> IO10 (FSPICS0)",
+        "5  ADC_DRDY   -> IO4  (interrupt)",
+        "6  ADC_CLKIN  <- IO5  (8.192 MHz from LEDC or I2S)",
+        "7  ADC_RESET  <- IO6  (SYNC/RESET)",
+        "8  +5V        -> DevKitC 5V pin",
+        "9  GND        -> DevKitC GND",
+    ]
+    for i, r in enumerate(rows):
+        s.text(r, 400.0, 206.0 + 5.0 * i, 1.27)
+    s.text("Avoid IO35-37 (octal PSRAM), strapping pins IO0/3/45/46 and IO19/20 (USB). The DevKitC makes its own 3.3 V from the 5V pin.", 294.64, 262.0, 1.27)
+    s.text("The ADC runs from the LP5907, not from the DevKitC 3V3 pin. Power sources on the DevKitC are mutually exclusive: USB, 5V pin or 3V3 pin.", 294.64, 266.0, 1.27)
+
+
 block1_mains()
 block2_analog()
 block3_adc_power()
+block4_header()
 s.save(OUT)
 print("wrote", os.path.abspath(OUT))

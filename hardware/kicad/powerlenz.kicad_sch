@@ -2,7 +2,7 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "58376948-81ce-4954-ae1c-bc1e9c7f26d0")
+	(uuid "1fcbfd22-ec62-4307-9c1b-4a549448c65c")
 	(paper "A2")
 	(title_block
 		(title "PowerLenz: single-phase NILM front end")
@@ -3317,6 +3317,367 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector_Generic:Conn_01x09"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x09"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x09, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x09_1_1"
+				(rectangle
+					(start -1.27 11.43)
+					(end 1.27 -11.43)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 10.287)
+					(end 0 10.033)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 7.747)
+					(end 0 7.493)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 5.207)
+					(end 0 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -7.493)
+					(end 0 -7.747)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -10.033)
+					(end 0 -10.287)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 10.16 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 7.62 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 5.08 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -7.62 0)
+					(length 3.81)
+					(name "Pin_8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -10.16 0)
+					(length 3.81)
+					(name "Pin_9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(rectangle
 		(start 12.7 15.24)
@@ -3328,7 +3689,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "841366b6-8d47-4534-a363-da503d19e681")
+		(uuid "8c325890-4a47-4bb3-b7cc-e5a3d020d5fc")
 	)
 	(text "1. MAINS INPUT, PROTECTION AND ISOLATED 5 V   (230 V AC on the left of the isolation barrier: hazardous)"
 		(exclude_from_sim no)
@@ -3340,7 +3701,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "f59fa86d-2bd0-4c01-b085-6a28b689cf35")
+		(uuid "7364ebf6-bc69-4ec4-904b-13f0866f1743")
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x02")
@@ -3352,7 +3713,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "c5226fad-f2c7-4173-949f-ac81b7db6634")
+		(uuid "e0aa63bd-5c10-4284-a9f0-b0421c1fab06")
 		(property "Reference" "J1"
 			(at 33.02 58.42 0)
 			(show_name no)
@@ -3440,14 +3801,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "f8e35d7e-ab58-46f5-8f62-971cfa56533b")
+			(uuid "83a42955-89ed-48b0-8488-4fd3adaf3892")
 		)
 		(pin "2"
-			(uuid "30829e10-04a6-442e-9bcd-5db4a040ca21")
+			(uuid "462fe30e-636d-43e1-92a6-98847681f7dd")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "J1")
 					(unit 1)
 				)
@@ -3462,7 +3823,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "8db788e1-b3f9-434f-8933-0858bf99810d")
+		(uuid "d25e58d3-1f6b-4baf-ad92-8b476485dd4b")
 	)
 	(label "N"
 		(at 27.94 63.5 180)
@@ -3472,7 +3833,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "818be7f4-9d96-4d53-88f6-62d199a6eed3")
+		(uuid "12a70cd8-836e-49d8-a096-f1273008bfe5")
 	)
 	(symbol
 		(lib_id "Device:Fuse")
@@ -3484,7 +3845,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "699a880a-b341-4445-93e5-60711fd7e51d")
+		(uuid "21cbf0d5-a226-4f63-8932-9e115d6344f5")
 		(property "Reference" "F1"
 			(at 68.58 57.76 270)
 			(show_name no)
@@ -3594,14 +3955,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "9e398423-58bc-4faf-8cb2-fef7dd092d3e")
+			(uuid "cb855155-d542-4aa5-8f27-24bd8647eeb9")
 		)
 		(pin "2"
-			(uuid "dab11f1a-cea8-4f70-8a8d-ef850fc8e7a4")
+			(uuid "cae1b329-4d56-4161-ba66-c2ec4f6c39bc")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "F1")
 					(unit 1)
 				)
@@ -3616,7 +3977,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "076d3bb2-c63e-4c78-9494-4647e4dfafd8")
+		(uuid "6aed3180-b0e0-405b-bc9a-294d99c14424")
 	)
 	(label "L_FUSED"
 		(at 72.39 60.96 0)
@@ -3626,7 +3987,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e99f1b27-41b4-4f33-b863-49dde0060c2d")
+		(uuid "c24f772f-d1ed-4915-b445-0dd89f71e5a8")
 	)
 	(symbol
 		(lib_id "Device:Varistor")
@@ -3638,7 +3999,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e4b32678-bb2a-4f2f-9997-fe760e23ef86")
+		(uuid "be05b26d-ef1c-4144-8174-9af26569082c")
 		(property "Reference" "RV1"
 			(at 101.6 57.76 270)
 			(show_name no)
@@ -3803,14 +4164,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "0a58bb6b-6a8f-4848-a50d-ad66a4f5d490")
+			(uuid "44ffd7b9-5d28-4fd6-ac8a-fc732b1b4173")
 		)
 		(pin "2"
-			(uuid "bfd807a2-7cdb-4b92-90be-bd5cf3a1c30d")
+			(uuid "f598e48d-86df-4a98-9e7c-e824641d6560")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "RV1")
 					(unit 1)
 				)
@@ -3825,7 +4186,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "e1b72ccd-b7c6-4b11-823a-f1c9404933ac")
+		(uuid "5afac7cc-79c0-4302-9ac3-be67244be8a3")
 	)
 	(label "N"
 		(at 105.41 60.96 0)
@@ -3835,7 +4196,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c534f183-d6ba-4eb4-a554-e90ff36b4e54")
+		(uuid "993cb14e-8776-4c4a-aabc-fdb427533dcb")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -3847,7 +4208,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "7e7796f0-5d6b-4922-9a9d-2c3e4f7df2bc")
+		(uuid "1bb7404d-5c65-46f9-8077-70fc4c00bb42")
 		(property "Reference" "R1"
 			(at 132.08 57.76 270)
 			(show_name no)
@@ -3946,14 +4307,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "886c4f4c-5b3d-49c2-8292-62df753be5c3")
+			(uuid "b7cd5615-ff02-4f84-be7d-3d29cbcc707b")
 		)
 		(pin "2"
-			(uuid "79001ffc-121e-4ca3-b38d-dbcc09adfd75")
+			(uuid "8e38607c-a6a9-445a-bfa8-794ccfa7277e")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "R1")
 					(unit 1)
 				)
@@ -3968,7 +4329,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "45cc0cde-c1e1-4381-82a5-fcde0a0fd6c0")
+		(uuid "91d1f56d-a600-499e-9c82-7e14bdf925f6")
 	)
 	(label "ZP1"
 		(at 135.89 60.96 0)
@@ -3978,7 +4339,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "67f57d37-e077-4919-9b96-536e125dfa6f")
+		(uuid "ae74deff-ac00-4ddb-a76a-f6ee105840ba")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -3990,7 +4351,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "11c41a16-653c-4d60-8ad3-ca5ada3d6bc2")
+		(uuid "777e7642-7039-442e-9f86-f450fd260bc8")
 		(property "Reference" "R2"
 			(at 157.48 57.76 270)
 			(show_name no)
@@ -4078,14 +4439,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "e4830263-66a5-4e7f-b603-b983c898e18b")
+			(uuid "b3b1e461-4210-4d3d-95cb-6e1f4077be08")
 		)
 		(pin "2"
-			(uuid "0a634f0b-fa18-471e-9948-58b580504e30")
+			(uuid "b786ebb3-e5f9-42ae-9f4b-0c0a6b17fa68")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "R2")
 					(unit 1)
 				)
@@ -4100,7 +4461,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "62b377ca-06a6-49f9-80ae-c02bf8d04c20")
+		(uuid "ce4278e7-78d5-4f09-9461-6a03e98edf80")
 	)
 	(label "ZP2"
 		(at 161.29 60.96 0)
@@ -4110,7 +4471,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8d0c3159-a451-4d70-ad35-2db0fc6f6954")
+		(uuid "7cffac1d-98a5-468a-ba8b-6398f3a2b266")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -4122,7 +4483,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "b03c58e0-d7e0-4bc4-b372-9b8a70b69679")
+		(uuid "e5e7dd3b-93db-48b5-81e7-6af12c852405")
 		(property "Reference" "R3"
 			(at 182.88 57.76 270)
 			(show_name no)
@@ -4210,14 +4571,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "76e15383-f47f-4003-8878-286dbeb05288")
+			(uuid "9ed27b2a-50ea-4bac-b613-2fac6d7412c5")
 		)
 		(pin "2"
-			(uuid "7150d382-ff8a-44ca-b342-3967c81379a8")
+			(uuid "293e128b-783c-4d1e-b759-3cc1cc1865b4")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "R3")
 					(unit 1)
 				)
@@ -4232,7 +4593,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "307ee9ed-1b37-457f-bbed-5ba523d1acd4")
+		(uuid "464dff2b-b074-45e8-ac62-13090ad73050")
 	)
 	(label "ZA_P"
 		(at 186.69 60.96 0)
@@ -4242,7 +4603,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ad00a844-6239-4bcd-a4bb-3c00e285abd2")
+		(uuid "157fc646-aaef-4ec2-94e8-3416425fb848")
 	)
 	(symbol
 		(lib_id "Device:Transformer_1P_1S")
@@ -4254,7 +4615,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "93fbcc89-d5fa-4d98-a6e7-04f390a91343")
+		(uuid "8621856b-3bc6-460f-acd6-b8172a51f8e5")
 		(property "Reference" "T1"
 			(at 228.6 54.61 0)
 			(show_name no)
@@ -4342,20 +4703,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "646623fe-9f19-457a-8297-60084deab158")
+			(uuid "13dbc616-2b65-498c-b903-f4159bf28ecc")
 		)
 		(pin "2"
-			(uuid "3f97fa64-b173-40dd-90ed-78c98bb5082e")
+			(uuid "69d590e7-3c88-4c8c-b719-b73773305a81")
 		)
 		(pin "3"
-			(uuid "88afe411-4152-4070-a2ed-54d860c60159")
+			(uuid "dcf86430-899e-4cdd-a56c-fb495c413e4f")
 		)
 		(pin "4"
-			(uuid "b825b679-9d66-4f20-bd53-2a9350547b90")
+			(uuid "a2ec2c5c-b1ab-4325-a31d-7f8975ec9cbb")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "T1")
 					(unit 1)
 				)
@@ -4370,7 +4731,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "abce4a4b-fa2e-4429-9ef1-dc54dce6af10")
+		(uuid "efbd1719-1048-4def-ac13-a111942e9cb1")
 	)
 	(label "N"
 		(at 218.44 66.04 180)
@@ -4380,7 +4741,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "f97171f8-64c0-41c2-a75d-4ce7d5ef63f5")
+		(uuid "da9f3843-0ad2-43a5-ac31-6ac6d4c1c526")
 	)
 	(label "V_P"
 		(at 238.76 55.88 0)
@@ -4390,7 +4751,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e4155fe2-5e22-4c5b-8e21-bbf5ae588d5b")
+		(uuid "59f5233b-6534-4651-87ef-f4698593f4f1")
 	)
 	(label "V_N"
 		(at 238.76 66.04 0)
@@ -4400,7 +4761,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "f4dd5e00-ebea-4be5-8b87-8ac668ce889a")
+		(uuid "1d64cba2-02f9-4220-8e94-de531f40195e")
 	)
 	(text "ZMPT107-1: left = mains side, right = isolated sensing side"
 		(exclude_from_sim no)
@@ -4411,7 +4772,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5a154e72-243f-4823-ae0c-f0725ac67de2")
+		(uuid "3781c6b1-56b0-415e-bd6a-3d7f9ae75f38")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -4423,7 +4784,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp yes)
-		(uuid "4c458f3c-f1f8-4b3c-8971-3bd568ee8f84")
+		(uuid "33ad7a21-a89c-43db-8ae1-4707ef67058e")
 		(property "Reference" "C1"
 			(at 102.235 101.6 0)
 			(show_name no)
@@ -4513,14 +4874,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "ff52a49d-5bdc-4244-9adc-e3422b9291de")
+			(uuid "e29144ea-9d01-4621-854e-138ef9f7fac5")
 		)
 		(pin "2"
-			(uuid "04feb036-ac4f-4568-bd68-66e5e18809c7")
+			(uuid "ffc74d63-6d27-4e1e-8d88-4df26db8da08")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "C1")
 					(unit 1)
 				)
@@ -4535,7 +4896,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8c011ac5-3c12-4b37-89ab-149a2e83f7b3")
+		(uuid "5169019e-1808-4487-a318-3007f44f9814")
 	)
 	(label "N"
 		(at 101.6 107.95 270)
@@ -4545,7 +4906,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "87669bb4-367a-4eef-a6f3-602fd6ae5de4")
+		(uuid "0eebc364-8aa0-41bb-81a8-e4c645535e72")
 	)
 	(symbol
 		(lib_id "Converter_ACDC:HLK-5M05")
@@ -4557,7 +4918,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "465b3f61-e9a2-4c48-8b66-726a41938477")
+		(uuid "b325351e-8a5b-47a6-9407-65655b6e4a06")
 		(property "Reference" "PS1"
 			(at 160.02 99.06 0)
 			(show_name no)
@@ -4656,20 +5017,20 @@
 			)
 		)
 		(pin "1"
-			(uuid "6980c416-14e0-4f43-8bf3-d7413aae3425")
+			(uuid "ef277603-5971-4636-846f-485f15f6cde1")
 		)
 		(pin "2"
-			(uuid "8f059102-50da-448f-b379-001501214d9f")
+			(uuid "c33fd542-c1d6-4dec-808a-66e5aea38934")
 		)
 		(pin "3"
-			(uuid "39552944-f709-408c-bb36-4debd73abb72")
+			(uuid "13c71070-4206-4982-8509-b096dc7af90e")
 		)
 		(pin "4"
-			(uuid "62a8de75-6312-40f7-8394-14e19c1c4d72")
+			(uuid "deb29265-6320-4303-b3c6-99e31e77a148")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "PS1")
 					(unit 1)
 				)
@@ -4685,7 +5046,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ebb97403-0c1a-47cf-8b29-29a2fc90b995")
+		(uuid "a78bfffb-fe5d-4ac3-9356-07f984b05040")
 	)
 	(wire
 		(pts
@@ -4696,7 +5057,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "cb7a7730-b893-4c95-b096-73123a0049eb")
+		(uuid "09c54f98-0b67-4160-ba28-8ca2efd03bd1")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -4708,7 +5069,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "ebf2bdab-06fd-4992-88ea-c886d7e39af3")
+		(uuid "1822a7aa-4f0e-4275-9997-eafd4ceb84b8")
 		(property "Reference" "#FLG01"
 			(at 144.78 99.695 0)
 			(show_name no)
@@ -4775,11 +5136,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "d2c170d1-1d89-494a-b8a3-1daaf66f407b")
+			(uuid "ea7fbd56-cf57-492e-8302-a1aa05612dfc")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#FLG01")
 					(unit 1)
 				)
@@ -4794,7 +5155,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "d12f0de1-0a78-4111-8717-bc10a5a1ac82")
+		(uuid "904987d8-9445-4cbc-8b18-eb4d5423bb06")
 	)
 	(wire
 		(pts
@@ -4805,7 +5166,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4332add4-6e01-448a-baa4-ded1ac444f80")
+		(uuid "664eaa02-e0f5-46bc-9c78-a84a30a4dc45")
 	)
 	(wire
 		(pts
@@ -4816,7 +5177,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d367ed9b-2435-4d9a-a88e-4c47113ff3eb")
+		(uuid "fd173fbd-41af-4d14-94ed-07d357ac55d8")
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -4828,7 +5189,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "94b57f53-5ff3-4194-9978-09993b02aaea")
+		(uuid "5962ca83-c613-4d73-9500-71b5dc0e3886")
 		(property "Reference" "#FLG02"
 			(at 144.78 104.775 0)
 			(show_name no)
@@ -4895,11 +5256,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "8855c433-9acd-4b8c-804c-c23a66b95ceb")
+			(uuid "0dd66929-8f5c-46ee-96c5-10ab6669bec3")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#FLG02")
 					(unit 1)
 				)
@@ -4914,7 +5275,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "674b77c1-b754-4802-945c-673a4b2b22e6")
+		(uuid "7e0de531-d7ef-4372-b1eb-321ac27835d0")
 	)
 	(wire
 		(pts
@@ -4925,7 +5286,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "49d6293e-b492-4e2e-bd47-c725ca74ab5d")
+		(uuid "e143be92-e9c7-4b50-861d-38738f0604cb")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -4937,7 +5298,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "c3327960-e651-4320-a69c-e4a909b24577")
+		(uuid "4c8b91b7-1b65-4057-87af-0fe04b88d2ce")
 		(property "Reference" "#PWR03"
 			(at 172.72 113.03 0)
 			(show_name no)
@@ -5004,11 +5365,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "9a8bfe52-d0c9-4567-9554-755161db4499")
+			(uuid "95968af4-fea0-47ef-bc0e-fbaf7abbafa4")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#PWR03")
 					(unit 1)
 				)
@@ -5024,7 +5385,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f07f520c-ebc5-48e7-bc06-bcdc079847bc")
+		(uuid "c6cd7db8-3763-4584-8d48-16a445c04b58")
 	)
 	(symbol
 		(lib_id "power:+5V")
@@ -5036,7 +5397,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "bf8f4aef-e437-4026-a3cb-608e7c083047")
+		(uuid "a06fdc09-78bc-409e-ae0d-cf6157d01577")
 		(property "Reference" "#PWR04"
 			(at 172.72 105.41 0)
 			(show_name no)
@@ -5103,11 +5464,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "ba47e0cb-66be-478f-b3fa-72a7275daa6d")
+			(uuid "b265983e-6f1d-46fd-968c-53e743269cdb")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#PWR04")
 					(unit 1)
 				)
@@ -5124,7 +5485,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "cacd204d-c383-4e5c-801b-38537d6044f8")
+		(uuid "cc01ed9e-f45c-4641-843d-32851814e7e5")
 		(property "Reference" "C2"
 			(at 198.755 101.6 0)
 			(show_name no)
@@ -5214,14 +5575,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "a6a85d2a-4eb0-41ca-8ab3-5aa53a976076")
+			(uuid "faecf67b-526d-40c2-b5c7-254263177cb9")
 		)
 		(pin "2"
-			(uuid "88739cce-845e-4f32-902b-82520ab33b57")
+			(uuid "e03c34a5-f704-4746-8e81-318992ce3afc")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "C2")
 					(unit 1)
 				)
@@ -5237,7 +5598,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e0eedfa9-f986-49ed-9de4-0cbab40f54b4")
+		(uuid "18b60b8f-78ec-4a37-8b5a-34564beacc49")
 	)
 	(symbol
 		(lib_id "power:+5V")
@@ -5249,7 +5610,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "6658784f-d735-4f7a-9f9a-3605ea25b800")
+		(uuid "53cd8520-beb5-4990-ac29-7298f2d17a7e")
 		(property "Reference" "#PWR05"
 			(at 198.12 101.6 0)
 			(show_name no)
@@ -5316,11 +5677,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "739b9a0c-6003-4e7e-8d09-1d25cd46c554")
+			(uuid "84f7d287-5577-43d7-86e4-7b5ccb951d28")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#PWR05")
 					(unit 1)
 				)
@@ -5336,7 +5697,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "66bace0e-8165-4584-be6b-1e686c473991")
+		(uuid "9457adae-65a8-4f55-9a09-682704793e75")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -5348,7 +5709,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "44e135ca-6709-45e0-9f3f-511613dae9d1")
+		(uuid "9f3b0b5b-f73b-4275-b21b-c176b59270e6")
 		(property "Reference" "#PWR06"
 			(at 198.12 116.84 0)
 			(show_name no)
@@ -5415,11 +5776,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "cbc43c67-ac1b-46f6-b3e2-faa64f0db951")
+			(uuid "d8392c5b-eec7-4b86-b8ec-ffff0f0cfba0")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#PWR06")
 					(unit 1)
 				)
@@ -5435,7 +5796,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "eaf3182a-2ce4-4018-955f-c924a888fe88")
+		(uuid "9247604e-16db-4420-8176-fd9a211e7fa6")
 	)
 	(rectangle
 		(start 12.7 137.16)
@@ -5447,7 +5808,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "9444ea78-5753-4534-b76f-e5a85736acf6")
+		(uuid "5c796316-816b-49a1-93a4-d92b25be9c47")
 	)
 	(text "2. ANALOG FRONT END: BURDEN, SAMPLING RESISTORS AND ADC INPUT PROTECTION (low voltage, isolated side)"
 		(exclude_from_sim no)
@@ -5459,7 +5820,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a4f280fe-6865-458c-9958-973992a1314e")
+		(uuid "4d863f9b-e127-4c43-9d22-f9987e16f8db")
 	)
 	(text "CT current sensor: burden 2 x 6.49 ohm, midpoint to GND"
 		(exclude_from_sim no)
@@ -5470,7 +5831,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6044b792-e4bf-4668-ab44-c79b52aa60d4")
+		(uuid "46bee3da-b81f-48f3-af65-8562b7cfb832")
 	)
 	(symbol
 		(lib_id "Connector:Screw_Terminal_01x02")
@@ -5482,7 +5843,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "5f42e2e1-112b-4396-b1ef-e72280fe5657")
+		(uuid "5e919465-bee5-42e0-ba7e-2b21f0a49b4c")
 		(property "Reference" "J2"
 			(at 25.4 157.48 0)
 			(show_name no)
@@ -5570,14 +5931,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "b9033cb2-56cb-4d44-9b79-5f7c110f82d8")
+			(uuid "031b2c8e-adf1-4b7e-82ec-c59aae0fc748")
 		)
 		(pin "2"
-			(uuid "f2a51549-c5f9-4178-b534-b47af5c668e6")
+			(uuid "1ff8844a-e0f2-4061-b431-aeec7307f1ea")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "J2")
 					(unit 1)
 				)
@@ -5592,7 +5953,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "d1ae684f-c764-4527-ab19-7a08778a7938")
+		(uuid "165f0c6c-e350-43db-9937-6805c24ec071")
 	)
 	(label "CT_N"
 		(at 20.32 162.56 180)
@@ -5602,7 +5963,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "8855b4c9-56f6-41da-a3f2-992bb001b979")
+		(uuid "f5524a6f-d981-4099-bb06-ef5cc41ec627")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -5614,7 +5975,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e449afcc-49f6-4f9a-b305-f240ef60d70c")
+		(uuid "fb28e770-3676-43e3-8425-e25c12f28bc8")
 		(property "Reference" "R4"
 			(at 68.58 156.82 270)
 			(show_name no)
@@ -5724,14 +6085,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "df56007d-e60e-4178-b22e-183c553db643")
+			(uuid "b266e753-9444-495f-a60f-1711aa756b7a")
 		)
 		(pin "2"
-			(uuid "55332666-e5a2-4fc7-9cb6-b0d6a97b3f88")
+			(uuid "d52efcd9-b659-4ed4-9244-d930037dc8ae")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "R4")
 					(unit 1)
 				)
@@ -5746,7 +6107,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "411a1844-3f46-4f8f-88c8-b09cdee04c2d")
+		(uuid "32809097-c3f1-402f-9bda-6e2418ac63a2")
 	)
 	(wire
 		(pts
@@ -5757,7 +6118,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6ad8ea7b-0244-41e6-a1e6-5efd98e79956")
+		(uuid "d9f42c0f-2c04-41fe-b47a-652e9a213305")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -5769,7 +6130,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "7d6e7312-9393-4574-9aee-b5007ac3d40f")
+		(uuid "ccf38ccd-222c-4c22-818c-c193bb9eae6d")
 		(property "Reference" "#PWR07"
 			(at 74.93 166.37 0)
 			(show_name no)
@@ -5836,11 +6197,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "8ef30557-799e-48cf-9af2-5d2d79011482")
+			(uuid "38427d5e-0dac-4398-8fdc-35c2ef4d8fc0")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#PWR07")
 					(unit 1)
 				)
@@ -5857,7 +6218,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "ee21c227-f626-4be5-9103-62e9b25b34de")
+		(uuid "6f76f547-360d-4d1a-9a2b-a27476cba1f3")
 		(property "Reference" "R5"
 			(at 96.52 156.82 270)
 			(show_name no)
@@ -5956,14 +6317,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "6f022ece-a57b-410a-9ebe-9f8f73e43ca9")
+			(uuid "00cc7c47-6c8f-4ea0-8dcc-ba62e47263f1")
 		)
 		(pin "2"
-			(uuid "c9dcf7f0-df1d-4b92-9146-f0b0bc8eb036")
+			(uuid "59f7a085-30ff-4c51-8c66-f39d0ac440c7")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "R5")
 					(unit 1)
 				)
@@ -5979,7 +6340,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "bf7227a4-b690-47db-bc83-7b5582edf8a5")
+		(uuid "3c8341b6-d9c0-4959-bb00-3275039d2d55")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -5991,7 +6352,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "8a796454-23ab-4bf7-bd8a-4be0c49263c6")
+		(uuid "c74aba15-2b59-46c1-ac8c-42f758ff7040")
 		(property "Reference" "#PWR08"
 			(at 90.17 166.37 0)
 			(show_name no)
@@ -6058,11 +6419,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "1e0585e0-320b-40b2-b95e-572d68638568")
+			(uuid "39903955-7df3-49f8-9980-61c90f4aeaa1")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#PWR08")
 					(unit 1)
 				)
@@ -6077,7 +6438,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "fd27b454-e8af-4bed-80a5-680cbc004dbf")
+		(uuid "66a6cb92-dee0-46ac-aca4-66614915802d")
 	)
 	(text "ZMPT107-1 sampling: 2 x 24.9 ohm = about 50 ohm, midpoint to GND"
 		(exclude_from_sim no)
@@ -6088,7 +6449,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "fec39736-6cdc-46c4-ae19-b1f3de627e9b")
+		(uuid "12b35f2c-7927-46df-a7e4-1a2127bbc970")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -6100,7 +6461,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "2a7f9d21-8a25-4562-8cb1-a133dc6aeccd")
+		(uuid "0eadf9d4-ce6c-4f76-916e-16b4f7a23f51")
 		(property "Reference" "R6"
 			(at 160.02 156.82 270)
 			(show_name no)
@@ -6210,14 +6571,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "ab65f4f3-c498-4902-a18e-1419d40fc90e")
+			(uuid "e00155c6-30d1-4a11-9ee2-c4764f084588")
 		)
 		(pin "2"
-			(uuid "a84f6b7d-169f-46ce-a136-46c0c5cc3953")
+			(uuid "92cf4f8b-7ce5-4832-9f17-8c4845130c54")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "R6")
 					(unit 1)
 				)
@@ -6232,7 +6593,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "d19e9a04-dd6e-4816-b01e-ed46a709f59d")
+		(uuid "08d96d6e-df64-417a-8f82-ffac5b1d49bb")
 	)
 	(wire
 		(pts
@@ -6243,7 +6604,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ef1fad2c-4310-4ac2-90f9-b268ef58898a")
+		(uuid "b416268e-f1ce-407e-b59e-580d28542db4")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6255,7 +6616,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "0611b20b-5392-48ef-9936-51e5db106061")
+		(uuid "e991a94a-899e-4f77-abfc-dad6af69aa02")
 		(property "Reference" "#PWR09"
 			(at 166.37 166.37 0)
 			(show_name no)
@@ -6322,11 +6683,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "91ea2350-ec7b-4019-9244-0d688596bb2e")
+			(uuid "b14161c6-cb54-4b5e-aae7-de9d9eccdc73")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#PWR09")
 					(unit 1)
 				)
@@ -6343,7 +6704,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f092ed34-d01d-44d2-9811-ad07597d7ea5")
+		(uuid "268bfd50-b1c4-4949-b5bc-df5c98a383f4")
 		(property "Reference" "R7"
 			(at 187.96 156.82 270)
 			(show_name no)
@@ -6442,14 +6803,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "4d8492c0-63fa-4d4d-8307-774b347be276")
+			(uuid "67b591ef-827c-4719-86da-e79f23e3857b")
 		)
 		(pin "2"
-			(uuid "be8e63cd-66a4-4608-a815-6384374febc2")
+			(uuid "10c72faf-de91-4dcb-a848-a334eb0e2671")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "R7")
 					(unit 1)
 				)
@@ -6465,7 +6826,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8a2a4da4-ffe7-4748-a10a-0cb85bb53b5b")
+		(uuid "8c903329-c400-4ba0-bca4-141e7529a182")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6477,7 +6838,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "c10e7047-bb1e-433e-bc2b-b12bb32bc8da")
+		(uuid "7ffba451-824f-443e-bc71-0dc2dd559b5f")
 		(property "Reference" "#PWR10"
 			(at 181.61 166.37 0)
 			(show_name no)
@@ -6544,11 +6905,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "db632666-32df-44cc-a903-e96d9185d147")
+			(uuid "05bf5fd8-8137-40d1-9553-a9c496ba46fe")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#PWR10")
 					(unit 1)
 				)
@@ -6563,7 +6924,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8fc3563b-adea-4f3b-85a5-f419c3bc7460")
+		(uuid "41266edf-f9ad-4e6f-93cf-edf2adeb41a0")
 	)
 	(text "CH1 current, + leg"
 		(exclude_from_sim no)
@@ -6574,7 +6935,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5a5c4c6e-cb24-4bbf-aa72-4ee1b2d16339")
+		(uuid "1d18dbae-1720-449d-939c-57a49461c3be")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -6586,7 +6947,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "1b718916-b1b9-415c-91a5-c464d0d077eb")
+		(uuid "babc24f0-7854-493e-95bf-bb9ab61391aa")
 		(property "Reference" "R8"
 			(at 63.5 187.3 270)
 			(show_name no)
@@ -6696,14 +7057,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "0712cfcc-d9cf-4c10-bc03-4e39e4c7b67d")
+			(uuid "568193d2-cb3a-41f6-bc79-e5ecc096c636")
 		)
 		(pin "2"
-			(uuid "ec93c644-45c5-46c3-afbf-90b16eeb0688")
+			(uuid "b20107dc-ec5b-40e1-b371-3619441fc3f7")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "R8")
 					(unit 1)
 				)
@@ -6718,7 +7079,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "fcc97596-3f69-46fd-9781-8b63b4d1ffa8")
+		(uuid "2bbcb7c4-8ca7-4139-9d20-11c24c99382a")
 	)
 	(label "CT_P_C"
 		(at 67.31 190.5 0)
@@ -6728,7 +7089,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "a9e7ca1f-e601-462e-8202-37ae6ce67581")
+		(uuid "f21e9493-c142-4d3c-b85f-1129e9dfafdd")
 	)
 	(symbol
 		(lib_id "Device:D_Schottky")
@@ -6740,7 +7101,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "37925042-ff87-4a26-b9b7-a65ea8093e91")
+		(uuid "e382cc5e-ed09-4caf-9bf5-57267f7239dd")
 		(property "Reference" "D1"
 			(at 104.14 187.96 0)
 			(show_name no)
@@ -6850,14 +7211,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "0e901210-9a52-4edc-b71e-ad7e3bf06c4a")
+			(uuid "5b465416-a427-497f-bd5c-ec2deaffa934")
 		)
 		(pin "2"
-			(uuid "def1d767-0c0c-49fc-b529-1869a1fe024e")
+			(uuid "81686dfb-3bb4-42b7-94f3-c5dc900bc680")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "D1")
 					(unit 1)
 				)
@@ -6872,7 +7233,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "aede18cb-52c5-4891-aa9b-cb2f39a103c0")
+		(uuid "3789c786-39e2-431d-bfa0-db7282ec19c5")
 	)
 	(wire
 		(pts
@@ -6883,7 +7244,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6c8fa641-5e17-47bd-a697-f6bdf5ba2514")
+		(uuid "5f098f9e-0d1f-49c9-a196-2736dbb5cebc")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -6895,7 +7256,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "b1fd9425-f239-4798-8588-94fda6f68cf1")
+		(uuid "4f619de6-7738-4756-88f8-618bf14fbb85")
 		(property "Reference" "#PWR11"
 			(at 97.79 194.31 0)
 			(show_name no)
@@ -6962,11 +7323,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "ba2d9364-ff57-4730-b165-505c0d43dfc8")
+			(uuid "fd6c31dc-9bff-44a3-bc4b-3364389bbea6")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#PWR11")
 					(unit 1)
 				)
@@ -6983,7 +7344,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "35d99d34-3047-4d45-889b-9c72b2b944e4")
+		(uuid "493d0494-0ad5-43c7-ade5-f7fc686af24c")
 		(property "Reference" "D2"
 			(at 139.7 187.96 0)
 			(show_name no)
@@ -7115,14 +7476,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "3aeb70a2-eeee-412b-8fa5-e35714a84f0f")
+			(uuid "0cfb96ea-0cf4-4424-826a-a5d8077cdac6")
 		)
 		(pin "2"
-			(uuid "b3b7689d-d758-46fc-bc5c-9303f8666733")
+			(uuid "116ff348-d244-4b97-8479-e610fb32727a")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "D2")
 					(unit 1)
 				)
@@ -7138,7 +7499,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "65c298d7-d888-474d-8bc9-6b3981546607")
+		(uuid "04b07c3b-7a2c-411a-bd87-1f0268146d4a")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -7150,7 +7511,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "fc85ef05-cd41-4e72-9a38-d9716da4b5e3")
+		(uuid "6b074d72-8d36-4a1d-8d31-cdc7819ceb96")
 		(property "Reference" "#PWR12"
 			(at 146.05 196.85 0)
 			(show_name no)
@@ -7217,11 +7578,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "eaa27d41-7898-4bca-ba1c-33c1cdb54514")
+			(uuid "8a36f7ee-ac6f-44bd-9549-f38a74cbaed0")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#PWR12")
 					(unit 1)
 				)
@@ -7236,7 +7597,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "60baa823-bdd7-42bb-9563-b66555741d7a")
+		(uuid "0cf7927a-d956-4a6e-ab99-05b1a7291726")
 	)
 	(symbol
 		(lib_id "Device:D")
@@ -7248,7 +7609,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "83678756-d097-4d33-b7c2-81e69cf2d988")
+		(uuid "1091e5cf-d507-4997-a714-c49cdf4763bc")
 		(property "Reference" "D3"
 			(at 175.26 187.96 0)
 			(show_name no)
@@ -7369,14 +7730,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "6a93d1ab-3911-4f33-a623-a37bb6ba3f8a")
+			(uuid "508ced16-e9ec-4215-9643-48214bcf333f")
 		)
 		(pin "2"
-			(uuid "6d818d2b-8ebd-4f7e-b774-7b4033a4e145")
+			(uuid "abf1361f-a2d3-4690-a33b-e3646582827f")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "D3")
 					(unit 1)
 				)
@@ -7391,7 +7752,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "90c69ebd-bc2f-4ddd-8c35-201a2d0e210f")
+		(uuid "1128e39f-4e57-4582-827f-a0fcb293f43e")
 	)
 	(label "CT_P_C"
 		(at 171.45 190.5 180)
@@ -7401,7 +7762,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "4809f258-a20c-4038-b04a-fa5e9c229d6e")
+		(uuid "615a5698-13a4-4c70-bce6-a62d187d5dcc")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -7413,7 +7774,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "bdf04945-9f26-40cd-8f9c-bb9c4820f583")
+		(uuid "ba582514-1bc7-4b8c-b54f-b2c6329fb966")
 		(property "Reference" "R9"
 			(at 210.82 187.3 270)
 			(show_name no)
@@ -7523,14 +7884,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "ff7b1f9a-27cb-4b49-86cf-1cd7e3bd7d07")
+			(uuid "bee7b2dd-7cc0-4847-8815-cdebd7822345")
 		)
 		(pin "2"
-			(uuid "5603003b-bfc6-4c4d-9b08-ad4751475909")
+			(uuid "f947755c-70a5-4bbe-8901-b9cdd74ef29b")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "R9")
 					(unit 1)
 				)
@@ -7545,7 +7906,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "c6ea2cc3-f861-4f9e-af26-691289315bef")
+		(uuid "042ef32e-2c1d-4700-9e12-f188a2c03cc6")
 	)
 	(label "CH1P"
 		(at 214.63 190.5 0)
@@ -7555,7 +7916,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "290b19ab-49a9-4957-a572-2d9a513d083f")
+		(uuid "e9ea652f-c5e5-47ed-85af-b8f8d5174abe")
 	)
 	(text "CH1 current, - leg"
 		(exclude_from_sim no)
@@ -7566,7 +7927,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c1ad9ac4-7603-4818-9c7c-69049f7cae65")
+		(uuid "95a50d4d-ad27-42d5-a3f3-6308234bd585")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -7578,7 +7939,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "097a7cbd-d3a9-4822-8271-7fc6ded533a2")
+		(uuid "8e699e9f-3d84-42f4-bad2-15612e1fe762")
 		(property "Reference" "R10"
 			(at 63.5 212.7 270)
 			(show_name no)
@@ -7688,14 +8049,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "1f77380a-0f43-4eab-98fd-60a1ab82dd13")
+			(uuid "fa8f4921-1bd5-4fd4-8752-546a97fb4999")
 		)
 		(pin "2"
-			(uuid "c4c70d9b-f42e-44bc-9772-47a69a171d56")
+			(uuid "cdf3d871-fd7a-4e7a-aaea-50fadd904ee2")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "R10")
 					(unit 1)
 				)
@@ -7710,7 +8071,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "55326efc-dc27-4a47-bf02-85133f8bfb7c")
+		(uuid "cba6b2e0-81ff-4265-b4f8-4376c31fa632")
 	)
 	(label "CT_N_C"
 		(at 67.31 215.9 0)
@@ -7720,7 +8081,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "9e4a1c17-e136-4338-b7ff-ef4608117e57")
+		(uuid "f71b494d-2754-4161-a63a-0f5beeaec9ce")
 	)
 	(symbol
 		(lib_id "Device:D_Schottky")
@@ -7732,7 +8093,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "d81ff033-1d47-44cc-9f19-909a0c56664b")
+		(uuid "bd026ebe-1186-49a7-b6a8-ec2d8fe334f0")
 		(property "Reference" "D4"
 			(at 104.14 213.36 0)
 			(show_name no)
@@ -7842,14 +8203,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "22e5d2fc-0e6a-4a14-928c-3ba5cc6d8607")
+			(uuid "28d7cc0c-9f40-496f-a8e1-e3b6fe357d64")
 		)
 		(pin "2"
-			(uuid "770a7bff-da31-4240-9875-df146c748b40")
+			(uuid "e8b8613d-46f1-4312-b66e-d12337106ee9")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "D4")
 					(unit 1)
 				)
@@ -7864,7 +8225,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "f9ed66ee-3758-4c1f-9e9e-5ddee0975fb5")
+		(uuid "56b2d75d-e9db-41df-8455-ce8c5f16e6fe")
 	)
 	(wire
 		(pts
@@ -7875,7 +8236,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "247ef8ac-896a-4d9e-9361-7d651403b719")
+		(uuid "ac589b74-9617-402b-95f4-39d12b9cba3b")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -7887,7 +8248,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f3a07494-1e6e-463d-850f-2e64ea38f4eb")
+		(uuid "1be516f0-00cc-4307-b962-cb194027b990")
 		(property "Reference" "#PWR13"
 			(at 97.79 219.71 0)
 			(show_name no)
@@ -7954,11 +8315,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "6ebb787b-79bd-49ee-925b-0b3b472500d9")
+			(uuid "bbdc8f3a-4351-4fec-9241-ae7b81d83be8")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#PWR13")
 					(unit 1)
 				)
@@ -7975,7 +8336,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e3044677-5c03-43d7-85dc-6bde9a64c875")
+		(uuid "6d3e8954-153b-4f55-98fd-33a7dd02d7f1")
 		(property "Reference" "D5"
 			(at 139.7 213.36 0)
 			(show_name no)
@@ -8107,14 +8468,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "7c50366c-6cc9-4b80-b9a4-d571e2fa0729")
+			(uuid "5f226f70-fa47-4e0a-b2cb-a996a542125e")
 		)
 		(pin "2"
-			(uuid "29447ad2-0871-40fb-89cb-90074d162cd2")
+			(uuid "a08ed536-b556-41a6-9f0f-b54b3cacd34f")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "D5")
 					(unit 1)
 				)
@@ -8130,7 +8491,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "cf14b7ab-a527-4b6b-a894-6b5f726d4ead")
+		(uuid "38b0f095-9ac6-4ee5-a959-7a9b122ec299")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -8142,7 +8503,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "1558f555-ec4c-4a9e-96ed-738bb3cfdd0e")
+		(uuid "31dae5e4-9345-4d0a-893b-bf28b501bf39")
 		(property "Reference" "#PWR14"
 			(at 146.05 222.25 0)
 			(show_name no)
@@ -8209,11 +8570,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "a4d58fb4-44a1-44a4-82c3-1123fc1a803e")
+			(uuid "b731df2f-bc1d-41cf-b025-1817a10628b8")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#PWR14")
 					(unit 1)
 				)
@@ -8228,7 +8589,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "ea24dc77-7212-4440-b62f-7f5020b3b9a0")
+		(uuid "70a6eba6-0200-4671-a325-423fff825098")
 	)
 	(symbol
 		(lib_id "Device:D")
@@ -8240,7 +8601,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e8990013-be98-4934-ae0c-34583fc81a52")
+		(uuid "21756d63-0741-4008-99aa-136be94aeeb8")
 		(property "Reference" "D6"
 			(at 175.26 213.36 0)
 			(show_name no)
@@ -8361,14 +8722,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "bdbeb281-b4a2-491b-8d4b-4826c6d71f73")
+			(uuid "18761290-2b55-4684-abed-a587fe9e6204")
 		)
 		(pin "2"
-			(uuid "df3f9816-9353-47a2-876d-2813ac810ecc")
+			(uuid "1cebc2a7-71ac-4d87-8524-be6c639cf3a6")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "D6")
 					(unit 1)
 				)
@@ -8383,7 +8744,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b11f6d19-144f-4c48-a2c7-dc8113f5ae0b")
+		(uuid "1911093a-4fce-4985-90e6-ba7a2bf97532")
 	)
 	(label "CT_N_C"
 		(at 171.45 215.9 180)
@@ -8393,7 +8754,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "aa3cabca-d8b5-4534-ad26-207b71b6f4ea")
+		(uuid "db625658-de5a-45cd-af10-5d6568140bf4")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -8405,7 +8766,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "c78e9906-02ae-40df-8cd8-fceef5ed9ea9")
+		(uuid "e9b3d41f-1ea6-4da9-b20d-204e6385896f")
 		(property "Reference" "R11"
 			(at 210.82 212.7 270)
 			(show_name no)
@@ -8515,14 +8876,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "fc5593f9-3092-4b59-b9af-2535bf5b7394")
+			(uuid "88814dc8-fcab-46e2-a48f-64d989cae280")
 		)
 		(pin "2"
-			(uuid "998349b6-63cc-4f1e-9051-d2a8951fd527")
+			(uuid "71821a80-0da5-45a8-b315-c058b572a2da")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "R11")
 					(unit 1)
 				)
@@ -8537,7 +8898,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "f2d83756-df4f-406a-b393-180abe6c39af")
+		(uuid "41a9b7f5-c320-4a58-9e36-af4e4a0b2724")
 	)
 	(label "CH1N"
 		(at 214.63 215.9 0)
@@ -8547,7 +8908,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e304d493-50d7-4f87-8b12-be9b678fab8e")
+		(uuid "b31588c6-2d54-40ba-983c-21206a5cc582")
 	)
 	(text "CH2 voltage, + leg"
 		(exclude_from_sim no)
@@ -8558,7 +8919,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e5729b6b-ea31-418d-95e0-e846fea758a7")
+		(uuid "fc4fd5a8-31b7-436e-94f8-dc554be2a95b")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -8570,7 +8931,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "71dc9acc-be88-415b-bb0d-a481103b1778")
+		(uuid "de52e0c4-6fb3-4031-bef3-f284fde34821")
 		(property "Reference" "R12"
 			(at 63.5 238.1 270)
 			(show_name no)
@@ -8680,14 +9041,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "017a53eb-0c07-42f8-a7d7-24f031bdc5fd")
+			(uuid "7dae00af-e4b4-4dbf-b704-f4fc719e2228")
 		)
 		(pin "2"
-			(uuid "57e97ac1-8dad-4781-9e69-39cf5ad3421e")
+			(uuid "8eb10f0d-fd82-4113-9325-81669ffda391")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "R12")
 					(unit 1)
 				)
@@ -8702,7 +9063,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "6fa4b831-7a16-43a4-b298-6ab0fe939e1e")
+		(uuid "c89243a3-451e-45de-b256-a7ca3b6e540c")
 	)
 	(label "V_P_C"
 		(at 67.31 241.3 0)
@@ -8712,7 +9073,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4519a229-ddc0-44cc-a1fd-0c9e4a0dbf1d")
+		(uuid "55a47044-9864-4f44-9d1a-b1b223093261")
 	)
 	(symbol
 		(lib_id "Device:D_Schottky")
@@ -8724,7 +9085,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "8a7d3a7c-7dcf-4372-9ae2-9e2696342be7")
+		(uuid "ba0b3d22-c3f9-4b7e-bcb0-d2f79053759f")
 		(property "Reference" "D7"
 			(at 104.14 238.76 0)
 			(show_name no)
@@ -8834,14 +9195,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "2fe2618b-25fc-4734-b2a5-40c21d03eca0")
+			(uuid "bbd805ab-5950-417f-8df0-c61d9d8ecda5")
 		)
 		(pin "2"
-			(uuid "a0ef45fb-621f-4445-b9a1-c57b98c93820")
+			(uuid "4271cf8f-2c83-44f8-8517-16f5b606f4c3")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "D7")
 					(unit 1)
 				)
@@ -8856,7 +9217,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "83d82700-24e5-481b-8ef6-386ab08fb423")
+		(uuid "7a8a621b-4542-428e-8a6f-22f85bf06c84")
 	)
 	(wire
 		(pts
@@ -8867,7 +9228,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "fa6d6f84-6600-4823-8aaf-99b9c2003866")
+		(uuid "3943e6c2-2bea-40de-ae6a-4d0476a9da3c")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -8879,7 +9240,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "a565c3be-a22c-44aa-8525-517945dfd2fa")
+		(uuid "d7f99724-02c7-4a31-abe4-b869a0e9ffe3")
 		(property "Reference" "#PWR15"
 			(at 97.79 245.11 0)
 			(show_name no)
@@ -8946,11 +9307,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "3ead2ac0-cc52-4912-a460-fb6d9c615b36")
+			(uuid "b1b023b6-1052-4cb3-8ce0-886edb7c2d42")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#PWR15")
 					(unit 1)
 				)
@@ -8967,7 +9328,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "636927de-bf46-40e9-ae80-ccfea5c3aa35")
+		(uuid "b99ddc81-a8eb-4ffb-8b1b-465eb8e1c3c3")
 		(property "Reference" "D8"
 			(at 139.7 238.76 0)
 			(show_name no)
@@ -9099,14 +9460,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "e566ffc7-e160-4036-bcc5-a748ba9f9256")
+			(uuid "3a1dbb4f-4640-4613-bc9e-95bb59aaa35e")
 		)
 		(pin "2"
-			(uuid "26b1a0c0-c3e7-4c00-bf36-e7f5d02ec514")
+			(uuid "b3a768ca-9853-4c5a-ad93-e057c08baade")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "D8")
 					(unit 1)
 				)
@@ -9122,7 +9483,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6ccc2740-bb25-404f-9bdd-0e7bf6067cbb")
+		(uuid "eda365c7-cdb5-4364-8f0e-74e0e5658dd0")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -9134,7 +9495,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "d9002675-3bf2-4965-8d60-b3b1f6f4ae13")
+		(uuid "61ca9e61-a78e-4219-8487-7be518937c05")
 		(property "Reference" "#PWR16"
 			(at 146.05 247.65 0)
 			(show_name no)
@@ -9201,11 +9562,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "55148e1e-adc8-4759-a256-728e9e5310ed")
+			(uuid "3ab37042-6788-4752-8d88-962e2e9eb0ba")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#PWR16")
 					(unit 1)
 				)
@@ -9220,7 +9581,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "f52d7723-fb5f-4238-ad5e-1c13b6e701ae")
+		(uuid "d056ee3e-28a5-4200-a0b1-19c9161071c7")
 	)
 	(symbol
 		(lib_id "Device:D")
@@ -9232,7 +9593,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "422f6c5d-5880-433e-9caa-6ea9c04369bc")
+		(uuid "f271ba46-3bd4-43b5-b7d4-a78db49e8022")
 		(property "Reference" "D9"
 			(at 175.26 238.76 0)
 			(show_name no)
@@ -9353,14 +9714,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "c75d3600-dd70-45b2-b3c7-f7b943d383f6")
+			(uuid "1be08372-110e-4dbe-beef-ab579fde3881")
 		)
 		(pin "2"
-			(uuid "e3557562-3e87-463d-8175-d3a58fcc239d")
+			(uuid "9f0232fd-94cb-4fd5-b9ec-094589c68003")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "D9")
 					(unit 1)
 				)
@@ -9375,7 +9736,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d30d699f-b2b6-495d-a540-9f0e5da12239")
+		(uuid "2a023be3-d633-48f2-89e4-534716ad0c67")
 	)
 	(label "V_P_C"
 		(at 171.45 241.3 180)
@@ -9385,7 +9746,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "24bd5765-3914-4ba2-9474-1c4b57ed12ac")
+		(uuid "ea9f2749-5421-45ce-9486-3639d97385cb")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -9397,7 +9758,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "4af218a7-6c4a-4f02-9504-cfd224247f76")
+		(uuid "ff96c08a-27e4-4099-9cc0-c5f23cf88406")
 		(property "Reference" "R13"
 			(at 210.82 238.1 270)
 			(show_name no)
@@ -9507,14 +9868,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "7b540ee7-7de3-4877-9872-c616ad49f192")
+			(uuid "43ca3fab-77cb-4093-b12c-d7133d4c9e23")
 		)
 		(pin "2"
-			(uuid "9757f27b-e636-43c9-a5c3-b05c7d453d61")
+			(uuid "2513f17c-02a8-47d9-a834-800d7998d1dc")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "R13")
 					(unit 1)
 				)
@@ -9529,7 +9890,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "29a01acd-e6b7-4f39-9236-15ff3537a864")
+		(uuid "e7511677-cd3b-4416-b05b-5823d3aaaad7")
 	)
 	(label "CH2P"
 		(at 214.63 241.3 0)
@@ -9539,7 +9900,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "2f60f99f-f780-446c-ae78-fcaf331b0157")
+		(uuid "596f8bb7-8684-40e3-9c07-2ffcee4f43f1")
 	)
 	(text "CH2 voltage, - leg"
 		(exclude_from_sim no)
@@ -9550,7 +9911,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "44fd30ba-7b64-4852-9a65-15e15cc18d0f")
+		(uuid "0773492c-a72c-4eb6-801f-50591f6f0393")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -9562,7 +9923,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e2a11eeb-93b1-4826-ae1e-596e9a29fefc")
+		(uuid "ac6b7e7f-8dde-4212-84c6-b0b5f3442f88")
 		(property "Reference" "R14"
 			(at 63.5 263.5 270)
 			(show_name no)
@@ -9672,14 +10033,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "bcb58b44-4b6a-49cc-848c-d004468bb8c4")
+			(uuid "f3283118-78c8-4ece-bb6f-63fec777f769")
 		)
 		(pin "2"
-			(uuid "f43fcff0-fa1a-493f-a74e-ea058580a2f5")
+			(uuid "48a43ec6-9616-40b7-961e-325dbe41f714")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "R14")
 					(unit 1)
 				)
@@ -9694,7 +10055,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "c5e3a120-8174-4d7b-885a-482a85072e55")
+		(uuid "93e7a20a-4c78-4c20-86fb-e5681b9be109")
 	)
 	(label "V_N_C"
 		(at 67.31 266.7 0)
@@ -9704,7 +10065,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "00f2e47c-d892-4e57-b480-5070c59cb996")
+		(uuid "908de9ac-cbf0-4bff-a704-74845c9301ce")
 	)
 	(symbol
 		(lib_id "Device:D_Schottky")
@@ -9716,7 +10077,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "265188ec-fbfa-4c38-a94f-058ec2de85d0")
+		(uuid "c3bdc960-c2a5-44d6-b327-d90e14cac76d")
 		(property "Reference" "D10"
 			(at 104.14 264.16 0)
 			(show_name no)
@@ -9826,14 +10187,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "e23da2c9-2e7b-4c26-b7e7-ff40a95d5993")
+			(uuid "12abf375-7502-4e6a-b272-a00ed3e7fc75")
 		)
 		(pin "2"
-			(uuid "39609fdf-0c8a-4f7b-b649-f6dfceb2749a")
+			(uuid "d4cf07ff-025c-4f8c-81fb-afc096b3c5eb")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "D10")
 					(unit 1)
 				)
@@ -9848,7 +10209,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1feee4a5-63ef-446d-b3e6-d65ab76b39e1")
+		(uuid "10a8e69f-5d0b-45f4-9365-ece567942cc7")
 	)
 	(wire
 		(pts
@@ -9859,7 +10220,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ad555444-c8b6-484b-8d62-027e211fac19")
+		(uuid "bf770ddd-1830-40cf-bd7f-3067e73552e5")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -9871,7 +10232,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "923255e3-e795-4b17-89e6-b228ba7164bc")
+		(uuid "85d89e8c-3f6c-4492-a68c-a2d7c6f0447d")
 		(property "Reference" "#PWR17"
 			(at 97.79 270.51 0)
 			(show_name no)
@@ -9938,11 +10299,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "2bc1001c-cef6-4155-a47a-064730e9de57")
+			(uuid "7d766069-f1d1-4d7d-92c2-b89a3dcdcb35")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#PWR17")
 					(unit 1)
 				)
@@ -9959,7 +10320,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "be925604-d7e8-4c48-aff6-c722e45d0202")
+		(uuid "83745b71-76d1-4d77-b65f-5d92373ef162")
 		(property "Reference" "D11"
 			(at 139.7 264.16 0)
 			(show_name no)
@@ -10091,14 +10452,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "43bbe091-7e5e-4494-be8d-c0abeb500d05")
+			(uuid "d028bdd8-c9c7-4a49-baff-d3b7e5c82a4a")
 		)
 		(pin "2"
-			(uuid "6935816f-0d46-4502-81a1-38b62418d0c5")
+			(uuid "3318e715-4a9e-49d5-b464-7dd807010e6e")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "D11")
 					(unit 1)
 				)
@@ -10114,7 +10475,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "08579d82-ee65-4408-b9e3-7e5145161611")
+		(uuid "9541d270-91f3-4139-be65-bd57bc733a88")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -10126,7 +10487,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "abedd57e-4b43-4b90-913b-6536c4e97662")
+		(uuid "36b99a79-5786-43f0-a7b9-0350575b52df")
 		(property "Reference" "#PWR18"
 			(at 146.05 273.05 0)
 			(show_name no)
@@ -10193,11 +10554,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "497312a8-f29d-4ef6-9669-40bcb80b3d12")
+			(uuid "760bca22-dafc-4049-90e6-d62b5c9e6c40")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#PWR18")
 					(unit 1)
 				)
@@ -10212,7 +10573,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "28703e38-6d88-440f-8fa5-5080e4c2c0ce")
+		(uuid "3d8dcbd2-e0aa-42c2-b6e4-da0ad7d92bf7")
 	)
 	(symbol
 		(lib_id "Device:D")
@@ -10224,7 +10585,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e6efa157-3391-4bcb-8aac-82f4e54054f6")
+		(uuid "50b7bf2d-7e1b-4a9f-9464-e49f92867229")
 		(property "Reference" "D12"
 			(at 175.26 264.16 0)
 			(show_name no)
@@ -10345,14 +10706,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "ef8d3e66-959f-41af-9eab-3b865442dade")
+			(uuid "5391a860-d534-4c2c-8308-072c62de1c57")
 		)
 		(pin "2"
-			(uuid "65d2950e-d013-4813-b720-ac121d25ce56")
+			(uuid "2aab443e-a98e-43a3-b42e-59c7c7b65c4b")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "D12")
 					(unit 1)
 				)
@@ -10367,7 +10728,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "51b14497-4c6b-498f-9413-273b07affbce")
+		(uuid "0295f2e0-77fd-43d4-b009-27ab3a706793")
 	)
 	(label "V_N_C"
 		(at 171.45 266.7 180)
@@ -10377,7 +10738,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "439ca774-b5fc-42d8-ac84-21e19fe880ab")
+		(uuid "e02b5601-214c-421d-b8a7-8cf96d6eee86")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -10389,7 +10750,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "4613c08f-da69-476d-84b6-f0b55b5f68fc")
+		(uuid "49e31d9c-b1f5-4e93-be21-a39821167c3c")
 		(property "Reference" "R15"
 			(at 210.82 263.5 270)
 			(show_name no)
@@ -10499,14 +10860,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "397f3693-c401-4a68-89e5-3e0a2290f493")
+			(uuid "637ccea3-09f4-4464-91d5-484d700e9c39")
 		)
 		(pin "2"
-			(uuid "7796d76b-1987-4e0b-95fa-acf0ea6a6d3b")
+			(uuid "c1fa7e6d-2751-4b19-8e83-26b6d5141f30")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "R15")
 					(unit 1)
 				)
@@ -10521,7 +10882,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "dbf18504-0ee9-44c5-9a84-aeadd2c03e04")
+		(uuid "6202f027-091e-4a0b-8b2d-51d3ee2dfb58")
 	)
 	(label "CH2N"
 		(at 214.63 266.7 0)
@@ -10531,7 +10892,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8886e2be-47d6-4e17-947e-c57c579c62a3")
+		(uuid "f330bb62-bd62-4797-ad91-4a0303ae176c")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -10543,7 +10904,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f4f9b27e-7212-4c08-8897-b77b105f52a2")
+		(uuid "9cb72593-94d5-43d4-a8b6-632bcd1005f0")
 		(property "Reference" "C3"
 			(at 254.635 200.66 0)
 			(show_name no)
@@ -10655,14 +11016,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "302df471-b67a-4ffe-92af-2891570b3eef")
+			(uuid "ccf33627-64f2-4247-8459-852e035e7395")
 		)
 		(pin "2"
-			(uuid "0f90d6c9-a8a0-40d5-aa85-45d1d3696251")
+			(uuid "646175ac-a87f-4273-b489-7cadd52e0308")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "C3")
 					(unit 1)
 				)
@@ -10677,7 +11038,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4cb23005-ce2d-43f2-a861-d4d659341882")
+		(uuid "5c3cfcba-af4f-4c05-9294-d183d6c3b205")
 	)
 	(label "CH1N"
 		(at 254 207.01 270)
@@ -10687,7 +11048,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "3d42fcaf-4c60-4466-bb57-ba385c7da25b")
+		(uuid "b24bf2dc-8ad7-4a62-b117-92aac850a459")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -10699,7 +11060,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "02d314e2-4f68-41fb-a031-3aa72ddbcc18")
+		(uuid "01e05b9e-2062-4fd4-bc3e-4fd5e84573f1")
 		(property "Reference" "C4"
 			(at 254.635 251.46 0)
 			(show_name no)
@@ -10811,14 +11172,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "cd3883c5-659e-445c-bd33-b95198270f30")
+			(uuid "547a006e-ab6d-445a-b6e5-ecb76c039b66")
 		)
 		(pin "2"
-			(uuid "fd51e1e6-55ac-4a15-b5a5-1cc10385f781")
+			(uuid "6d24660c-066e-4cd4-ba97-e4d6f3b62faf")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "C4")
 					(unit 1)
 				)
@@ -10833,7 +11194,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7352e416-6f39-4503-b437-96afbd2a7a34")
+		(uuid "ca6f1a01-d945-4a86-8067-6ad9b8f81904")
 	)
 	(label "CH2N"
 		(at 254 257.81 270)
@@ -10843,7 +11204,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "887856ac-d7ee-45d2-8feb-94efbdfe08c1")
+		(uuid "b1ac3875-6d51-4379-8e0f-a810e4e4452b")
 	)
 	(text "Differential corner about 7.2 kHz (1.1 kohm per leg); same on both channels so the phase lags cancel"
 		(exclude_from_sim no)
@@ -10854,7 +11215,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "8eeaec6e-0d6d-4cec-8255-8ed55c9ce4f3")
+		(uuid "03f1eb2f-5c03-435a-a929-8fbbdad28a59")
 	)
 	(text "TI clamp per pin: BAT54 to AVDD (+3V3A) and a BAV199 pair to GND, between the 1 kohm and 100 ohm resistors"
 		(exclude_from_sim no)
@@ -10865,7 +11226,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "68a81275-10c5-4817-91e2-618bc9d4ec7c")
+		(uuid "978c623d-e845-4123-b203-0fda404b2069")
 	)
 	(rectangle
 		(start 292.1 15.24)
@@ -10877,7 +11238,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "07c00c17-3d57-4705-8a67-5e4f74bc832b")
+		(uuid "afeca763-350e-4ac3-8495-d4a0f6710d73")
 	)
 	(text "3. ADS131M04 ADC AND 3.3 V SUPPLY (LP5907)"
 		(exclude_from_sim no)
@@ -10889,7 +11250,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6583b761-ef90-46b8-ac1e-f2a311e0a7d1")
+		(uuid "d1e20174-84f0-4376-9664-eac12080d016")
 	)
 	(text "LP5907: quiet 3.3 V for AVDD and DVDD (HLK ripple rejected about 60 dB at 100 kHz)"
 		(exclude_from_sim no)
@@ -10900,7 +11261,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b4efb7c6-25ab-4694-aa14-3538dd25cd58")
+		(uuid "40e8ee65-d888-418f-be9b-77c13ac89f45")
 	)
 	(symbol
 		(lib_id "Regulator_Linear:LP5907MFX-3.3")
@@ -10912,7 +11273,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "c83b407c-6f9e-4110-942f-f83d931b7bf8")
+		(uuid "30b109ff-36fc-4eea-a719-24ab8d3c4562")
 		(property "Reference" "U1"
 			(at 328.93 49.53 0)
 			(show_name no)
@@ -11022,23 +11383,23 @@
 			)
 		)
 		(pin "1"
-			(uuid "4d8dbf00-1c30-439c-91d4-247124ee2919")
+			(uuid "2bf21919-e4bc-47cf-904f-6e18a7eb1f81")
 		)
 		(pin "2"
-			(uuid "5baccd42-9c57-40c5-923b-ccf03cddef4a")
+			(uuid "cb44e0d5-99a6-459d-adde-cea5dca4b9e7")
 		)
 		(pin "3"
-			(uuid "94ddd464-f6ff-406b-b9b5-25ea8b594894")
+			(uuid "dd6da822-751e-47dd-84cf-8d2582dd7b64")
 		)
 		(pin "4"
-			(uuid "2cab6064-eeaf-4a36-8704-1061e85adfa7")
+			(uuid "9939dfea-5c24-4ffc-bb99-49d6b78157a1")
 		)
 		(pin "5"
-			(uuid "5b1d3949-c800-4400-9e3e-9b96e7a28aad")
+			(uuid "a5d6bb23-74ad-48da-b59c-adf1c4629d1b")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "U1")
 					(unit 1)
 				)
@@ -11054,7 +11415,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e5e8d9c4-8e91-4e15-bf94-7b65764c6103")
+		(uuid "9d03169c-fcb3-4a3a-8b1b-c25836fdc7b5")
 	)
 	(symbol
 		(lib_id "power:+5V")
@@ -11066,7 +11427,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "d8ef6a70-8b42-4c94-8cc7-304057584ad7")
+		(uuid "47fd41ab-c05c-41d1-81b6-64bfdefff933")
 		(property "Reference" "#PWR19"
 			(at 322.58 57.15 0)
 			(show_name no)
@@ -11133,214 +11494,36 @@
 			)
 		)
 		(pin "1"
-			(uuid "bcd86b33-e825-436d-83c7-ab7d48fec8a9")
+			(uuid "2ca3a393-8837-41b0-9e3a-1e6364186aa2")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "#PWR19")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 325.12 55.88)
-			(xy 322.58 55.88)
+	(label "+5V"
+		(at 325.12 55.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f509401-a2ae-4626-8604-7e180ce806b3")
+		(uuid "36e65e84-4bf9-4915-b8b2-cb2a89344f3a")
 	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 322.58 55.88 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2a9c0719-36f2-4c39-a1a6-ba29ef239532")
-		(property "Reference" "#PWR20"
-			(at 322.58 59.69 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
+	(label "+3V3A"
+		(at 340.36 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left bottom)
 		)
-		(property "Value" "+5V"
-			(at 322.58 52.324 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 322.58 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 322.58 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 322.58 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "global power"
-			(at 322.58 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1ab7383f-59a3-434f-b35a-109dc3092b49")
-		)
-		(instances
-			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 340.36 53.34)
-			(xy 342.9 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ee3566a9-14b7-4936-9eb0-d1c72c539673")
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 342.9 53.34 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "97b7bc52-4025-4dae-9ef0-e4bb08c09d97")
-		(property "Reference" "#PWR21"
-			(at 342.9 57.15 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3A"
-			(at 342.9 49.784 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 342.9 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 342.9 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 342.9 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "global power"
-			(at 342.9 53.34 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b3c01744-c78f-459a-85a8-8601fc11c387")
-		)
-		(instances
-			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR21")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "f8a19c90-d0a1-4963-953e-58afb7914e37")
 	)
 	(wire
 		(pts
@@ -11351,7 +11534,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5731bc48-eb49-4597-bc9c-1f4439f57933")
+		(uuid "216a37f3-1c67-4c63-8c23-c7299589e316")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -11363,8 +11546,8 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e069820d-b2c1-4c59-8076-938212001d20")
-		(property "Reference" "#PWR22"
+		(uuid "23443cfa-4afb-4448-bad5-618bb89161e3")
+		(property "Reference" "#PWR20"
 			(at 332.74 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11430,12 +11613,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "a7188b6b-a55b-4c6e-9bac-29f41d3d61df")
+			(uuid "744a5126-c632-494c-a5d5-ad2116879a5c")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR22")
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
+					(reference "#PWR20")
 					(unit 1)
 				)
 			)
@@ -11443,7 +11626,7 @@
 	)
 	(no_connect
 		(at 337.82 55.88)
-		(uuid "b5f3c493-5149-46c5-8127-09efb025c70b")
+		(uuid "2b869ff1-b8c1-423e-9e37-741739d43d07")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -11455,7 +11638,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "375c8096-e5e3-4f91-ae9f-aa0822e05ee3")
+		(uuid "6e6f276a-4ab1-40aa-bdb8-c9010dda93fa")
 		(property "Reference" "C5"
 			(at 305.435 66.04 0)
 			(show_name no)
@@ -11567,14 +11750,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "fd2bdc64-6d16-4d43-a936-f405367734a5")
+			(uuid "14a6b494-4c97-4a97-ab75-17ff6cacbb1d")
 		)
 		(pin "2"
-			(uuid "c2eb43bb-2570-4295-b9ae-26219151d38f")
+			(uuid "40e2b77e-6844-419b-8310-7f9d8feef541")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "C5")
 					(unit 1)
 				)
@@ -11590,7 +11773,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8a8850a9-7758-4f91-92e6-0ab2faa98dbc")
+		(uuid "4940d485-0919-4a4d-a722-529dd497ced4")
 	)
 	(symbol
 		(lib_id "power:+5V")
@@ -11602,8 +11785,8 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "4a20b641-586e-4549-b9f5-7ce598876eec")
-		(property "Reference" "#PWR23"
+		(uuid "7ee5e25e-8bf5-42d0-ac44-30d5ca135926")
+		(property "Reference" "#PWR21"
 			(at 304.8 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11669,12 +11852,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "e4b97381-5eb4-4381-bc66-d9ffbe63e1ad")
+			(uuid "3dee5c2a-dd45-4f49-921e-b515dd0dbac6")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR23")
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
+					(reference "#PWR21")
 					(unit 1)
 				)
 			)
@@ -11689,7 +11872,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d51d3801-b9ac-4e82-8927-8ef810348eac")
+		(uuid "3f7fcf80-4036-4089-8098-87bcacc1cf49")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -11701,8 +11884,8 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "961380b6-6fcc-4b0d-9e95-dc9e931456cc")
-		(property "Reference" "#PWR24"
+		(uuid "ccff5a24-2520-4152-b767-104e03ef1e02")
+		(property "Reference" "#PWR22"
 			(at 304.8 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11768,12 +11951,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "a52d73fb-e5dc-4f80-8189-a0cd3a56eb26")
+			(uuid "3531ff70-5365-4314-98e6-7f5ffaa35973")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR24")
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
+					(reference "#PWR22")
 					(unit 1)
 				)
 			)
@@ -11789,7 +11972,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "1523de26-769f-41d5-8470-0b299d876d1d")
+		(uuid "8c9ceeba-05de-4b0a-8f19-0849e4b9c231")
 		(property "Reference" "C6"
 			(at 368.935 66.04 0)
 			(show_name no)
@@ -11901,14 +12084,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "8d313eb1-b6cd-4d7f-b449-2c60c3f8f52d")
+			(uuid "3bba0fe9-35ff-4eac-8c4c-8f58594e49dc")
 		)
 		(pin "2"
-			(uuid "412e74e9-522d-4881-bcdc-64709a7c172a")
+			(uuid "ee46a0a8-9817-4e44-aa53-66d7ffeff5ce")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "C6")
 					(unit 1)
 				)
@@ -11924,7 +12107,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "086d6039-66f6-4e8e-978b-9c3e7231480b")
+		(uuid "f3331a44-131e-459e-a130-83e781f8949e")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -11936,8 +12119,8 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "8fca4074-e199-4aee-b0f5-8c27413d9cae")
-		(property "Reference" "#PWR25"
+		(uuid "03f5f9dc-fc3b-4e34-83ef-0ebf57f0b341")
+		(property "Reference" "#PWR23"
 			(at 368.3 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12003,12 +12186,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "c5d17723-288b-4e36-8272-561713044f00")
+			(uuid "1d06ec68-1126-400b-a8a1-a2c90684501c")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR25")
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
+					(reference "#PWR23")
 					(unit 1)
 				)
 			)
@@ -12023,7 +12206,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "79346a32-f1d0-4ea5-8165-74d116f10406")
+		(uuid "3c42a7f2-f4c8-48b4-b76c-7c1c87a7b1d8")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -12035,8 +12218,8 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "c56f4300-f78e-4545-8816-09a84b0f4d45")
-		(property "Reference" "#PWR26"
+		(uuid "949b5992-91cd-48f1-b8bf-426968216ceb")
+		(property "Reference" "#PWR24"
 			(at 368.3 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12102,12 +12285,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "de90b45d-08c6-4898-accc-79be3b25106d")
+			(uuid "79e31c41-4743-47f6-916c-d62b9c524de9")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR26")
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
+					(reference "#PWR24")
 					(unit 1)
 				)
 			)
@@ -12123,7 +12306,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "42243f54-b77a-431c-a7f5-c73e4a193a66")
+		(uuid "543c2e36-7cf0-42ba-812d-b5d78eb7f5d5")
 		(property "Reference" "U2"
 			(at 438.15 74.93 0)
 			(show_name no)
@@ -12238,469 +12421,113 @@
 			)
 		)
 		(pin "1"
-			(uuid "4e65fd9f-c737-470e-bb09-ced81896c0ef")
+			(uuid "cf623e69-2909-4306-92f5-e981783d36d1")
 		)
 		(pin "2"
-			(uuid "edc10242-9834-4aff-b86e-f3c198f2ccef")
+			(uuid "7760e82a-ab24-4508-86c3-976785e8ebcf")
 		)
 		(pin "3"
-			(uuid "37389abd-62b5-466d-a2bb-301e73ea2885")
+			(uuid "8394dde4-57a3-48af-9f58-da6166529e87")
 		)
 		(pin "4"
-			(uuid "a57caace-7cd6-472a-8b38-2f93f0843675")
+			(uuid "e7e46c7b-5243-4ad0-b50b-65e94e367566")
 		)
 		(pin "5"
-			(uuid "09e5f1bc-763d-41f7-ac6f-a2e3f10202a2")
+			(uuid "e12b7f04-40aa-47d3-a12a-29185ca409e7")
 		)
 		(pin "6"
-			(uuid "5dbc731e-2f2d-462a-bccc-ce0d2791bd6e")
+			(uuid "7465a361-bbfc-4659-bf2a-f03e23b551d3")
 		)
 		(pin "7"
-			(uuid "bc69e388-904d-4acd-a926-54e4bd10b0ec")
+			(uuid "4f178568-8239-485b-b26f-6455ed607144")
 		)
 		(pin "8"
-			(uuid "92d8cd99-bc15-4c2a-bdeb-8f3822df9c6d")
+			(uuid "f7baa3f3-65cf-4e0e-8dbe-cb1c2bbcea4c")
 		)
 		(pin "9"
-			(uuid "8d035c88-c7e2-4409-9c70-7150bb590bde")
+			(uuid "08df1fd0-2bd7-4b81-819b-81c82c9bafc5")
 		)
 		(pin "10"
-			(uuid "ac5bebf7-9e72-4c54-a47c-568ada3b62b5")
+			(uuid "a19d79c0-17d8-479b-aa8b-67351c7b6acf")
 		)
 		(pin "11"
-			(uuid "9b59fb24-ae00-497c-8199-bb2be670eefb")
+			(uuid "8871181c-2387-4c9d-8e05-23940c088991")
 		)
 		(pin "12"
-			(uuid "1fe2342d-1720-4bb5-852b-64c4003288e9")
+			(uuid "71e2910c-ef1b-43a5-a61f-59aead7dd0f3")
 		)
 		(pin "13"
-			(uuid "b4580706-c941-45ca-8712-c10fbe8e0885")
+			(uuid "e9e4696c-b7c9-497c-a1a0-12637f497308")
 		)
 		(pin "14"
-			(uuid "f2d9acf3-a0c9-41b2-a971-cdf94dc9cae1")
+			(uuid "24db581b-873d-4a00-a77c-9bed2e527af9")
 		)
 		(pin "15"
-			(uuid "df51b673-ddbc-41e7-a7b7-354681bb758c")
+			(uuid "2a1250f0-69e3-4bbb-a5b9-6158ac682bae")
 		)
 		(pin "16"
-			(uuid "c1c62abe-d6e3-4fa1-97a5-62b928b7574b")
+			(uuid "885ac8b4-c6c0-48c3-b748-bcead27359dc")
 		)
 		(pin "17"
-			(uuid "10fa0eeb-f0fa-4a76-9128-360766ff5646")
+			(uuid "4c8d6443-b912-4afe-bc33-db461caf4866")
 		)
 		(pin "18"
-			(uuid "01a8a0e6-53d4-4f8c-9129-f6f645311a10")
+			(uuid "7ee90e89-b414-47f8-a378-141af46b1818")
 		)
 		(pin "19"
-			(uuid "49d2b121-6293-4a19-a3e9-4fbef63371be")
+			(uuid "1ebd7e6f-2151-4c97-adf2-1cc21a2100bb")
 		)
 		(pin "20"
-			(uuid "ed2acaf2-4544-4dac-92da-1047052b2305")
+			(uuid "8c879796-cc29-4463-ba23-d9a1ea4fa9df")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "U2")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 447.04 73.66)
-			(xy 447.04 71.12)
+	(label "+3V3A"
+		(at 447.04 73.66 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0fe1abce-dff4-4ae2-9715-5e38d02893ab")
+		(uuid "0ad3295e-a512-4826-a025-5ff6d330b8c2")
 	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 447.04 71.12 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8c9661fd-8758-4be5-9813-7d8511114210")
-		(property "Reference" "#PWR27"
-			(at 447.04 74.93 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
+	(label "+3V3A"
+		(at 452.12 73.66 90)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left bottom)
 		)
-		(property "Value" "+3V3A"
-			(at 447.04 67.564 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 447.04 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 447.04 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 447.04 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "global power"
-			(at 447.04 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "19b575eb-0915-4e70-8b1b-c9b4872213fa")
-		)
-		(instances
-			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR27")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "cfdb89c6-0b6c-440c-8ec3-1e3a0163b1f3")
 	)
-	(wire
-		(pts
-			(xy 452.12 73.66)
-			(xy 452.12 71.12)
+	(label "GND"
+		(at 447.04 109.22 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8d13b10a-2c46-4466-9125-ad055e9b19fc")
+		(uuid "b355a70d-8eb4-4a70-8be8-02845d974e35")
 	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 452.12 71.12 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f0403e85-1928-492d-8034-e8532216a33e")
-		(property "Reference" "#PWR28"
-			(at 452.12 74.93 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
+	(label "GND"
+		(at 449.58 109.22 270)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify right bottom)
 		)
-		(property "Value" "+3V3A"
-			(at 452.12 67.564 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 452.12 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 452.12 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 452.12 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "global power"
-			(at 452.12 71.12 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "19af069f-890e-4389-a715-442d54dc3b8d")
-		)
-		(instances
-			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR28")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 447.04 109.22)
-			(xy 447.04 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "abb51d11-ee78-44ee-9627-c42326a38130")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 447.04 111.76 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "40afcd94-fac3-43ee-bf86-74001fdeb7c9")
-		(property "Reference" "#PWR29"
-			(at 447.04 118.11 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 447.04 115.57 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 447.04 111.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 447.04 111.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 447.04 111.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "global power"
-			(at 447.04 111.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "cfa99990-6187-42f8-912e-7281aaf9a6b5")
-		)
-		(instances
-			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR29")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 449.58 109.22)
-			(xy 449.58 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f6f6286f-6209-4514-85d0-bef9d4ce4ae8")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 449.58 111.76 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a53edae4-a209-4846-bb2b-de7a248b3d6e")
-		(property "Reference" "#PWR30"
-			(at 449.58 118.11 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 449.58 115.57 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 449.58 111.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 449.58 111.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 449.58 111.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "global power"
-			(at 449.58 111.76 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ef18c342-13fd-4857-bf3d-9f634afd4bba")
-		)
-		(instances
-			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR30")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "3d9ec3b4-85a2-4e2e-8fbb-3e40a384b228")
 	)
 	(label "CH1P"
 		(at 434.34 86.36 180)
@@ -12710,7 +12537,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "84d922b9-e8f7-4b52-a9c7-094c0e2909b3")
+		(uuid "61e31a32-3283-42a6-b8f7-8642cc1ca80d")
 	)
 	(label "CH1N"
 		(at 434.34 88.9 180)
@@ -12720,7 +12547,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "a3981d80-b89e-4c7d-b41a-43c0f48a071c")
+		(uuid "4ee41413-551a-4ca3-b151-e9191fdd4a0f")
 	)
 	(label "CH2P"
 		(at 434.34 93.98 180)
@@ -12730,7 +12557,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "ca10e6f2-6ace-49ba-b3e7-bc6b5c87da7e")
+		(uuid "7f2766e3-1c09-4438-9e77-44ca5e7cd1ad")
 	)
 	(label "CH2N"
 		(at 434.34 96.52 180)
@@ -12740,403 +12567,47 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "0187e7aa-b14d-40f0-8655-d9f9a10bd2a7")
+		(uuid "3f604a9c-0153-4934-acb2-2dbf94e460f6")
 	)
-	(wire
-		(pts
-			(xy 434.34 78.74)
-			(xy 431.8 78.74)
+	(label "GND"
+		(at 434.34 78.74 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "daaa6662-f324-4f14-82a4-5ef8591250f7")
+		(uuid "2a011463-0a23-42c1-a612-0f555a371552")
 	)
-	(symbol
-		(lib_id "power:GND")
-		(at 431.8 78.74 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "cb57bae2-4eb4-43ef-9836-560ed4eb2c67")
-		(property "Reference" "#PWR31"
-			(at 431.8 85.09 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
+	(label "GND"
+		(at 434.34 81.28 180)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify right bottom)
 		)
-		(property "Value" "GND"
-			(at 431.8 82.55 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 431.8 78.74 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 431.8 78.74 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 431.8 78.74 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "global power"
-			(at 431.8 78.74 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "07358e89-896d-4ea1-ada3-fef10199f0e3")
-		)
-		(instances
-			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR31")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "3229bcec-7de9-4808-85b3-f971abc0e23d")
 	)
-	(wire
-		(pts
-			(xy 434.34 81.28)
-			(xy 431.8 81.28)
+	(label "GND"
+		(at 434.34 101.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f583a862-7183-474a-9d2f-46f11cbcaf3c")
+		(uuid "7de7eb08-faf7-4bdf-b0b6-391a1a65b634")
 	)
-	(symbol
-		(lib_id "power:GND")
-		(at 431.8 81.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6f987a22-57a6-481e-881c-4212c2a26bb7")
-		(property "Reference" "#PWR32"
-			(at 431.8 87.63 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
+	(label "GND"
+		(at 434.34 104.14 180)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify right bottom)
 		)
-		(property "Value" "GND"
-			(at 431.8 85.09 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 431.8 81.28 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 431.8 81.28 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 431.8 81.28 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "global power"
-			(at 431.8 81.28 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4bf0f677-2380-4345-bde1-970d0f3d2b53")
-		)
-		(instances
-			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR32")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 434.34 101.6)
-			(xy 431.8 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "feec7074-2ae3-40a6-b840-e2032c4d9758")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 431.8 101.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3624f65e-973e-493f-8384-7fec50ff50a2")
-		(property "Reference" "#PWR33"
-			(at 431.8 107.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 431.8 105.41 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 431.8 101.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 431.8 101.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 431.8 101.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "global power"
-			(at 431.8 101.6 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0a17a10e-bc3d-4e72-a7b5-177d51b28325")
-		)
-		(instances
-			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR33")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 434.34 104.14)
-			(xy 431.8 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ec3a22de-4665-4671-b3d2-03deca73c69a")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 431.8 104.14 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ac6d8490-930b-49af-9171-c52140f08f44")
-		(property "Reference" "#PWR34"
-			(at 431.8 110.49 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 431.8 107.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 431.8 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 431.8 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 431.8 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "global power"
-			(at 431.8 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "60a59e90-364a-4802-ba17-e1ef1dd23bf0")
-		)
-		(instances
-			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR34")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "1913d415-9e0e-40a3-b23f-c27bb9a4c0cd")
 	)
 	(label "ADC_CAP"
 		(at 464.82 104.14 0)
@@ -13146,7 +12617,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "2673e578-4eff-4b45-9a07-d6c3e9fae454")
+		(uuid "a553b47a-037f-43f5-bb0f-dff42debfd5e")
 	)
 	(label "ADC_SCLK"
 		(at 464.82 83.82 0)
@@ -13156,7 +12627,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5a65e543-1e3d-44aa-a8ee-a362280cb53b")
+		(uuid "a5a2da75-ae2e-4fc5-857c-ab62a18a121e")
 	)
 	(label "ADC_DIN"
 		(at 464.82 88.9 0)
@@ -13166,7 +12637,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "dfb0bec3-bcc0-428e-9b24-d6e23d709c1a")
+		(uuid "83f95539-5692-433f-b646-dbfe73840cb6")
 	)
 	(label "ADC_DOUT"
 		(at 464.82 86.36 0)
@@ -13176,7 +12647,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4b21f3b6-f2d5-4da7-ad8a-061cebc69d5d")
+		(uuid "2b3d48c6-ddf2-400a-83d7-31efd2717afa")
 	)
 	(label "ADC_CS"
 		(at 464.82 91.44 0)
@@ -13186,7 +12657,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "df364ce6-09f3-4874-a6b5-2152757bdc19")
+		(uuid "f25e8782-8fed-4020-8b86-1d3f631b3faa")
 	)
 	(label "ADC_DRDY"
 		(at 464.82 96.52 0)
@@ -13196,7 +12667,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "bc912956-c5e7-439a-955b-47bdd2d416eb")
+		(uuid "98f36d20-ecca-46d3-b659-2508f6f799de")
 	)
 	(label "ADC_CLKIN"
 		(at 464.82 78.74 0)
@@ -13206,7 +12677,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "601f8918-9166-4340-b38f-ef891df4f939")
+		(uuid "b3a1f445-9ca5-4e61-8510-6215c6e11566")
 	)
 	(label "ADC_RESET"
 		(at 464.82 99.06 0)
@@ -13216,7 +12687,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "07299953-080f-4a84-8246-5cbb87575373")
+		(uuid "1794efb1-d3ac-4a3e-8241-6571fd19143d")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -13228,7 +12699,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "1a8fcc5d-641d-422a-b444-e62269291b65")
+		(uuid "c019c428-e369-4029-ab67-da417b067535")
 		(property "Reference" "C7"
 			(at 407.035 53.34 0)
 			(show_name no)
@@ -13340,14 +12811,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "10e8b5ce-151a-46f8-bab0-b28074013e9d")
+			(uuid "f87f62fb-f745-41ca-93ff-3a4a58baea49")
 		)
 		(pin "2"
-			(uuid "2536d57f-632b-40b3-8769-c339f04f18cf")
+			(uuid "8da84db6-77b9-4ba4-a4b8-5d6abf2c0076")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "C7")
 					(unit 1)
 				)
@@ -13363,7 +12834,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b07a890f-b906-4c6d-b0ab-2f9013aa804f")
+		(uuid "26769494-d675-48a7-aaa9-f64ed73988f9")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -13375,8 +12846,8 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "7a8410d2-d69a-4e16-9dfd-fd6f44429cf0")
-		(property "Reference" "#PWR35"
+		(uuid "4460b8b7-0f4b-4ebc-8b9e-ab727df883b7")
+		(property "Reference" "#PWR25"
 			(at 406.4 53.34 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13442,12 +12913,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "605f7679-86db-4829-b7fb-2a98514a94c0")
+			(uuid "7d9f3b62-7567-4be2-943c-ec63fdbeb150")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR35")
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
+					(reference "#PWR25")
 					(unit 1)
 				)
 			)
@@ -13462,7 +12933,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f59fb768-002d-46fd-b99c-b10838816d7b")
+		(uuid "a4dbaa86-f611-4b45-86d7-5cebea141c43")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -13474,8 +12945,8 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "c48edfd4-ff26-4d31-85f2-29f3010c5c82")
-		(property "Reference" "#PWR36"
+		(uuid "dd16ef48-6e53-479b-8397-bc1c22b62d7d")
+		(property "Reference" "#PWR26"
 			(at 406.4 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13541,12 +13012,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "490cf58a-51f0-4799-ba1d-3f697edd332f")
+			(uuid "9e12ac05-1433-43c7-8063-6a2233306ae0")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR36")
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
+					(reference "#PWR26")
 					(unit 1)
 				)
 			)
@@ -13562,7 +13033,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "a7c94cd6-c01d-4ddf-a9a2-b92e029059db")
+		(uuid "9b74c3b9-1313-456c-8f35-d8fd4c888548")
 		(property "Reference" "C8"
 			(at 493.395 53.34 0)
 			(show_name no)
@@ -13674,14 +13145,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "fb1f5e14-5eaa-4359-b429-9df848c7a3b3")
+			(uuid "8f338af6-1597-462f-b6e5-6a5d1018352a")
 		)
 		(pin "2"
-			(uuid "f5807c28-5852-433d-91cc-0fe34bdf107a")
+			(uuid "7ab259c0-4a4f-4724-8584-c34031bb2ed5")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "C8")
 					(unit 1)
 				)
@@ -13697,7 +13168,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "66bb10c3-1179-4bf2-899b-7f8585ab2b74")
+		(uuid "57caa911-e2e4-40a9-9dbf-fcd98881f7e1")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -13709,8 +13180,8 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "dac5d31d-c77f-4564-b0ff-74d4ca19aab5")
-		(property "Reference" "#PWR37"
+		(uuid "d0e20c27-3cc0-4e44-a3c8-1c18563ce720")
+		(property "Reference" "#PWR27"
 			(at 492.76 53.34 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13776,12 +13247,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "a3c64cba-56b4-45f8-bff2-e60456832039")
+			(uuid "340816a3-c5f3-4152-a607-a3f00e54a890")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR37")
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
+					(reference "#PWR27")
 					(unit 1)
 				)
 			)
@@ -13796,7 +13267,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1e8f283e-50e5-48b2-967d-07942b873516")
+		(uuid "376d9c56-7075-4567-83fb-37b33c7f12aa")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -13808,8 +13279,8 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "fa70ae99-088c-4bbb-8af6-7fffdf129ec5")
-		(property "Reference" "#PWR38"
+		(uuid "6184171c-3f4f-4a3c-8d6f-e22551502168")
+		(property "Reference" "#PWR28"
 			(at 492.76 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13875,12 +13346,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "1de59c11-59a5-4f8c-b2c6-6a457d41443f")
+			(uuid "3f2b5d91-e7f4-4374-8a31-2fecf4b2304e")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR38")
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
+					(reference "#PWR28")
 					(unit 1)
 				)
 			)
@@ -13896,7 +13367,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "b2f1b4e2-33fd-4f4c-97a6-cfe8e6077d68")
+		(uuid "3749a1a6-25a8-4fe7-8754-94996585230a")
 		(property "Reference" "C9"
 			(at 506.095 106.68 0)
 			(show_name no)
@@ -14008,14 +13479,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "fe39f83c-98fc-4e2a-929f-3d2687a55d71")
+			(uuid "954d79c4-f895-4f80-9761-b160dfd5f417")
 		)
 		(pin "2"
-			(uuid "0d44034d-be1d-4073-b705-f8520d797943")
+			(uuid "c986fded-4574-449d-8844-c6a28694fb7c")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
 					(reference "C9")
 					(unit 1)
 				)
@@ -14030,7 +13501,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d20cedec-1ace-4b2a-8402-ebd3a168b34d")
+		(uuid "511f99be-985f-43e3-8b89-eca539427263")
 	)
 	(wire
 		(pts
@@ -14041,7 +13512,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "3a2dfbb6-3859-4600-a7ca-f585530a045e")
+		(uuid "f246390f-91e2-426b-92c9-70fd3e5e3d36")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -14053,8 +13524,8 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f17d5333-a7b8-4edd-971e-86e17eb0fb71")
-		(property "Reference" "#PWR39"
+		(uuid "262a5245-25a0-4043-9202-c083166f4109")
+		(property "Reference" "#PWR29"
 			(at 505.46 121.92 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14120,12 +13591,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "93c62b16-0f32-4a97-a859-01604dcc2638")
+			(uuid "c421f49c-e1b8-40bc-83d3-281b0c1b2d46")
 		)
 		(instances
 			(project "powerlenz"
-				(path "/58376948-81ce-4954-ae1c-bc1e9c7f26d0"
-					(reference "#PWR39")
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
+					(reference "#PWR29")
 					(unit 1)
 				)
 			)
@@ -14140,7 +13611,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1f10adab-d0d1-413d-b910-1583863ab021")
+		(uuid "3f9e4e1b-0228-431e-a359-6f3036133eb3")
 	)
 	(text "ADC to MCU: SCLK, DIN, DOUT, CS, DRDY, CLKIN, SYNC/RESET (nets ADC_*)"
 		(exclude_from_sim no)
@@ -14151,7 +13622,387 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "de87a040-f90d-4a95-8484-e2f594f5cf72")
+		(uuid "9e75a36e-102e-483e-b138-634caeb4661d")
+	)
+	(rectangle
+		(start 292.1 165.1)
+		(end 560 290)
+		(stroke
+			(width 0.2)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "6b16d288-ac47-4b09-ab2e-0d74972cc14f")
+	)
+	(text "4. HEADER TO THE ESP32-S3 DEVKITC (N16R8)"
+		(exclude_from_sim no)
+		(at 294.64 172 0)
+		(effects
+			(font
+				(size 2 2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "6121ee74-372d-4981-9bb2-9b45f231c321")
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x09")
+		(at 368.3 228.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "619f4aa8-8d74-4f00-b8ea-a669be206609")
+		(property "Reference" "J3"
+			(at 368.3 215.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "To DevKitC"
+			(at 368.3 241.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 368.3 228.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 368.3 228.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x09, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 368.3 228.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 368.3 228.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 368.3 228.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Note" "Wire or header to the DevKitC. Pin 8 feeds the DevKitC 5V pin. Never connect USB and this 5 V at the same time"
+			(at 368.3 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c8c714ea-1487-4714-949f-a5e23353c59b")
+		)
+		(pin "2"
+			(uuid "ae5fb012-0680-4a28-8c24-451fe5a7bbbd")
+		)
+		(pin "3"
+			(uuid "77d7496e-96a3-48f5-8e17-8db8d61d7eac")
+		)
+		(pin "4"
+			(uuid "67c7cc65-4535-4aba-84e9-e718226d57d0")
+		)
+		(pin "5"
+			(uuid "484edeb4-c1d2-4b6c-bc6e-7b01b3c3f5a1")
+		)
+		(pin "6"
+			(uuid "ce4ccd58-6c4d-4800-b61d-a75f5328167f")
+		)
+		(pin "7"
+			(uuid "a61d2667-a99e-4f84-a359-06de2044e80a")
+		)
+		(pin "8"
+			(uuid "48c3108e-931b-403d-bd53-52d5be9352c1")
+		)
+		(pin "9"
+			(uuid "f33bc4f1-19b4-49e1-a2ba-edde53db9fe9")
+		)
+		(instances
+			(project "powerlenz"
+				(path "/1fcbfd22-ec62-4307-9c1b-4a549448c65c"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "ADC_SCLK"
+		(at 363.22 218.44 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "933ffd0f-4c6b-4ec5-ab8b-0ff2d1b37f37")
+	)
+	(label "ADC_DIN"
+		(at 363.22 220.98 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "543aca6a-b315-418f-a85b-26b78b006f95")
+	)
+	(label "ADC_DOUT"
+		(at 363.22 223.52 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "522b63cd-c3dd-4cc9-8f99-1722f9360ba0")
+	)
+	(label "ADC_CS"
+		(at 363.22 226.06 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "54dafa17-e5f0-49c8-83fe-32b74bf9b2f3")
+	)
+	(label "ADC_DRDY"
+		(at 363.22 228.6 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9b42f5b5-9c96-4310-be28-e8ff4360b49e")
+	)
+	(label "ADC_CLKIN"
+		(at 363.22 231.14 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "78c7dc38-3a61-45af-a375-071d1ab6bf18")
+	)
+	(label "ADC_RESET"
+		(at 363.22 233.68 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6ae02ad3-94c4-40ab-9ad2-1cdf8de37795")
+	)
+	(label "+5V"
+		(at 363.22 236.22 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "396af602-f855-4191-832b-4caf577e8459")
+	)
+	(label "GND"
+		(at 363.22 238.76 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4a36f835-1f1d-49a9-94c2-631620d2881b")
+	)
+	(text "Suggested DevKitC pins (not final):"
+		(exclude_from_sim no)
+		(at 400 200 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "5f55f358-bc9e-4566-b25f-567cc07f5e90")
+	)
+	(text "1  ADC_SCLK   -> IO12 (FSPICLK)"
+		(exclude_from_sim no)
+		(at 400 206 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "60862944-2635-4e2b-a9e9-163e0c00d5ec")
+	)
+	(text "2  ADC_DIN    -> IO11 (FSPID, MOSI)"
+		(exclude_from_sim no)
+		(at 400 211 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "813cfadc-160f-44a9-92bc-70d80adfdae2")
+	)
+	(text "3  ADC_DOUT   -> IO13 (FSPIQ, MISO)"
+		(exclude_from_sim no)
+		(at 400 216 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cb7c10f8-41d5-470e-a608-34b5f9bba654")
+	)
+	(text "4  ADC_CS     -> IO10 (FSPICS0)"
+		(exclude_from_sim no)
+		(at 400 221 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "52b1097d-9390-4bb6-b90d-a03f0a1a5e55")
+	)
+	(text "5  ADC_DRDY   -> IO4  (interrupt)"
+		(exclude_from_sim no)
+		(at 400 226 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ed2c37a8-645c-48ec-b9cf-c9eb6b79e86e")
+	)
+	(text "6  ADC_CLKIN  <- IO5  (8.192 MHz from LEDC or I2S)"
+		(exclude_from_sim no)
+		(at 400 231 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3a87c9fe-5ba2-41c8-9dbd-3a9f5a96e6f3")
+	)
+	(text "7  ADC_RESET  <- IO6  (SYNC/RESET)"
+		(exclude_from_sim no)
+		(at 400 236 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5db0f343-148c-4025-9c9a-6b44a9738834")
+	)
+	(text "8  +5V        -> DevKitC 5V pin"
+		(exclude_from_sim no)
+		(at 400 241 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0ff6905e-3371-4091-a5c2-7bccf6249115")
+	)
+	(text "9  GND        -> DevKitC GND"
+		(exclude_from_sim no)
+		(at 400 246 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3ced2075-a55c-449a-9a17-793276fa30cc")
+	)
+	(text "Avoid IO35-37 (octal PSRAM), strapping pins IO0/3/45/46 and IO19/20 (USB). The DevKitC makes its own 3.3 V from the 5V pin."
+		(exclude_from_sim no)
+		(at 294.64 262 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2eb8a2d0-7fee-44d4-9691-ce6f203676e5")
+	)
+	(text "The ADC runs from the LP5907, not from the DevKitC 3V3 pin. Power sources on the DevKitC are mutually exclusive: USB, 5V pin or 3V3 pin."
+		(exclude_from_sim no)
+		(at 294.64 266 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6570e3c-4901-42ff-bf18-48abcc935980")
 	)
 	(sheet_instances
 		(path "/"
