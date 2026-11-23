@@ -24,7 +24,7 @@ Needs KiCad 10 (`kicad-cli`) and Python 3. Connections are made with net labels 
 
 ## PCB and 3D model
 
-`tools/build_pcb.py` builds `powerlenz.kicad_pcb` from the schematic netlist: all parts are placed on a compact 154 x 86 mm board (with the ESP32-S3 DevKitC plugged into two 1x22 sockets; its outline and 22.86 mm row spacing are assumed) with a mains zone and a low-voltage zone, and every pad is assigned its net. **It is placement only: no copper tracks are routed**, so KiCad shows 90 unrouted connections in DRC. It is a picture of the design, not something to manufacture.
+`tools/build_pcb.py` builds `powerlenz.kicad_pcb` from the schematic netlist: all parts are placed on a compact 154 x 86 mm board (with the ESP32-S3 DevKitC plugged into two 1x22 sockets; its outline and 22.86 mm row spacing are assumed) with a mains zone and a low-voltage zone, and every pad is assigned its net. `tools/route.py` then routes the low-voltage side with Freerouting (needs Java and the Freerouting jar in `~/tools`, not stored in the repo). **The mains side (L_IN, L_FUSED, N and the 39 k chain, 14 connections) is deliberately left unrouted** until someone with mains-design experience sets creepage and the isolation slot. It is a picture of the design, not something to manufacture.
 
 ```
 python3 tools/build_pcb.py        # after the schematic is built
