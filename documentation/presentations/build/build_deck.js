@@ -207,7 +207,7 @@ function add(master, sec) { return pres.addSlide({ masterName: master, sectionTi
   const items8 = [
     ["Voltage path", C.accent1, "230 V, 117 kΩ gives 2 mA, a 50 Ω sampling resistor gives 0.14 V peak at CH2 (gain 2)."],
     ["Current path", C.accent1, "10 A, CT to 5 mA, a 13 Ω burden, then 0.09 V peak at CH1 (gain 1)."],
-    ["Both paths", C.text2, "1 kΩ in each leg and 10 nF across. Each split resistor's midpoint is analog ground (AGND)."],
+    ["Both paths", C.text2, "1 kΩ, clamp, 100 Ω in each leg, 10 nF across. Each split resistor's midpoint is analog ground (AGND)."],
   ];
   items8.forEach((it, i) => {
     text(s, it[0], { x: 9.1, y: 1.55 + i * 1.7, w: 3.63, h: 0.35, fontSize: 18, bold: true, color: it[1] });
@@ -226,18 +226,18 @@ function add(master, sec) { return pres.addSlide({ masterName: master, sectionTi
     "The capacitor shorts fast ripple to ground before the ADC samples it.",
     "This ADC samples internally at 4.096 MHz, so the filter's real job is noise near that rate. The ADC's digital filter handles everything between 4 kHz and the MHz range.",
   ]), { x: 8.8, y: 2.1, w: 3.93, h: 4.6, fontSize: 15 });
-  s.addNotes("The left plot draws the ripple slowed down; the real ripple is thousands of times faster. Capacitor impedance Xc = 1 / (2 pi f C): huge at 50 Hz, tiny at MHz. Cutoff fc = 1 / (2 pi R C); the filter has 1 kohm in each leg and 10 nF across, so R is 2 kohm and fc is about 8 kHz. Correction to the first draft: this ADC is delta-sigma, so the analog filter is not an anti-alias filter at the 4 kHz output Nyquist point. The ADC oversamples at 4.096 MHz and filters digitally.");
+  s.addNotes("The left plot draws the ripple slowed down; the real ripple is thousands of times faster. Capacitor impedance Xc = 1 / (2 pi f C): huge at 50 Hz, tiny at MHz. Cutoff fc = 1 / (2 pi R C); the filter has 1 kohm plus 100 ohm in each leg and 10 nF across, so R is 2.2 kohm (1 kohm and 100 ohm per leg, the 100 ohm coming from the TI protection circuit) and fc is about 7.2 kHz. Correction to the first draft: this ADC is delta-sigma, so the analog filter is not an anti-alias filter at the 4 kHz output Nyquist point. The ADC oversamples at 4.096 MHz and filters digitally.");
 
   // ===== 10. Filter response =====
   s = add("CONTENT", "Filtering");
   title(s, "A gradual filter, not a brick wall");
-  picture(s, "filter-response", 0.6, 1.55, { w: 8.0 }, "Filter gain against frequency on a log scale: flat through the mains band, down 3 dB at about 8 kHz, down 54 dB at the ADC modulator rate of 4.096 MHz");
+  picture(s, "filter-response", 0.6, 1.55, { w: 8.0 }, "Filter gain against frequency on a log scale: flat through the mains band, down 3 dB at about 7.2 kHz, down 55 dB at the ADC modulator rate of 4.096 MHz");
   text(s, "Can remove", { x: 8.9, y: 1.55, w: 3.83, h: 0.35, fontSize: 18, bold: true, color: C.accent1 });
   text(s, "Switching supplies, sparks from motors and relays, and clock edges. Tens of kHz and up.", { x: 8.9, y: 1.95, w: 3.83, h: 1.2, fontSize: 15 });
   text(s, "Cannot remove", { x: 8.9, y: 3.3, w: 3.83, h: 0.35, fontSize: 18, bold: true, color: C.accent2 });
   text(s, "Wi-Fi burst ripple on the supply and 50 Hz hum. They sit too low. Fix with the separate LP5907 supply, careful layout and averaging in the DSP.", { x: 8.9, y: 3.7, w: 3.83, h: 1.8, fontSize: 15 });
-  text(s, "1 kΩ in each leg + 10 nF across, fc ≈ 8 kHz.", { x: 8.9, y: 5.8, w: 3.83, h: 0.4, fontSize: 12, color: C.accent5 });
-  s.addNotes("The filter attenuates 20 dB for every tenfold increase in frequency. The ADC's own digital filter removes what remains between its 4 kHz output limit and the MHz range, so the RC filter does not set the 4 kHz limit; its job is the modulator rate and its multiples. The noise frequency ranges are typical, not measured on our hardware; check on the first board with an oscilloscope. Phase lag at 50 Hz is 0.36 degrees on the current channel and 0.37 degrees on the voltage channel, so the two cancel to about 0.007 degrees. The first draft used a divider that made a 0.165 degree mismatch.");
+  text(s, "1 kΩ + 100 Ω in each leg + 10 nF across, fc ≈ 7.2 kHz.", { x: 8.9, y: 5.8, w: 3.83, h: 0.4, fontSize: 12, color: C.accent5 });
+  s.addNotes("The filter attenuates 20 dB for every tenfold increase in frequency. The ADC's own digital filter removes what remains between its 4 kHz output limit and the MHz range, so the RC filter does not set the 4 kHz limit; its job is the modulator rate and its multiples. The noise frequency ranges are typical, not measured on our hardware; check on the first board with an oscilloscope. Phase lag at 50 Hz is about 0.40 degrees on both channels (0.398 current, 0.405 voltage), so the two cancel to about 0.007 degrees. The first draft used a divider that made a 0.165 degree mismatch.");
 
   // ===== ADC types =====
   section("ADC and power");

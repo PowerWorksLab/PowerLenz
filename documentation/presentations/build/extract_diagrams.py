@@ -77,7 +77,7 @@ def fill_paths(body):
         cmd = "L" if i else "M"
         before.append("%s%d %.1f" % (cmd, 40 + i, 132 - A * (s + r)))
         after.append("%s%d %.1f" % (cmd, 40 + i, 316 - A * s))
-    fc = 1 / (2 * math.pi * 2000 * 10e-9)
+    fc = 1 / (2 * math.pi * 2200 * 10e-9)
     N = 200
     curve = []
     for k in range(N + 1):

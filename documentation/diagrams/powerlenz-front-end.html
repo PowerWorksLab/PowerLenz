@@ -121,7 +121,7 @@
 
   <figure>
     <div class="scroll">
-      <svg viewBox="0 0 1200 830" role="img" aria-label="Block-level schematic, version 2. The live wire passes through a split-core CT. A 1 amp fused tap feeds a surge MOV, a ZMPT107-1 current-type voltage transformer through three 39 kilohm resistors, and the HLK-5M05 isolated AC-DC module. The CT burden is two 6.49 ohm resistors with their midpoint at analog ground. The ZMPT107-1 sampling resistor is two 25 ohm resistors with their midpoint at analog ground. Each channel has 1 kilohm in each leg and 10 nanofarads across, then goes to the ADS131M04 simultaneous-sampling ADC. The ADC is supplied by an LP5907 regulator from the 5 volt rail, and talks to the ESP32-S3 DevKitC over SPI. The DevKitC takes 5 volts directly.">
+      <svg viewBox="0 0 1200 830" role="img" aria-label="Block-level schematic, version 2. The live wire passes through a split-core CT. A 1 amp fused tap feeds a surge MOV, a ZMPT107-1 current-type voltage transformer through three 39 kilohm resistors, and the HLK-5M05 isolated AC-DC module. The CT burden is two 6.49 ohm resistors with their midpoint at analog ground. The ZMPT107-1 sampling resistor is two 25 ohm resistors with their midpoint at analog ground. Each channel has 1 kilohm in each leg, a protection clamp, 100 ohms and 10 nanofarads across, then goes to the ADS131M04 simultaneous-sampling ADC. The ADC is supplied by an LP5907 regulator from the 5 volt rail, and talks to the ESP32-S3 DevKitC over SPI. The DevKitC takes 5 volts directly.">
         <defs>
           <g id="gnd"><path class="gnd" d="M0 0 v6 M-9 6 h18 M-6 10 h12 M-3 14 h6"/></g>
         </defs>
@@ -212,15 +212,26 @@
         <text x="456" y="548" text-anchor="end" class="dim">25 Ω</text>
         <text x="456" y="600" text-anchor="end" class="dim">25 Ω</text>
         <text x="514" y="566" class="dim">AGND</text>
-        <rect class="part" x="540" y="512" width="36" height="16"/>
-        <rect class="part" x="540" y="612" width="36" height="16"/>
-        <text x="558" y="504" text-anchor="middle" class="dim">1 kΩ</text>
-        <text x="558" y="604" text-anchor="middle" class="dim">1 kΩ</text>
-        <circle class="dot-s" cx="620" cy="520" r="3.5"/>
-        <circle class="dot-s" cx="620" cy="620" r="3.5"/>
-        <path class="ws" d="M620 520 V566 M620 574 V620"/>
-        <path class="thin" d="M608 566 H632 M608 574 H632"/>
-        <text x="640" y="574" class="dim">10 nF</text>
+        <rect class="part" x="510" y="512" width="36" height="16"/>
+        <rect class="part" x="510" y="612" width="36" height="16"/>
+        <text x="528" y="504" text-anchor="middle" class="dim">1 kΩ</text>
+        <text x="528" y="604" text-anchor="middle" class="dim">1 kΩ</text>
+        <circle class="dot-s" cx="580" cy="520" r="3.5"/>
+        <circle class="dot-s" cx="580" cy="620" r="3.5"/>
+        <path class="ws" d="M580 520 V532 M580 608 V620"/>
+        <rect class="block" x="558" y="532" width="44" height="24" rx="3"/>
+        <rect class="block" x="558" y="584" width="44" height="24" rx="3"/>
+        <text x="580" y="548" text-anchor="middle" class="dim">clamp</text>
+        <text x="580" y="600" text-anchor="middle" class="dim">clamp</text>
+        <rect class="part" x="620" y="512" width="36" height="16"/>
+        <rect class="part" x="620" y="612" width="36" height="16"/>
+        <text x="638" y="504" text-anchor="middle" class="dim">100 Ω</text>
+        <text x="638" y="604" text-anchor="middle" class="dim">100 Ω</text>
+        <circle class="dot-s" cx="676" cy="520" r="3.5"/>
+        <circle class="dot-s" cx="676" cy="620" r="3.5"/>
+        <path class="ws" d="M676 520 V566 M676 574 V620"/>
+        <path class="thin" d="M664 566 H688 M664 574 H688"/>
+        <text x="660" y="574" text-anchor="end" class="dim">10 nF</text>
         <text x="342" y="486" text-anchor="end" class="b ts">VOLTAGE</text>
         <text x="342" y="504" text-anchor="end" class="dim">CH2, gain 2</text>
 
@@ -235,18 +246,30 @@
         <text x="456" y="698" text-anchor="end" class="dim">6.49 Ω</text>
         <text x="456" y="750" text-anchor="end" class="dim">6.49 Ω</text>
         <text x="514" y="716" class="dim">AGND</text>
-        <rect class="part" x="540" y="662" width="36" height="16"/>
-        <rect class="part" x="540" y="762" width="36" height="16"/>
-        <text x="558" y="654" text-anchor="middle" class="dim">1 kΩ</text>
-        <text x="558" y="754" text-anchor="middle" class="dim">1 kΩ</text>
-        <circle class="dot-s" cx="620" cy="670" r="3.5"/>
-        <circle class="dot-s" cx="620" cy="770" r="3.5"/>
-        <path class="ws" d="M620 670 V716 M620 724 V770"/>
-        <path class="thin" d="M608 716 H632 M608 724 H632"/>
-        <text x="640" y="724" class="dim">10 nF</text>
+        <rect class="part" x="510" y="662" width="36" height="16"/>
+        <rect class="part" x="510" y="762" width="36" height="16"/>
+        <text x="528" y="654" text-anchor="middle" class="dim">1 kΩ</text>
+        <text x="528" y="754" text-anchor="middle" class="dim">1 kΩ</text>
+        <circle class="dot-s" cx="580" cy="670" r="3.5"/>
+        <circle class="dot-s" cx="580" cy="770" r="3.5"/>
+        <path class="ws" d="M580 670 V682 M580 758 V770"/>
+        <rect class="block" x="558" y="682" width="44" height="24" rx="3"/>
+        <rect class="block" x="558" y="734" width="44" height="24" rx="3"/>
+        <text x="580" y="698" text-anchor="middle" class="dim">clamp</text>
+        <text x="580" y="750" text-anchor="middle" class="dim">clamp</text>
+        <rect class="part" x="620" y="662" width="36" height="16"/>
+        <rect class="part" x="620" y="762" width="36" height="16"/>
+        <text x="638" y="654" text-anchor="middle" class="dim">100 Ω</text>
+        <text x="638" y="754" text-anchor="middle" class="dim">100 Ω</text>
+        <circle class="dot-s" cx="676" cy="670" r="3.5"/>
+        <circle class="dot-s" cx="676" cy="770" r="3.5"/>
+        <path class="ws" d="M676 670 V716 M676 724 V770"/>
+        <path class="thin" d="M664 716 H688 M664 724 H688"/>
+        <text x="660" y="724" text-anchor="end" class="dim">10 nF</text>
         <text x="116" y="650" class="b ts">CURRENT</text>
         <text x="116" y="666" class="dim" dy="-0">CH1, gain 1</text>
         <text x="116" y="692" class="dim">burden 2 × 6.49 Ω ≈ 13 Ω</text>
+        <text x="116" y="800" class="dim">clamp = BAT54 to AVDD + BAV199 pair to AGND, one per ADC input pin (TI SBAA506)</text>
 
         <!-- ADC -->
         <rect class="block" x="700" y="470" width="180" height="320" rx="3"/>
@@ -259,7 +282,6 @@
         <text x="710" y="774" class="mono">CH1 −</text>
         <text x="790" y="716" text-anchor="middle" class="mono dim">1 µF AVDD, 1 µF DVDD</text>
         <text x="790" y="734" text-anchor="middle" class="mono dim">220 nF CAP · AGND=DGND</text>
-        <text x="790" y="752" text-anchor="middle" class="mono dim">clamps (SBAA506): not drawn</text>
 
         <!-- HLK outputs and power -->
         <path class="wp" d="M910 400 V402"/><use href="#gnd" x="910" y="400"/>
@@ -309,7 +331,7 @@
       <span class="l-pwr"><i></i><b>DC power</b></span>
       <span class="l-dig"><i></i><b>digital (SPI and control)</b></span>
     </div>
-    <figcaption>The live wire runs straight through the CT on its way to the house. A separate 1 A ceramic time-lag fused tap (high breaking capacity) feeds three things in parallel: a surge MOV, the ZMPT107-1 (through three 39 kΩ resistors that set its 2 mA) and the HLK-5M05 AC-DC module. Only those two parts, the module and the CT's magnetic coupling cross the isolation barrier. Each sensor has a split burden whose midpoint is analog ground, then 1 kΩ in each leg and 10 nF across, identical on both channels, so the filters add the same small phase lag to both. The HLK's 5 V feeds the DevKitC's 5V pin directly and an LP5907 for the ADC. The sign of each channel is fixed in firmware on a resistive load. Ground symbols are the analog ground (AGND = DGND, joined at the ADC).</figcaption>
+    <figcaption>The live wire runs straight through the CT on its way to the house. A separate 1 A ceramic time-lag fused tap (high breaking capacity) feeds three things in parallel: a surge MOV, the ZMPT107-1 (through three 39 kΩ resistors that set its 2 mA) and the HLK-5M05 AC-DC module. Only those two parts, the module and the CT's magnetic coupling cross the isolation barrier. Each sensor has a split burden whose midpoint is analog ground. Every ADC input pin then sees the same chain: 1 kΩ, a protection clamp (BAT54 to AVDD, BAV199 pair to ground), 100 Ω, then the pin, with 10 nF across each pair. The chains are identical on both channels, so they add the same small phase lag to both. The HLK's 5 V feeds the DevKitC's 5V pin directly and an LP5907 for the ADC. The sign of each channel is fixed in firmware on a resistive load. Ground symbols are the analog ground (AGND = DGND, joined at the ADC).</figcaption>
   </figure>
 
   <figure>
@@ -386,9 +408,9 @@
   </figure>
 
   <figure>
-    <h2>What the 1 kΩ + 10 nF filter removes</h2>
+    <h2>What the input filter removes</h2>
     <div class="scroll">
-      <svg viewBox="0 0 1200 400" role="img" aria-label="Left: a 50 Hz wave with fast ripple on it before the filter, and the same wave clean after it. Right: the filter's gain against frequency on a log scale. It passes 50 Hz and its harmonics unchanged, falls to 70 percent at about 8 kHz, and cuts noise by 54 dB at the ADC modulator rate of 4.096 MHz.">
+      <svg viewBox="0 0 1200 400" role="img" aria-label="Left: a 50 Hz wave with fast ripple on it before the filter, and the same wave clean after it. Right: the filter's gain against frequency on a log scale. It passes 50 Hz and its harmonics unchanged, falls to 70 percent at about 7.2 kHz, and cuts noise by 55 dB at the ADC modulator rate of 4.096 MHz.">
         <!-- left: before and after -->
         <text x="40" y="36" class="b">Before the filter</text>
         <text x="40" y="54" class="dim">50 Hz wave with fast ripple riding on it (ripple drawn slowed down)</text>
@@ -397,7 +419,7 @@
 
         <path class="axis" d="M290 190 V208"/>
         <polygon class="a-d" points="284,206 290,216 296,206"/>
-        <text x="304" y="206" class="mono">1 kΩ + 10 nF</text>
+        <text x="304" y="206" class="mono">1.1 kΩ + 10 nF</text>
 
         <text x="40" y="240" class="b">After the filter</text>
         <text x="40" y="258" class="dim">same 50 Hz wave, ripple gone</text>
@@ -406,7 +428,7 @@
 
         <!-- right: frequency response -->
         <text x="640" y="36" class="b">What the filter lets through</text>
-        <text x="640" y="54" class="dim">gain against frequency, log scale, 1 kΩ in each leg + 10 nF across</text>
+        <text x="640" y="54" class="dim">gain against frequency, log scale, 1.1 kΩ in each leg + 10 nF across</text>
 
         <rect class="band-sig" x="660" y="70" width="164.4" height="260"/>
         <rect class="band-noise" x="924.2" y="70" width="235.8" height="260"/>
@@ -431,25 +453,25 @@
         <text x="930" y="88" class="b tm">noise: fast,</text>
         <text x="930" y="106" class="b tm">above ~50 kHz</text>
 
-        <path class="vline" d="M867.2 70 V330"/>
+        <path class="vline" d="M864.2 70 V330"/>
         <path class="vline" d="M1060.9 70 V330"/>
-        <text x="873" y="322" class="mono">fc ≈ 8 kHz, −3 dB</text>
+        <text x="870" y="322" class="mono">fc ≈ 7.2 kHz, −3 dB</text>
         <text x="1068" y="110" class="mono">ADC modulator</text>
         <text x="1068" y="126" class="mono">4.096 MHz</text>
 
-        <circle class="dot-s" cx="1060.9" cy="246" r="4"/>
-        <text x="1052" y="262" text-anchor="end" class="mono">−54 dB</text>
-        <text x="1052" y="278" text-anchor="end" class="mono">at 4.096 MHz</text>
+        <circle class="dot-s" cx="1060.9" cy="249" r="4"/>
+        <text x="1052" y="265" text-anchor="end" class="mono">−55 dB</text>
+        <text x="1052" y="281" text-anchor="end" class="mono">at 4.096 MHz</text>
       </svg>
     </div>
-    <figcaption>Left: the filter leaves a 50 Hz wave alone and strips the ripple. The real ripple is thousands of times faster than drawn, so it would be an unreadable blur at this scale. Right: the filter does not stop at one frequency. It gradually shuts the door, 20 dB lower for every ten times higher in frequency. Everything the ADC needs sits far to the left of the cutoff. This ADC is a delta-sigma type: it samples internally at 4.096 MHz and then filters digitally down to 8 kSPS, so the digital filter removes everything between 4 kHz and the MHz range. The analog filter's real job is to stop noise near the modulator rate and its multiples, where it gives about −54 dB. (The first draft wrongly drew this as an anti-alias filter at the 4 kHz output Nyquist point.)</figcaption>
+    <figcaption>Left: the filter leaves a 50 Hz wave alone and strips the ripple. The real ripple is thousands of times faster than drawn, so it would be an unreadable blur at this scale. Right: the filter does not stop at one frequency. It gradually shuts the door, 20 dB lower for every ten times higher in frequency. Everything the ADC needs sits far to the left of the cutoff. This ADC is a delta-sigma type: it samples internally at 4.096 MHz and then filters digitally down to 8 kSPS, so the digital filter removes everything between 4 kHz and the MHz range. The analog filter's real job is to stop noise near the modulator rate and its multiples, where it gives about −55 dB. (The first draft wrongly drew this as an anti-alias filter at the 4 kHz output Nyquist point.)</figcaption>
   </figure>
 
   <section style="display:grid;gap:12px">
     <h2>Which noise the filter can and cannot remove</h2>
     <div class="tbl">
       <table>
-        <thead><tr><th>Noise source</th><th>Roughly how fast</th><th>Removed by the 1 kΩ + 10 nF filter?</th></tr></thead>
+        <thead><tr><th>Noise source</th><th>Roughly how fast</th><th>Removed by the input filter?</th></tr></thead>
         <tbody>
           <tr><td>Switching power supplies (the AC-DC module, any DC-DC stage)</td><td>tens of kHz to a few MHz</td><td>Yes, mostly</td></tr>
           <tr><td>Sparks from motor brushes and relay contacts</td><td>broadband, up to hundreds of MHz</td><td>Yes, mostly</td></tr>
@@ -543,18 +565,18 @@ energy (kWh) = Σ ( P × Δt ) / 3,600,000      Δt in seconds</pre>
 
     <div>
       <h3>5. The filter, and why both channels match</h3>
-<pre class="eq">R_total = 2 × Rf + R_source              (1 kΩ in each leg)
+<pre class="eq">R_total = 2 × (Rf + R2) + R_source       (1 kΩ and 100 Ω in each leg)
 fc      = 1 / ( 2π × R_total × Cf )
 gain    = 1 / sqrt( 1 + (f/fc)² )
 phase   = − atan( f / fc )
 
-current channel:  R_source ≈ 13 Ω    R_total = 2,013 Ω   fc = 7.91 kHz   lag at 50 Hz = 0.362°
-voltage channel:  R_source =  50 Ω   R_total = 2,050 Ω   fc = 7.76 kHz   lag at 50 Hz = 0.369°
+current channel:  R_source ≈ 13 Ω    R_total = 2,213 Ω   fc = 7.19 kHz   lag at 50 Hz = 0.398°
+voltage channel:  R_source =  50 Ω   R_total = 2,250 Ω   fc = 7.07 kHz   lag at 50 Hz = 0.405°
 
-at 4.096 MHz (the ADC's modulator rate): 20 × log10(4.096 M / 7.9 k) ≈ −54 dB
+at 4.096 MHz (the ADC's modulator rate): 20 × log10(4.096 M / 7.2 k) ≈ −55 dB
 
-fixed gain error: 2 kΩ against the ADC's 330 kΩ input impedance → about −0.6% per channel</pre>
-      <p>Two 1 kΩ resistors dominate the filter, so the source resistance (13 Ω against 50 Ω) barely matters: the two lags differ by about 0.007°. The first draft used a 938 Ω divider, which made a 0.165° mismatch. The 0.6% gain term is constant, so calibration absorbs it. Its temperature drift is not yet known.</p>
+fixed gain error: 2.2 kΩ against the ADC's 330 kΩ input impedance → about −0.7% per channel</pre>
+      <p>The 1 kΩ and 100 Ω resistors in each leg dominate the filter, so the source resistance (13 Ω against 50 Ω) barely matters: the two lags differ by about 0.007°. The first draft used a 938 Ω divider, which made a 0.165° mismatch. The 0.7% gain term is constant, so calibration absorbs it. Its temperature drift is not yet known. The 100 Ω resistors come from TI's protection circuit (SBAA506).</p>
     </div>
 
     <div>
@@ -590,7 +612,7 @@ noise floor:   7.56 µV rms (G = 1, 8 kSPS) / 12.98 Ω × 2000 ≈ 1.2 mA of wir
     <div>
       <h3>8. Calibration, in order</h3>
       <ol>
-        <li><b>Voltage gain k_v.</b> Compare V_rms with a reference meter, and set k_v = V_ref ÷ V_measured. This also absorbs the 0.6% filter term.</li>
+        <li><b>Voltage gain k_v.</b> Compare V_rms with a reference meter, and set k_v = V_ref ÷ V_measured. This also absorbs the 0.7% filter term.</li>
         <li><b>Current gain k_i.</b> Use a resistive load (a heater or incandescent lamp) and set k_i = I_ref ÷ I_measured. Repeat at a few currents, because a CT is not perfectly linear.</li>
         <li><b>Sign.</b> On the same resistive load, real power must be positive. If it isn't, flip the sign of that channel in firmware.</li>
         <li><b>Phase φ.</b> On the resistive load, Q must be 0. Adjust the whole-sample shift and the PHASEn register until it is.</li>
@@ -642,7 +664,7 @@ noise floor:   7.56 µV rms (G = 1, 8 kSPS) / 12.98 Ω × 2000 ≈ 1.2 mA of wir
       <li><b>CT protection.</b> A CT secondary must never run open. The split burden keeps it loaded. TI's clamp above covers the ADC pins, but a clamp across the CT secondary itself is still to be designed.</li>
       <li><b>HLK-5M05.</b> The datasheet states 3000 V isolation in one place and 2500 V in another, and its circuit drawing shows a 0.5 A fuse where its text says 1 A. Its derating graphs were read: full load from about 110 V to 260 V AC and up to 60 °C. Do not connect a laptop to the board while it is on mains until the isolation rating is resolved.</li>
       <li><b>Fuse.</b> The Littelfuse 0239 glass fuse is only rated 35 A at 250 V AC (official table), so it is replaced by a ceramic Bel 5HT 1-R listed at 1.5 kA. That figure comes from a seller listing; read Bel's datasheet before building.</li>
-      <li><b>Input protection.</b> TI's SBAA506 clamp is adopted on all four ADC input pins: signal, 1 kΩ, clamp node (BAT54 to AVDD, BAV199 pair to ground), 100 Ω, ADC pin, with the 10 nF C0G across each pair. It is not drawn on the schematic above. It moves the filter corner to about 7.2 kHz and the lag to about 0.40° on both channels, so the two still cancel. A TVS or Zener on AVDD is still to be chosen.</li>
+      <li><b>Input protection.</b> TI's SBAA506 clamp is adopted on all four ADC input pins: signal, 1 kΩ, clamp node (BAT54 to AVDD, BAV199 pair to ground), 100 Ω, ADC pin, with the 10 nF C0G across each pair. It is drawn on the schematic above as the "clamp" boxes. It moves the filter corner to about 7.2 kHz and the lag to about 0.40° on both channels, so the two still cancel. A TVS or Zener on AVDD is still to be chosen.</li>
       <li><b>ZMPT107-1.</b> Surge withstand of the primary is not stated, and its linearity is only specified from about 46 V to 276 V rms.</li>
       <li><b>ADS131M04.</b> Use continuous-conversion mode for AC (global-chop is for DC). Phase calibration shifts the DRDY timing, so read that section before writing the interrupt handler. The 330 kΩ input impedance's temperature drift is unknown.</li>
       <li><b>Power.</b> The DevKitC guide calls its power sources "mutually exclusive", so never connect USB and the HLK 5 V at the same time. A custom board would replace its regulator with an AP63203 buck.</li>
@@ -668,7 +690,7 @@ noise floor:   7.56 µV rms (G = 1, 8 kSPS) / 12.98 Ω × 2000 ≈ 1.2 mA of wir
       document.getElementById("wave-before").setAttribute("d", before);
       document.getElementById("wave-after").setAttribute("d", after);
 
-      var fc = 1 / (2 * Math.PI * 2000 * 10e-9), curve = "", N = 200;
+      var fc = 1 / (2 * Math.PI * 2200 * 10e-9), curve = "", N = 200;
       for (var k = 0; k <= N; k++) {
         var f = 10 * Math.pow(10, (7 * k) / N);
         var gdb = -10 * Math.log10(1 + Math.pow(f / fc, 2));
