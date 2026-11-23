@@ -22,6 +22,15 @@ kicad-cli sch export pdf -o powerlenz.pdf powerlenz.kicad_sch
 
 Needs KiCad 10 (`kicad-cli`) and Python 3. Connections are made with net labels and power symbols: every pin carrying the same net name is connected.
 
+## ERC notes
+
+- `same_local_global_label` is set to ignore in `powerlenz.kicad_pro`. A few pins use a plain net label with the same name as a power net (for example +3V3A or GND) to keep stacked power symbols from overlapping. The nets are the same either way, and the exported netlist was compared before and after to confirm that.
+- Footprints are not assigned yet, so the board stage is still ahead.
+
+## Exports
+
+`exports/powerlenz-schematic.pdf` and `exports/powerlenz-bom.csv` are generated with `kicad-cli` (see above). Re-export after any change.
+
 ## Status
 
 The schematic is built block by block. Each block is committed once its ERC is clean. Footprints are not assigned yet. Nothing here has been built or tested; the open items in `documentation/README.md` still apply, and the mains side needs a design review before it is ever powered.
