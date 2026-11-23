@@ -77,7 +77,7 @@ def fill_paths(body):
         cmd = "L" if i else "M"
         before.append("%s%d %.1f" % (cmd, 40 + i, 132 - A * (s + r)))
         after.append("%s%d %.1f" % (cmd, 40 + i, 316 - A * s))
-    fc = 1 / (2 * math.pi * 1000 * 10e-9)
+    fc = 1 / (2 * math.pi * 2000 * 10e-9)
     N = 200
     curve = []
     for k in range(N + 1):
@@ -109,10 +109,10 @@ def write(name, body, vb, scale=4):
 schematic, ct, filt = (inner(b) for b in blocks)
 filt = fill_paths(filt)
 
-write("schematic-full", schematic, (0, 0, 1200, 800), 3)
-write("schematic-mains", schematic, (20, 12, 610, 400))
-write("schematic-chains", schematic, (40, 380, 680, 400))
-write("schematic-power-adc", schematic, (600, 137, 590, 648))
+write("schematic-full", schematic, (0, 0, 1200, 830), 3)
+write("schematic-mains", schematic, (20, 12, 650, 420))
+write("schematic-chains", schematic, (60, 390, 700, 430))
+write("schematic-power-adc", schematic, (690, 225, 510, 600))
 write("ct-clamp", ct, (0, 0, 1000, 440), 3)
 write("filter-wave", filt, (20, 20, 540, 360))
 write("filter-response", filt, (615, 20, 585, 375))

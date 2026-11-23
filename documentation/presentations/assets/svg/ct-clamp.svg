@@ -67,20 +67,19 @@ text{fill:#1b2227;font-family:'Liberation Sans',Arial,sans-serif;font-size:13px}
 
         <!-- leads, burden resistor and output -->
         <path class="ws" d="M392 147 H600 V205"/>
-        <path class="ws" d="M392 353 H600 V285"/>
+        <path class="ws" d="M392 353 H890 M600 353 V285"/><polygon class="a-s" points="884,347 896,353 884,359"/>
         <polygon class="a-s" points="462,141 476,147 462,153"/>
         <text x="430" y="136" class="dim">secondary current: I ÷ 2000 = 5 mA</text>
-        <rect class="part" x="592" y="205" width="16" height="80"/>
-        <text x="620" y="222" class="b ts">Rb (burden)</text>
-        <text x="620" y="240" class="mono">V = I_sec × Rb</text>
-        <text x="620" y="258" class="mono">5 mA × 22 Ω = 110 mV rms</text>
+        <rect class="part" x="592" y="205" width="16" height="34"/><rect class="part" x="592" y="251" width="16" height="34"/><path class="ws" d="M600 239 V251"/><circle class="dot-s" cx="600" cy="245" r="3.5"/><path class="ws" d="M600 245 H640"/><use xlink:href="#gnd2" x="640" y="245"/>
+        <text x="660" y="216" class="b ts">Rb: 2 × 6.49 Ω</text>
+        <text x="660" y="234" class="mono">V = I_sec × Rb</text><text x="660" y="250" class="dim">midpoint to AGND</text>
+        <text x="660" y="276" class="mono">5 mA × 13 Ω = 65 mV rms</text>
         <circle class="dot-s" cx="600" cy="147" r="3.5"/>
         <path class="ws" d="M600 147 H890"/>
         <polygon class="a-s" points="884,141 896,147 884,153"/>
-        <text x="640" y="178" class="dim">to Rf + Cf, then ADC CH1+</text>
+        <text x="640" y="178" class="dim">to 1 kΩ + 10 nF filter, then ADC CH1+</text>
         <circle class="dot-s" cx="600" cy="353" r="3.5"/>
-        <use xlink:href="#gnd2" x="600" y="353"/>
-        <text x="622" y="368" class="dim">analog ground, also ADC CH1−</text>
+        <text x="640" y="372" class="dim">to 1 kΩ + 10 nF filter, then ADC CH1−</text>
 
         <!-- step badges -->
         <circle class="badge" cx="338" cy="236" r="11"/><text class="badge-t" x="338" y="240">1</text>
