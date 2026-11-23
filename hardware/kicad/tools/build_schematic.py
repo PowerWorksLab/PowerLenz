@@ -32,7 +32,8 @@ FOOT = {
     "220nF 50V X7R": "Capacitor_SMD:C_0805_2012Metric",
     "LP5907-3.3": "Package_TO_SOT_SMD:SOT-23-5",
     "ADS131M04": "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm",
-    "To DevKitC": "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical",
+    "DevKitC row A (J1 pins)": "Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical",
+    "DevKitC row B (J3 pins)": "Connector_PinSocket_2.54mm:PinSocket_1x22_P2.54mm_Vertical",
 }
 s.foot = FOOT
 
@@ -158,12 +159,16 @@ def block3_adc_power():
 def block4_header():
     """Header carrying the ADC control signals and the 5 V supply to the ESP32-S3 DevKitC."""
     s.box(292.1, 165.1, 560, 290)
-    s.text("4. HEADER TO THE ESP32-S3 DEVKITC (N16R8)", 294.64, 172, 2.0, True)
-    s.part("Connector_Generic", "Conn_01x09", "To DevKitC", (368.3, 228.6),
-           {1: "ADC_SCLK", 2: "ADC_DIN", 3: "ADC_DOUT", 4: "ADC_CS", 5: "ADC_DRDY", 6: "ADC_CLKIN", 7: "ADC_RESET",
-            8: "~+5V", 9: "~GND"}, prefix="J",
-           extra={"Note": "Wire or header to the DevKitC. Pin 8 feeds the DevKitC 5V pin. Never connect USB and this 5 V at the same time"})
-    s.text("Suggested DevKitC pins (not final):", 400.0, 200.0, 1.27, True)
+    s.text("4. SOCKETS FOR THE ESP32-S3 DEVKITC (N16R8)", 294.64, 172, 2.0, True)
+    # DevKitC-1 header J1 (22 pins, left row) plugs into this socket; the pin numbers follow Espressif's J1 table.
+    j1 = {4: "~ADC_DRDY", 5: "~ADC_CLKIN", 6: "~ADC_RESET", 16: "~ADC_CS", 17: "~ADC_DIN", 18: "~ADC_SCLK",
+          19: "~ADC_DOUT", 21: "~+5V", 22: "~GND"}
+    s.part("Connector_Generic", "Conn_01x22", "DevKitC row A (J1 pins)", (368.3, 190.5), j1, prefix="J",
+           nc=[n for n in range(1, 23) if n not in j1],
+           extra={"Note": "Socket for DevKitC header J1. Pin 21 feeds the DevKitC 5V pin. Never connect USB and this 5 V at the same time"})
+    s.part("Connector_Generic", "Conn_01x22", "DevKitC row B (J3 pins)", (508.0, 190.5), {}, prefix="J",
+           nc=range(1, 23), extra={"Note": "Second socket row, mechanical support only. Row spacing assumed 22.86 mm, confirm against Espressif dimensions drawing"})
+    s.text("DevKitC pins used (not final):", 400.0, 200.0, 1.27, True)
     rows = [
         "1  ADC_SCLK   -> IO12 (FSPICLK)",
         "2  ADC_DIN    -> IO11 (FSPID, MOSI)",
