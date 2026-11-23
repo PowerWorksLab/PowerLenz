@@ -17,27 +17,28 @@ SYS_FP = "/usr/share/kicad/footprints"
 OUT = os.path.join(ROOT, "powerlenz.kicad_pcb")
 VERSION = "20260206"
 
-BOARD_W, BOARD_H = 162.0, 104.0
-BARRIER_X = 66.0
+BOARD_W, BOARD_H = 154.0, 86.0
+BARRIER_X = 56.0
+DK_X, DK_Y = 121.0, 10.0       # pin 1 of the DevKitC left socket row; right row is 22.86 mm further right
 
-# ref -> (x, y, rotation). Rough placement for a 3D picture; not a routed design.
+# ref -> (x, y, rotation). Compact placement; not a routed design.
 PLACE = {
     # --- mains side ---
-    "J1": (10, 20, 90), "F1": (30, 12, 0), "RV1": (60, 14, 0),
-    "R1": (22, 34, 0), "R2": (22, 42, 0), "R3": (22, 50, 0), "C1": (50, 42, 0),
-    "T1": (66, 62, 180), "PS1": (36, 84, 0), "C2": (80, 96, 0),
+    "J1": (8, 16, 90), "F1": (30, 8, 0), "RV1": (47, 22, 0),
+    "R1": (22, 30, 0), "R2": (22, 38, 0), "R3": (22, 46, 0), "C1": (20, 58, 0),
+    "T1": (56, 44, 180), "PS1": (40, 68, 0), "C2": (82, 68, 0),
     # --- analog front end (low voltage) ---
-    "J2": (150, 22, 90), "R4": (132, 18, 0), "R5": (132, 25, 0),
-    "R6": (84, 56, 0), "R7": (84, 68, 0),
-    "R8": (84, 24, 0), "D1": (96, 24, 0), "D2": (104, 24, 0), "R9": (116, 24, 0),
-    "R10": (84, 32, 0), "D3": (96, 32, 0), "D4": (104, 32, 0), "R11": (116, 32, 0),
-    "R12": (84, 40, 0), "D5": (96, 40, 0), "D6": (104, 40, 0), "R13": (116, 40, 0),
-    "R14": (84, 48, 0), "D7": (96, 48, 0), "D8": (104, 48, 0), "R15": (116, 48, 0),
-    "C3": (126, 28, 90), "C4": (126, 44, 90),
-    # --- ADC, supply and header ---
-    "U2": (140, 66, 0), "U1": (98, 80, 0),
-    "C5": (88, 80, 90), "C6": (108, 80, 90), "C7": (128, 56, 90), "C8": (150, 56, 90), "C9": (152, 76, 90),
-    "J3": (156, 36, 0),
+    "J2": (110, 12, 90), "R4": (94, 8, 0), "R5": (102, 8, 0),
+    "R6": (74, 48, 0), "R7": (74, 56, 0),
+    "R8": (66, 16, 0), "D1": (76, 16, 0), "D2": (84, 16, 0), "R9": (94, 16, 0),
+    "R10": (66, 23, 0), "D3": (76, 23, 0), "D4": (84, 23, 0), "R11": (94, 23, 0),
+    "R12": (66, 30, 0), "D5": (76, 30, 0), "D6": (84, 30, 0), "R13": (94, 30, 0),
+    "R14": (66, 37, 0), "D7": (76, 37, 0), "D8": (84, 37, 0), "R15": (94, 37, 0),
+    "C3": (102, 19, 90), "C4": (102, 34, 90),
+    # --- ADC, supply and DevKitC sockets ---
+    "U2": (104, 62, 0), "U1": (92, 78, 0),
+    "C5": (84, 80, 90), "C6": (100, 80, 90), "C7": (96, 54, 90), "C8": (114, 54, 90), "C9": (116, 72, 90),
+    "J3": (DK_X, DK_Y, 0), "J4": (DK_X + 22.86, DK_Y, 0),
 }
 
 # schematic pin -> footprint pad, where they differ (assumed mappings are flagged in the part notes)
@@ -156,6 +157,16 @@ def main():
     for ref in sorted(comps, key=lambda r: (r.rstrip("0123456789"), int("".join(ch for ch in r if ch.isdigit())))):
         x, y, rot = PLACE[ref]
         fps.append(dump(place_fp(ref, comps[ref], x, y, rot, netid, pin_net), 1))
+    # DevKitC mechanical stand-in
+    dk = load_footprint("powerlenz:ESP32-S3-DevKitC-1")
+    items = ["footprint", Str("powerlenz:ESP32-S3-DevKitC-1"), ["layer", Str("F.Cu")], ["uuid", Str(uid())], ["at", num(DK_X), num(DK_Y)]]
+    for c in dk[2:]:
+        if isinstance(c, list) and c and c[0] not in ("version", "generator", "generator_version", "layer"):
+            c = list(c)
+            if (c[0] == "property" or c[0].startswith("fp_")) and first(c, "uuid") is None:
+                c.append(["uuid", Str(uid())])
+            items.append(c)
+    fps.append(dump(items, 1))
     # mounting holes
     for mi, (hx, hy) in enumerate([(4, 4), (BOARD_W - 4, 4), (4, BOARD_H - 4), (BOARD_W - 4, BOARD_H - 4)], 1):
         mh = load_footprint("MountingHole:MountingHole_3.2mm_M3")
@@ -176,10 +187,10 @@ def main():
         gr_line(0, 0, BOARD_W, 0, "Edge.Cuts", 0.1), gr_line(BOARD_W, 0, BOARD_W, BOARD_H, "Edge.Cuts", 0.1),
         gr_line(BOARD_W, BOARD_H, 0, BOARD_H, "Edge.Cuts", 0.1), gr_line(0, BOARD_H, 0, 0, "Edge.Cuts", 0.1),
         gr_line(BARRIER_X, 2, BARRIER_X, BOARD_H - 2, "F.SilkS", 0.25, dashed=True),
-        gr_text("MAINS SIDE 230 V", 8, 6, "F.SilkS", 1.5, True),
-        gr_text("LOW VOLTAGE", 80, 6, "F.SilkS", 1.5, True),
-        gr_text("ISOLATION BARRIER", BARRIER_X + 2, 11, "F.SilkS", 1.0),
-        gr_text("PowerLenz v0.1  placement only, not routed", 80, BOARD_H - 3, "F.SilkS", 1.0),
+        gr_text("MAINS SIDE 230 V", 8, 83, "F.SilkS", 1.5, True),
+        gr_text("LOW VOLTAGE", 62, 3, "F.SilkS", 1.5, True),
+        gr_text("ISOLATION BARRIER", BARRIER_X + 2, BOARD_H - 3, "F.SilkS", 1.0),
+        gr_text("PowerLenz v0.1  not for manufacture", 100, BOARD_H - 2, "F.SilkS", 1.0),
     ]
     nets = ['\t(net 0 "")'] + ['\t(net %d "%s")' % (i, n) for n, i in sorted(netid.items(), key=lambda kv: kv[1])]
     layers = open(os.path.join(HERE, "pcb_layers.txt"), encoding="utf-8").read().rstrip("\n")
