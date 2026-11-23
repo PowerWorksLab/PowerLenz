@@ -16,6 +16,7 @@ This page is the reading order for everything written so far. It records what is
 | 6 | [findings/datasheet-verification-checklist.md](findings/datasheet-verification-checklist.md) | Every assumption checked against datasheets, plus the finalized-decisions table |
 | 6b | [findings/bill-of-materials.md](findings/bill-of-materials.md) | Every part with quantity, price and buy link |
 | 7 | [findings/datasheet-links.md](findings/datasheet-links.md) | All datasheet links and whether each was read |
+| 7b | [datasheets/](datasheets/README.md) | Local copies of the manufacturer documents, organised by function, with an index |
 | 8 | [diagrams/powerlenz-front-end.html](diagrams/powerlenz-front-end.html) | Circuit diagrams and the equations (version 2, matches the decisions below) |
 | 9 | [presentations/powerlenz-front-end.pptx](presentations/powerlenz-front-end.pptx) | 18-slide deck of the diagrams, the datasheet changes, phase error and open items (version 2) |
 

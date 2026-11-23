@@ -2,6 +2,8 @@
 
 Links collected while checking the PowerLenz parts. Last reviewed 23 Nov 2026. Manufacturers revise datasheets, so confirm the revision before relying on a number.
 
+Local copies of the documents we have downloaded are kept in [../datasheets/](../datasheets/README.md), organised by function.
+
 **Status key**
 - **Read:** the full text was extracted and read.
 - **Listing only:** only a distributor or search listing was read, not the manufacturer document.
