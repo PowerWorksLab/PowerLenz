@@ -153,8 +153,8 @@
         <path class="wm" d="M170 60 V92 M170 128 V140 H1010 V270"/>
         <rect class="part" x="162" y="92" width="16" height="36"/>
         <path class="thin" d="M170 92 V128"/>
-        <text x="190" y="108" class="dim">fuse 1 A</text>
-        <text x="190" y="124" class="dim">slow-blow</text>
+        <text x="190" y="108" class="dim">fuse 1 A, ceramic</text>
+        <text x="190" y="124" class="dim">time-lag, 1.5 kA</text>
         <text x="560" y="132" class="mono tm">L (fused)</text>
 
         <!-- neutral -->
@@ -259,6 +259,7 @@
         <text x="710" y="774" class="mono">CH1 −</text>
         <text x="790" y="716" text-anchor="middle" class="mono dim">1 µF AVDD, 1 µF DVDD</text>
         <text x="790" y="734" text-anchor="middle" class="mono dim">220 nF CAP · AGND=DGND</text>
+        <text x="790" y="752" text-anchor="middle" class="mono dim">clamps (SBAA506): not drawn</text>
 
         <!-- HLK outputs and power -->
         <path class="wp" d="M910 400 V402"/><use href="#gnd" x="910" y="400"/>
@@ -308,7 +309,7 @@
       <span class="l-pwr"><i></i><b>DC power</b></span>
       <span class="l-dig"><i></i><b>digital (SPI and control)</b></span>
     </div>
-    <figcaption>The live wire runs straight through the CT on its way to the house. A separate 1 A slow-blow fused tap feeds three things in parallel: a surge MOV, the ZMPT107-1 (through three 39 kΩ resistors that set its 2 mA) and the HLK-5M05 AC-DC module. Only those two parts, the module and the CT's magnetic coupling cross the isolation barrier. Each sensor has a split burden whose midpoint is analog ground, then 1 kΩ in each leg and 10 nF across, identical on both channels, so the filters add the same small phase lag to both. The HLK's 5 V feeds the DevKitC's 5V pin directly and an LP5907 for the ADC. The sign of each channel is fixed in firmware on a resistive load. Ground symbols are the analog ground (AGND = DGND, joined at the ADC).</figcaption>
+    <figcaption>The live wire runs straight through the CT on its way to the house. A separate 1 A ceramic time-lag fused tap (high breaking capacity) feeds three things in parallel: a surge MOV, the ZMPT107-1 (through three 39 kΩ resistors that set its 2 mA) and the HLK-5M05 AC-DC module. Only those two parts, the module and the CT's magnetic coupling cross the isolation barrier. Each sensor has a split burden whose midpoint is analog ground, then 1 kΩ in each leg and 10 nF across, identical on both channels, so the filters add the same small phase lag to both. The HLK's 5 V feeds the DevKitC's 5V pin directly and an LP5907 for the ADC. The sign of each channel is fixed in firmware on a resistive load. Ground symbols are the analog ground (AGND = DGND, joined at the ADC).</figcaption>
   </figure>
 
   <figure>
@@ -638,9 +639,10 @@ noise floor:   7.56 µV rms (G = 1, 8 kSPS) / 12.98 Ω × 2000 ≈ 1.2 mA of wir
     <h2>Still open</h2>
     <ul>
       <li><b>Bench tests.</b> Our CT's and ZMPT107-1's real phase and ratio error; CT accuracy from about 0.1 A; the jitter on the ESP32-made CLKIN.</li>
-      <li><b>CT protection.</b> A CT secondary must never run open. The split burden keeps it loaded, but a clamp across the secondary is still to be designed. It cannot be an ordinary diode to AGND because of the ADC's negative charge pump. TI's note SBAA506 could not be read here.</li>
+      <li><b>CT protection.</b> A CT secondary must never run open. The split burden keeps it loaded. TI's clamp above covers the ADC pins, but a clamp across the CT secondary itself is still to be designed.</li>
       <li><b>HLK-5M05.</b> The datasheet states 3000 V isolation in one place and 2500 V in another, and its circuit drawing shows a 0.5 A fuse where its text says 1 A. Its derating graphs were read: full load from about 110 V to 260 V AC and up to 60 °C. Do not connect a laptop to the board while it is on mains until the isolation rating is resolved.</li>
-      <li><b>Fuse.</b> The 1 A slow-blow fuse is rated 250 V AC, but one source lists its breaking capacity at 250 V AC as only 35 A. Check the official Littelfuse datasheet before building.</li>
+      <li><b>Fuse.</b> The Littelfuse 0239 glass fuse is only rated 35 A at 250 V AC (official table), so it is replaced by a ceramic Bel 5HT 1-R listed at 1.5 kA. That figure comes from a seller listing; read Bel's datasheet before building.</li>
+      <li><b>Input protection.</b> TI's SBAA506 clamp is adopted on all four ADC input pins: signal, 1 kΩ, clamp node (BAT54 to AVDD, BAV199 pair to ground), 100 Ω, ADC pin, with the 10 nF C0G across each pair. It is not drawn on the schematic above. It moves the filter corner to about 7.2 kHz and the lag to about 0.40° on both channels, so the two still cancel. A TVS or Zener on AVDD is still to be chosen.</li>
       <li><b>ZMPT107-1.</b> Surge withstand of the primary is not stated, and its linearity is only specified from about 46 V to 276 V rms.</li>
       <li><b>ADS131M04.</b> Use continuous-conversion mode for AC (global-chop is for DC). Phase calibration shifts the DRDY timing, so read that section before writing the interrupt handler. The 330 kΩ input impedance's temperature drift is unknown.</li>
       <li><b>Power.</b> The DevKitC guide calls its power sources "mutually exclusive", so never connect USB and the HLK 5 V at the same time. A custom board would replace its regulator with an AP63203 buck.</li>
