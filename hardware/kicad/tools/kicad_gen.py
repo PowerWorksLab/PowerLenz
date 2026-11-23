@@ -34,6 +34,7 @@ class Schematic:
         self.counters = {}
         self.pwr_count = 0
         self.refs = {}
+        self.foot = {}  # value -> footprint
 
     # ---------- library handling ----------
     def _embed(self, lib, sym):
@@ -129,6 +130,7 @@ class Schematic:
         if ref is None:
             self.counters[prefix] = self.counters.get(prefix, 0) + 1
             ref = "%s%d" % (prefix, self.counters[prefix])
+        footprint = footprint or self.foot.get(value, "")
         pts = self.pin_points(lib, sym, x, y, rot)
         numbers = sorted(pts, key=lambda s: (len(s), s))
         self._instance(lib, sym, ref, value, x, y, rot, footprint, extra, dnp, pin_numbers=numbers)

@@ -11,6 +11,31 @@ from kicad_gen import Schematic
 OUT = os.path.join(os.path.dirname(__file__), "..", "powerlenz.kicad_sch")
 s = Schematic("PowerLenz: single-phase NILM front end", paper="A2")
 
+FOOT = {
+    "Mains in": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+    "CT SCT-013-000": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+    "1A T 250V": "Fuse:Fuseholder_Clip-5x20mm_Bel_FC-203-22_Lateral_P17.80x5.00mm_D1.17mm_Horizontal",
+    "10D561K": "Varistor:RV_Disc_D12mm_W4.2mm_P7.5mm",
+    "39k 1% 1/2W": "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal",
+    "ZMPT107-1": "powerlenz:ZMPT107-1",
+    "0.1uF X2 275VAC": "Capacitor_THT:C_Rect_L13.0mm_W5.0mm_P10.00mm_FKS3_FKP3_MKS4",
+    "HLK-5M05": "Converter_ACDC:Converter_ACDC_Hi-Link_HLK-5Mxx",
+    "220uF 25V": "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm",
+    "6.49R 1%": "Resistor_SMD:R_1206_3216Metric",
+    "24.9R 1%": "Resistor_SMD:R_0805_2012Metric",
+    "1k 1%": "Resistor_SMD:R_0805_2012Metric",
+    "100R 1%": "Resistor_SMD:R_0805_2012Metric",
+    "BAT54": "Package_TO_SOT_SMD:SOT-23",
+    "BAV199": "Package_TO_SOT_SMD:SOT-23",
+    "10nF C0G": "Capacitor_SMD:C_0805_2012Metric",
+    "1uF 50V X7R": "Capacitor_SMD:C_0805_2012Metric",
+    "220nF 50V X7R": "Capacitor_SMD:C_0805_2012Metric",
+    "LP5907-3.3": "Package_TO_SOT_SMD:SOT-23-5",
+    "ADS131M04": "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm",
+    "To DevKitC": "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical",
+}
+s.foot = FOOT
+
 
 def block1_mains():
     """Mains input, fuse, MOV, ZMPT107-1 primary string and the HLK-5M05 isolated 5 V supply."""
@@ -80,13 +105,12 @@ def block2_analog():
                extra={"MPN": "RC0805FR-071KL", "Manufacturer": "Yageo", "Note": "Input filter resistor (TI SBAA506 R1)"})
         s.part("Device", "D_Schottky", "BAT54", (104.14, y), {2: node, 1: "+3V3A"}, prefix="D",
                extra={"MPN": "BAT54-7-F", "Manufacturer": "Diodes Inc",
-                      "Note": "Clamps positive overstress to AVDD. SOT-23 pin mapping to be checked in the BAT54 datasheet"})
-        s.part("Device", "D", "BAV199 (a)", (139.7, y), {2: "GND", 1: mid}, prefix="D",
+                      "Note": "Clamps positive overstress to AVDD. SOT-23 pad mapping assumed (K = pad 1, A = pad 3); check the BAT54 datasheet (DS11005)"})
+        s.part("Diode", "BAT54S", "BAV199", (157.48, y), {1: "GND", 2: node}, prefix="D", nc=(3,),
                extra={"MPN": "BAV199-7-F", "Manufacturer": "Diodes Inc",
-                      "Note": "One BAV199 package = two series diodes (this and the next). Pin mapping to be checked in its datasheet"})
-        s.part("Device", "D", "BAV199 (b)", (175.26, y), {2: mid, 1: node}, prefix="D",
-               extra={"MPN": "BAV199-7-F", "Manufacturer": "Diodes Inc"})
-        s.part("Device", "R", "100R 1%", (210.82, y), {1: node, 2: adc}, prefix="R", rot=90,
+                      "Note": "Series pair in one SOT-23: pin 1 anode (to GND), pin 3 common (middle), pin 2 cathode (to the clamp node). "
+                              "Pin mapping assumed to match the BAT54S symbol; check the BAV199 datasheet (DS30232)"})
+        s.part("Device", "R", "100R 1%", (193.04, y), {1: node, 2: adc}, prefix="R", rot=90,
                extra={"MPN": "RC0805FR-07100RL", "Manufacturer": "Yageo", "Note": "TI SBAA506 R2; not yet priced"})
     s.part("Device", "C", "10nF C0G", (254, 203.2), {1: "CH1P", 2: "CH1N"}, prefix="C",
            extra={"MPN": "0805N103J500CT", "Manufacturer": "Walsin", "Note": "C0G, 5%, 50 V. Across the CH1 pair, after the 100 ohm resistors"})
