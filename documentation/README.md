@@ -58,10 +58,10 @@ Why this shape:
 | Current sensor | **SCT-013-000** split-core CT (100 A : 50 mA), one on live | Order the current-output version. Buy 2–3 and calibrate each. Gain within about 2% from 0.5 A in field tests (one unit, by OpenEnergyMonitor). |
 | Burden | 2 × 6.49 Ω, 0.1%, midpoint to AGND (about 13 Ω total) | 22 Ω was rejected: it clips above about 77 A. 13 Ω clips above about 131 A. |
 | Voltage sensor | **ZMPT107-1** current-type transformer (2 mA : 2 mA, 3000 V isolation, ≤0.75° phase) | 3 × 39 kΩ in series on the mains side (about 2 mA at 230 V). Secondary: 50 Ω as 2 × 25 Ω, midpoint to AGND. |
-| Input filter | 1 kΩ in each leg + 10 nF C0G across, identical on both channels | About 8 kHz corner. Identical filters make their phase shifts cancel. |
+| Input filter and protection | 1 kΩ in each leg, TI's clamp (BAT54 to AVDD, BAV199 pair to ground), 100 Ω, then the ADC pin; 10 nF C0G across each channel | About 7.2 kHz corner. Identical on both channels, so their phase shifts cancel. |
 | ADC | **ADS131M04**: 24-bit, 4 channels, simultaneous | 8 kSPS (OSR 512), continuous-conversion mode (global-chop is for DC), internal reference. CH1 = current at PGA gain 1, CH2 = voltage at gain 2. 1 µF on AVDD/DVDD, 220 nF on CAP. SPI mode 1. CLKIN 8.192 MHz from the ESP32. |
 | MCU | **ESP32-S3-WROOM-1-N16R8** (on an ESP32-S3-DevKitC-1 board we still have to buy) | Avoid IO35–37 (octal PSRAM) and strapping pins. Ambient ≤ 65 °C. SPI2 on any pins. |
-| AC-DC | **HLK-5M05** (5 V, 1 A) | 1 A slow-blow fuse, MOV 10D561K, 100–220 µF output capacitor. Safety capacitor + choke only if certifying. |
+| AC-DC | **HLK-5M05** (5 V, 1 A) | 1 A time-lag ceramic fuse with high breaking capacity (Bel 5HT 1-R), MOV 10D561K, 100–220 µF output capacitor. Safety capacitor + choke only if certifying. |
 | Analog supply | **LP5907** 3.3 V | Feeds ADC AVDD (and DVDD, our suggestion). Ripple rejection 60 dB at 100 kHz. |
 | Digital supply (demo) | The DevKitC's own regulator, from the HLK's 5 V | Never connect USB and the HLK 5 V at once (not yet confirmed safe). |
 | Digital supply (custom board) | **AP63203** 3.3 V buck, 3.9 µH + 10 µF + 2 × 22 µF | Replaces the AP2112K, which would overheat from 5 V. |
@@ -141,11 +141,12 @@ The mains side (fuse, MOV, HLK input, ZMPT107-1 series resistors and primary) is
 - HLK-5M05 derating graphs: full load from about 110 V to 260 V AC and up to 60 °C. Our load is about 40%, so it is comfortable.
 - DevKitC user guide: the USB ports, the 5V pin and the 3V3 pin are "mutually exclusive" power sources, so never use USB and the HLK 5 V together.
 - ADS131M04: use continuous-conversion mode for AC, not global-chop. TI's phase-shift example matches our plan.
-- MOV 10D561K is rated 350 V AC. The 1 A fuse's breaking capacity at 250 V AC is **in doubt** (one source says only 35 A), so it needs the official datasheet before building.
+- MOV 10D561K is rated 350 V AC. The Littelfuse 0239 glass fuse is only rated **35 A at 250 V AC** (official table), so it is replaced by a ceramic Bel 5HT 1-R rated about 1.5 kA. That figure still needs the Bel datasheet.
+- TI's SBAA506 input-protection circuit is adopted on all four ADC input pins.
 
 **Still needs a datasheet or answer**
 - HLK-5M05: isolation rating (3000 V or 2500 V) and a conflict over the input fuse (its text says 1 A, its circuit drawing shows 0.5 A).
-- Official Bourns MOV and Littelfuse fuse datasheets; TI SBAA506 for the CT open-circuit clamp. The fetch tool was blocked or got unreadable PDFs.
+- Official Bourns MOV datasheet and the Bel 5HT fuse datasheet; a 3.3 V supply clamp part for AVDD.
 - ZMPT107-1 surge withstand (not stated); behaviour outside about 46–276 V.
 - ESP32-S3 SoC datasheet (SPI limits came from a secondary source), the DevKitC regulator's current rating, the 330 kΩ input-impedance drift, and the AP63203 current revision.
 
