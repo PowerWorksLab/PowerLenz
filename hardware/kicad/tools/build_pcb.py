@@ -121,6 +121,8 @@ def place_fp(ref, comp, x, y, rot, netid, pin_net):
             items.append(c)
             continue
         c = list(c)
+        if tag == "model" and "Fuseholder_Clip-5x20mm_Bel_FC-203-22" in str(c[1]):
+            c[1] = Str("${KIPRJMOD}/footprints/powerlenz.3dshapes/FuseClip-5x20.step")  # the KiCad install has no model for it
         if tag == "pad":
             pad = str(c[1])
             pin = inv.get(pad, pad)

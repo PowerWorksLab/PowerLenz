@@ -17,9 +17,9 @@
 	(fp_text user "ESP32-S3 DevKitC (plug-in)" (at 11.43 30.700000000000003 90) (layer "F.SilkS") (effects (font (size 1.2 1.2) (thickness 0.18))))
 	(attr exclude_from_pos_files exclude_from_bom)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/footprints/powerlenz.3dshapes/ESP32-S3-DevKitC-1.wrl"
+	(model "${KIPRJMOD}/footprints/powerlenz.3dshapes/ESP32-S3-DevKitC-1.step"
 		(offset (xyz 0 0 0))
-		(scale (xyz 0.3937 0.3937 0.3937))
+		(scale (xyz 1 1 1))
 		(rotate (xyz 0 0 0))
 	)
 )

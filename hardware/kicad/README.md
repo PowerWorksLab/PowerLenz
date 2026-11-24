@@ -33,14 +33,15 @@ python3 tools/build_pcb.py        # after the schematic is built
 python3 tools/route.py            # needs ~/tools/freerouting*.jar; removes old tracks, then routes
 kicad-cli pcb render --side top --width 2400 --height 1500 --quality high --rotate '-50,0,-25' --perspective --zoom 0.9 -o exports/3d/powerlenz-pcb-3d.png powerlenz.kicad_pcb
 kicad-cli pcb export glb --subst-models -o exports/3d/powerlenz-pcb.glb powerlenz.kicad_pcb
-kicad-cli pcb export step --subst-models -o exports/3d/powerlenz-pcb.step powerlenz.kicad_pcb
+python3 tools/make_step_models.py   # STEP stand-ins for the ZMPT107-1, DevKitC and fuse clip
+kicad-cli pcb export step --subst-models --include-tracks --include-pads --include-zones --include-silkscreen --include-soldermask -o exports/3d/powerlenz-pcb.step powerlenz.kicad_pcb
 ```
 
 | File | What it is |
 |---|---|
 | `exports/3d/powerlenz-pcb-3d.png`, `powerlenz-pcb-top.png` | Rendered pictures of the board |
 | `exports/3d/powerlenz-pcb.glb` | The full 3D model (open in Blender, or any glTF viewer) |
-| `exports/3d/powerlenz-pcb.step` | STEP for SolidWorks and other mechanical CAD. **Incomplete:** it does not contain the ZMPT107-1 (our model is VRML only) or the fuse clip (KiCad has no 3D model for it). Use the GLB for the full picture. |
+| `exports/3d/powerlenz-pcb.step` | STEP for SolidWorks and other mechanical CAD, with copper, pads, silkscreen, solder mask and every part. The ZMPT107-1, the DevKitC and the fuse clip are simple coloured boxes from `tools/make_step_models.py` (assumed sizes, not manufacturer geometry); the other parts are KiCad library models. In SolidWorks use Open, Options, Import as assembly. |
 
 Things to know about the 3D model:
 - The ZMPT107-1 is a simple box (19 x 10 x 18.2 mm) with four pins, from the manufacturer's drawing, with its footprint taken from the same drawing and not yet checked against a real part.

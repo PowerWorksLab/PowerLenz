@@ -84,12 +84,12 @@
 		(remove_unused_layers no)
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/footprints/powerlenz.3dshapes/ZMPT107-1.wrl"
+	(model "${KIPRJMOD}/footprints/powerlenz.3dshapes/ZMPT107-1.step"
 		(offset
 			(xyz 0 0 0)
 		)
 		(scale
-			(xyz 0.3937 0.3937 0.3937)
+			(xyz 1 1 1)
 		)
 		(rotate
 			(xyz 0 0 0)
