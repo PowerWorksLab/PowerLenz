@@ -449,12 +449,12 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/footprints/powerlenz.3dshapes/ESP32-S3-DevKitC-1.wrl"
+		(model "${KIPRJMOD}/footprints/powerlenz.3dshapes/ESP32-S3-DevKitC-1.step"
 			(offset
 				(xyz 0 0 0)
 			)
 			(scale
-				(xyz 0.3937 0.3937 0.3937)
+				(xyz 1 1 1)
 			)
 			(rotate
 				(xyz 0 0 0)
@@ -5997,12 +5997,12 @@
 			(uuid "f111528e-7302-4625-a7c8-835e14594095")
 		)
 		(embedded_fonts no)
-		(model "${KIPRJMOD}/footprints/powerlenz.3dshapes/ZMPT107-1.wrl"
+		(model "${KIPRJMOD}/footprints/powerlenz.3dshapes/ZMPT107-1.step"
 			(offset
 				(xyz 0 0 0)
 			)
 			(scale
-				(xyz 0.3937 0.3937 0.3937)
+				(xyz 1 1 1)
 			)
 			(rotate
 				(xyz 0 0 0)
@@ -9152,7 +9152,7 @@
 			(uuid "4f2de74c-a0a3-419c-86d3-f1056d120362")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Fuse.3dshapes/Fuseholder_Clip-5x20mm_Bel_FC-203-22_Lateral_P17.80x5.00mm_D1.17mm_Horizontal.step"
+		(model "${KIPRJMOD}/footprints/powerlenz.3dshapes/FuseClip-5x20.step"
 			(offset
 				(xyz 0 0 0)
 			)
