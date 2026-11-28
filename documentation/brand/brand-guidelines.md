@@ -14,11 +14,20 @@ Illustrated version: [`kit/06-guidelines/sixteen-amps-brand-guidelines.pdf`](kit
 
 The name comes from the large socket in an Indian home.
 
-## 2. Logo
+## 2. Tagline and story line
+
+| Line | Words | Where |
+|---|---|---|
+| Tagline | **Clarity for every unit of energy.** | With the logo: use the supplied `logo-tagline` artwork |
+| Story line | **From every socket to every decision.** | Posters and presentations, set in IBM Plex Sans |
+
+Use the tagline version at least 60 mm or 240 px wide; below that, use the logo alone. Do not put both lines side by side. Purpose, mission and roadmap are in [`company-purpose.md`](company-purpose.md).
+
+## 3. Logo
 
 - **Symbol:** Three Pins, fused. It also reads as an A, for Amps.
 - **Lettering:** IBM Plex Sans SemiBold, converted to outlines, with a round dot on the i. Never retype it.
-- **Layouts:** primary, stacked, name only, symbol, endorsement ("by sixteen amps"), PowerLenz lockup.
+- **Layouts:** primary, primary with tagline, stacked, name only, symbol, endorsement ("by sixteen amps"), PowerLenz lockup.
 
 | Background | Symbol and letters | Dot on the i | File variant |
 |---|---|---|---|
@@ -33,7 +42,7 @@ The name comes from the large socket in an Indian home.
 - 3D printing with about 0.8 mm features: primary logo at least 44 mm wide.
 - Do not stretch, rotate, recolour, add effects or retype.
 
-## 3. Typography
+## 4. Typography
 
 | Job | Typeface | Weight |
 |---|---|---|
@@ -79,7 +88,7 @@ All three are free on Google Fonts under open licences. Fallback: `Arial, sans-s
 }
 ```
 
-## 4. Colour
+## 5. Colour
 
 | Colour | HEX | RGB | Use |
 |---|---|---|---|
@@ -105,13 +114,13 @@ All three are free on Google Fonts under open licences. Fallback: `Arial, sans-s
 
 Always write the state in words as well. Brass is close to the High amber, so never use Brass for a status.
 
-## 5. Voice (provisional)
+## 6. Voice (provisional)
 
-Confident but not loud. Plain words and real measurements, no hype. To be revisited with the company's purpose and goals.
+Confident but not loud. Plain words and real measurements, no hype. Say what is measured and what is estimated.
 
-## 6. Open items
+## 7. Open items
 
-- Company purpose, goals and motives: to be discussed.
+- Answer the open questions in `company-purpose.md`.
 - Trademark and similar-logo search.
 - Register the domain (`sixteenamps.com` is printed on templates).
 - Test how people read the symbol.
@@ -121,6 +130,7 @@ Confident but not loud. Plain words and real measurements, no hype. To be revisi
 
 | Path | Contents |
 |---|---|
+| `company-purpose.md` | Purpose, taglines, users, values and roadmap |
 | `kit/` | Logos, icons, fabrication files, templates, patterns, illustrated guidelines |
 | `sixteen-amps-brand-kit-v2.zip` | The kit, for sharing |
 | `sample/` | Sample web page and mobile screen |

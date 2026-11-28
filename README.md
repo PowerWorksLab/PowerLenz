@@ -15,6 +15,7 @@ Start with **[documentation/README.md](documentation/README.md)**. It gives the 
 | [documentation/datasheets/](documentation/datasheets/README.md) | Local copies of the manufacturer datasheets, organised by function |
 | [documentation/diagrams/](documentation/diagrams/) | Circuit diagrams and the calculation page |
 | [documentation/presentations/](documentation/presentations/) | The slide deck and the scripts that build it |
+| [documentation/brand/](documentation/brand/brand-guidelines.md) | Brand guidelines, [company purpose](documentation/brand/company-purpose.md), brand kit and sample screens |
 
 ## Safety
 
