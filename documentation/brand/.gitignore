@@ -1,0 +1,4 @@
+# Shareable zip: rebuild with src/build.py
+*.zip
+# Downloaded fonts: restore with src/fetch_fonts.py
+src/fonts/
