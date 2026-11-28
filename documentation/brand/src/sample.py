@@ -55,7 +55,7 @@ WEB = f"""
    <div class="chartbox chart">{BARS}</div>
   </div></div>
  <div class="band"><div><h2 class="h">Know before the bill arrives.</h2><p>Follow your usage from your phone.</p></div><span class="cta solid">View specifications</span></div>
- <footer class="pad">{LOGO}<span>PowerLenz by Sixteen Amps</span></footer>
+ <footer class="pad">{LOGO}<span>Clarity for every unit of energy.<br>PowerLenz by Sixteen Amps</span></footer>
 </div>"""
 
 PHONE = f"""

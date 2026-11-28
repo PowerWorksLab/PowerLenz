@@ -31,6 +31,8 @@ FONT_CSS = "".join(WEBFONTS.values())
 
 SYMBOL = re.search(r' d="([^"]+)"', (SRC / "symbol.svg").read_text()).group(1)
 TRACK, SIZE, GAP, SC = -0.02, 200, 58, 1000
+TAGLINE = "Clarity for every unit of energy."       # sits with the logo
+STORY_LINE = "From every socket to every decision."  # posters and presentations
 
 
 def text(s, weight):
@@ -88,7 +90,12 @@ def _layouts():
     k = 0.5
     small = _move(endorsement, b[0] - endorsement[2][0] * k, b[3] + 46 - endorsement[2][1] * k, k)
     lockup = ([(d, 0, 0, 1)] + small[0], small[1], _union(b, small[2]))
-    return {"logo": logo, "stacked": stacked, "wordmark": name, "symbol": symbol,
+    # the tagline sits under the name, set to the same width
+    d, b = text(TAGLINE, 500)
+    k = (_BOX[2] - _BOX[0]) / (b[2] - b[0])
+    dx, dy = _BOX[0] - b[0] * k, logo[2][3] + ASC * 0.32 - b[1] * k
+    tagged = (logo[0] + [(d, dx, dy, k)], logo[1], _union(logo[2], (_BOX[0], dy + b[1] * k, _BOX[2], dy + b[3] * k)))
+    return {"logo": logo, "logo-tagline": tagged, "stacked": stacked, "wordmark": name, "symbol": symbol,
             "endorsement": endorsement, "powerlenz-lockup": lockup}
 
 

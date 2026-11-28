@@ -13,7 +13,7 @@ from pathlib import Path
 import pcbnew
 
 import guidelines
-from identity import (ARTS, BLACK, BRASS, NAVY, PAPER, SC, STEM_RATIO, TINT, WEBFONTS, WHITE, variants_for)
+from identity import (ARTS, BRASS, NAVY, PAPER, SC, STEM_RATIO, STORY_LINE, TAGLINE, WEBFONTS, WHITE, variants_for)
 
 BRAND = Path(__file__).resolve().parent.parent
 KIT = BRAND / "kit"
@@ -142,7 +142,7 @@ def templates():
     sections = ((28, 172, 260, 150, "Need"), (306, 172, 260, 150, "User study"), (28, 358, 538, 160, "How it works"),
                 (28, 554, 260, 150, "Design"), (306, 554, 260, 150, "Bill of materials"))
     sheet("poster-a1", 594, 841, f'<rect width="594" height="150" fill="{NAVY}"/>' + symbol.place(500, 38, 62, "white")
-          + lockup.place(28, 28, 230, "on-navy") + t(28, 134, 10, "One line that says what the product does", WHITE)
+          + lockup.place(28, 28, 230, "on-navy") + t(28, 134, 12, STORY_LINE, WHITE, 600)
           + f'<rect y="150" width="594" height="3" fill="{BRASS}"/>'
           + "".join(tab(x, y, label) + box(x, y + 20, w, h) for x, y, w, h, label in sections)
           + f'<rect x="28" y="740" width="538" height="73" rx="8" fill="{NAVY}"/>' + logo.place(46, 762, 170, "on-navy")
@@ -150,13 +150,13 @@ def templates():
     sheet("sticker-round-50mm", 56, 56, f'<circle cx="28" cy="28" r="28" fill="{NAVY}"/>'
           + symbol.place(13, 28 - symbol.height_for(30) / 2, 30, "white"), WHITE, "mm")
     sheet("slide-title", 1920, 1080, logo.place(120, 100, 520, "on-navy") + t(120, 640, 120, "Presentation title", WHITE, 700, HEAD)
-          + f'<rect x="120" y="680" width="120" height="8" fill="{BRASS}"/>' + t(120, 770, 48, "Subtitle · Date", WHITE)
+          + f'<rect x="120" y="680" width="120" height="8" fill="{BRASS}"/>' + t(120, 770, 48, STORY_LINE, WHITE) + t(120, 850, 36, "Presenter · Date", WHITE)
           + symbol.place(1520, 720, 280, "white"), NAVY)
     sheet("slide-content", 1920, 1080, t(120, 170, 72, "Slide heading", weight=700, family=HEAD)
           + f'<rect x="120" y="205" width="100" height="7" fill="{BRASS}"/>'
           + "".join(f'<rect x="120" y="{290 + i * 90}" width="{1100 if i % 3 != 2 else 760}" height="22" rx="11" fill="{NAVY}" opacity="0.1"/>' for i in range(6))
           + logo.place(1500, 960, 300), PAPER)
-    sheet("social-cover", 1500, 500, logo.place(400, 250 - logo.height_for(700) / 2, 700, "on-navy"), NAVY)
+    sheet("social-cover", 1500, 500, ARTS["logo-tagline"].place(400, 250 - ARTS["logo-tagline"].height_for(700) / 2, 700, "on-navy"), NAVY)
 
 
 def patterns():
@@ -180,12 +180,14 @@ Logo: **Three Pins, fused**, lettered in IBM Plex Sans SemiBold. Colours: **Navy
 
 | Folder | Contents |
 |---|---|
-| `01-logo/` | `svg/` and `png/`: logo, stacked, wordmark, symbol, endorsement and PowerLenz lockup. Variants: `navy` (light backgrounds), `on-navy` (white with a Brass dot), `black`, `white` |
+| `01-logo/` | `svg/` and `png/`: logo, logo with tagline, stacked, wordmark, symbol, endorsement and PowerLenz lockup. Variants: `navy` (light backgrounds), `on-navy` (white with a Brass dot), `black`, `white` |
 | `02-icons/` | favicon (SVG, ICO), app icons, round avatar, maskable icon, web manifest |
 | `03-fabrication/` | `kicad/` silkscreen footprints and `dxf/` outlines; the file name gives the width in mm |
 | `04-templates/` | business card (3 mm bleed), A4 letterhead, A1 poster, slides, 50 mm sticker, social cover |
 | `05-pattern/` | pins field backgrounds |
 | `06-guidelines/` | brand guidelines (HTML and PDF) |
+
+Tagline (with the logo): **{TAGLINE}** Story line (posters and presentations): **{STORY_LINE}**
 
 Type: Bricolage Grotesque (headings), IBM Plex Sans (data headings, paragraphs), Roboto (numbers, rupee prices).
 Template fonts are embedded for viewing in a browser; install them from Google Fonts to edit in a design program.
