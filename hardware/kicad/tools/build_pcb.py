@@ -201,7 +201,6 @@ def main():
         gr_text("MAINS SIDE 230 V", 8, 83, "F.SilkS", 1.5, True),
         gr_text("LOW VOLTAGE", 62, 3, "F.SilkS", 1.5, True),
         gr_text("ISOLATION BARRIER", BARRIER_X + 2, BOARD_H - 3, "F.SilkS", 1.0),
-        gr_text("DRAFT - mains creepage unreviewed - not for manufacture", 70, BOARD_H - 2, "F.SilkS", 1.0),
     ]
     nets = ['\t(net 0 "")'] + ['\t(net %d "%s")' % (i, n) for n, i in sorted(netid.items(), key=lambda kv: kv[1])]
     layers = open(os.path.join(HERE, "pcb_layers.txt"), encoding="utf-8").read().rstrip("\n")

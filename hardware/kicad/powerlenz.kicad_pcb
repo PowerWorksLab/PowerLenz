@@ -383,7 +383,7 @@
 		(property "Reference" "DK1"
 			(at 11.43 -6 0)
 			(layer "F.SilkS")
-			(uuid "c469dc14-acaa-4079-9f47-cd3a913eb965")
+			(uuid "6327cc63-3cad-4ac3-8f43-ab4d15b7ae87")
 			(effects
 				(font
 					(size 1 1)
@@ -394,7 +394,7 @@
 		(property "Value" "ESP32-S3-DevKitC-1"
 			(at 11.43 67.4 0)
 			(layer "F.Fab")
-			(uuid "98f9f91c-abe3-4e71-9918-8d5a64fc68a0")
+			(uuid "d17ddc3b-fc5a-455d-829d-ed2fbfca86be")
 			(effects
 				(font
 					(size 1 1)
@@ -406,7 +406,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "768045c4-6443-476f-bd17-e3d743472603")
+			(uuid "bf96a386-6a89-4247-9aff-67753ac0b691")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -417,7 +417,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "86f9c36d-ce9b-4766-97be-c79bb003fd99")
+			(uuid "98487c5e-76b2-422d-b028-68d9eff26008")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9391,7 +9391,7 @@
 		(property "Reference" "J3"
 			(at 0 -2.77 0)
 			(layer "F.SilkS")
-			(uuid "431576e6-f215-4d2c-bd0e-25d2b45ed6eb")
+			(uuid "3790d845-a9c3-44bc-9194-6d35c36aa8fa")
 			(effects
 				(font
 					(size 1 1)
@@ -9402,7 +9402,7 @@
 		(property "Value" "DevKitC row A (J1 pins)"
 			(at 0 56.11 0)
 			(layer "F.Fab")
-			(uuid "8fcdb932-2311-48d6-8459-029a02570a51")
+			(uuid "8ed172ef-cb32-49cf-bb8f-d9be24f1c9f0")
 			(effects
 				(font
 					(size 1 1)
@@ -9414,7 +9414,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "ac065ed0-1054-49f0-9d95-56a032ce0ea7")
+			(uuid "4cb9b730-2230-47a5-9529-49e407d1c9fb")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9425,7 +9425,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "d3a58b20-7fba-4102-8c19-5c0bc5be6a4a")
+			(uuid "b82ba40c-e691-4c8e-9d47-7834ddcd84ae")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11926,18 +11926,6 @@
 		(at 58 83 0)
 		(layer "F.SilkS")
 		(uuid "b1546638-b6c1-4d17-9531-aed7a79dbdf9")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.1667)
-			)
-			(justify left)
-		)
-	)
-	(gr_text "DRAFT - mains creepage unreviewed - not for manufacture"
-		(at 70 84 0)
-		(layer "F.SilkS")
-		(uuid "0538ade6-652b-4045-8afe-75ea9b028e74")
 		(effects
 			(font
 				(size 1 1)
