@@ -31,7 +31,7 @@ Needs KiCad 10 (`kicad-cli`) and Python 3. Connections are made with net labels 
 ```
 python3 tools/build_pcb.py        # after the schematic is built
 python3 tools/route.py            # needs ~/tools/freerouting*.jar; removes old tracks, then routes
-kicad-cli pcb render --side top --width 2400 --height 1500 --quality high --rotate '-50,0,-25' --perspective --zoom 0.9 -o exports/3d/powerlenz-pcb-3d.png powerlenz.kicad_pcb
+kicad-cli pcb render --side top --rotate '-45,0,25' --width 2400 --height 1600 --quality high -o exports/3d/powerlenz-pcb-3d.png powerlenz.kicad_pcb
 kicad-cli pcb export glb --subst-models -o exports/3d/powerlenz-pcb.glb powerlenz.kicad_pcb
 python3 tools/make_step_models.py   # STEP stand-ins for the ZMPT107-1, DevKitC and fuse clip
 kicad-cli pcb export step --subst-models --include-tracks --include-pads --include-zones --include-silkscreen --include-soldermask -o exports/3d/powerlenz-pcb.step powerlenz.kicad_pcb
